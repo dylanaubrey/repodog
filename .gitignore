@@ -1,0 +1,9 @@
+.nyc_output/
+bundle/
+coverage/
+lib/
+node_modules/
+.env
+.eslintcache
+*.log
+.DS_Store

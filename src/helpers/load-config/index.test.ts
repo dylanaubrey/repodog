@@ -25,7 +25,7 @@ describe("the loadConfig function", () => {
     });
 
     it("then the function should return the default configuration options", () => {
-      expect(loadedConfig).toEqual(repodogConfig);
+      expect(loadedConfig).toEqual({ ...repodogConfig, npmClient: "npm" });
     });
   });
 
@@ -41,7 +41,7 @@ describe("the loadConfig function", () => {
     });
 
     it("then the function should return the loaded configuration options", () => {
-      expect(loadedConfig).toEqual(repodogConfig);
+      expect(loadedConfig).toEqual({ ...repodogConfig, npmClient: "yarn" });
     });
   });
 });

@@ -6,7 +6,7 @@ import * as semver from "semver";
 import * as validate from "validate-npm-package-name";
 import * as yargs from "yargs";
 import { error } from "../helpers/commands/error";
-import { exec } from "../helpers/commands/exec";
+import { run } from "../helpers/commands/run";
 import { getSyncedDependencies } from "../helpers/get-synced-dependencies";
 import { loadConfig } from "../helpers/load-config";
 import { validatePackageNames } from "../helpers/validate-package-names";
@@ -37,7 +37,7 @@ import { ObjectMap, PackageConfig } from "../types";
   }
 
   const repodogConfig = loadConfig();
-  const { packagesPath, scaffoldPath } = repodogConfig;
+  const { npmClient, packagesPath, scaffoldPath } = repodogConfig;
   const cwd = process.cwd();
   const fullScaffoldPath = resolve(cwd, scaffoldPath);
   const fullPackagePath = resolve(cwd, packagesPath, name);
@@ -80,7 +80,7 @@ import { ObjectMap, PackageConfig } from "../types";
     writeFileSync(resolve(fullPackagePath, "package.json"), JSON.stringify(packageConfig, null, 2));
 
     if (rootConfig.scripts && rootConfig.scripts["new-package:post"]) {
-      exec("yarn run new-package:post");
+      run("new-package:post", npmClient);
     }
   }
 }());

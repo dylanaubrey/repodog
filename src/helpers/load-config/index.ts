@@ -6,6 +6,7 @@ const SCAFFOLD_PATH = ".repodog/new-package";
 
 function setDefaults(): RepodogConfig {
   return {
+    npmClient: "npm",
     packagesPath: PACKAGES_PATH,
     scaffoldPath: SCAFFOLD_PATH,
   };

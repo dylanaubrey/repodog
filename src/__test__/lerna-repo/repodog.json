@@ -1,4 +1,5 @@
 {
+  "npmClient": "yarn",
   "packagesPath": "packages",
   "scaffoldPath": ".repodog/new-package"
 }

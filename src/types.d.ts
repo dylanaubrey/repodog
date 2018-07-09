@@ -1,3 +1,5 @@
+export type NPMClient = "npm" | "yarn";
+
 export interface ObjectMap {
   [key: string]: any;
 }

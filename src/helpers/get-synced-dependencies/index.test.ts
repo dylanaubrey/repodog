@@ -1,5 +1,6 @@
 import { getSyncedDependencies } from ".";
 import { info } from "../commands/info";
+import { RepodogConfig } from "../load-config/types";
 import { GetSyncedDependenciesResult } from "./types";
 
 jest.mock("../commands/info", () => ({
@@ -14,7 +15,8 @@ const basePackageConfig = {
   version: "0.0.1",
 };
 
-const repodogConfig = {
+const repodogConfig: RepodogConfig = {
+  npmClient: "yarn",
   packagesPath: "packages",
   scaffoldPath: ".repodog/new-package",
 };

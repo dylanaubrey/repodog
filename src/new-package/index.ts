@@ -12,7 +12,7 @@ import { loadConfig } from "../helpers/load-config";
 import { validatePackageNames } from "../helpers/validate-package-names";
 import { ObjectMap, PackageConfig } from "../types";
 
-(async function newPackage() {
+export default async function newPackage() {
   const argv = yargs
     .array("dep")
     .array("devDep")
@@ -43,7 +43,7 @@ import { ObjectMap, PackageConfig } from "../types";
   const fullPackagePath = resolve(cwd, packagesPath, name);
 
   if (existsSync(fullPackagePath)) {
-    return error(`Repodog did not expect a directory to exist for ${name} package.`);
+    return error(`Repodog did not expect a directory to exist for the ${name} package.`);
   }
 
   copySync(fullScaffoldPath, fullPackagePath);
@@ -51,7 +51,7 @@ import { ObjectMap, PackageConfig } from "../types";
 
   try {
     rootConfig = require(resolve(cwd, "package.json"));
-  } catch (error) {
+  } catch (err) {
     return error(`Repodog expected a package.json to exist in the project root.`);
   }
 
@@ -83,4 +83,4 @@ import { ObjectMap, PackageConfig } from "../types";
       run("new-package:post", npmClient);
     }
   }
-}());
+}

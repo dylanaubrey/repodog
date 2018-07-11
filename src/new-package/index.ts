@@ -52,11 +52,11 @@ export default async function newPackage() {
   try {
     rootConfig = require(resolve(cwd, "package.json"));
   } catch (err) {
-    return error(`Repodog expected a package.json to exist in the project root.`);
+    return error("Repodog expected a package.json to exist in the project root.");
   }
 
   if (!validate(rootConfig.name).validForNewPackages || !semver.valid(rootConfig.version)) {
-    return error(`Repodog expected the project package.json to have a valid name and version.`);
+    return error("Repodog expected the project package.json to have a valid name and version.");
   }
 
   let scaffoldConfig: ObjectMap | undefined;

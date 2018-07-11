@@ -24,6 +24,8 @@ const repodogConfig: RepodogConfig = {
 
 const LERNA_REPO_PATH = "src/__test__/lerna-repo";
 const INVALID_REPO_PATH = "src/__test__/invalid-repo";
+const INVALID_NAME_REPO_PATH = "src/__test__/invalid-name";
+const INVALID_VERSION_REPO_PATH = "src/__test__/invalid-version";
 
 describe("the newPackage function", () => {
   let processCwd: () => string;
@@ -129,6 +131,54 @@ describe("the newPackage function", () => {
 
     it("then the function should execute the error function with the correct message", () => {
       expect(error).toBeCalledWith("Repodog expected a package.json to exist in the project root.");
+    });
+  });
+
+  describe("when the project root package.json name is invalid", () => {
+    beforeAll(() => {
+      process.cwd = jest.fn().mockReturnValue(INVALID_NAME_REPO_PATH);
+
+      (yargs.parse as jest.Mock).mockReturnValue({
+        desc: "A valid package description.",
+        name: "valid",
+      });
+
+      (validatePackageNames as jest.Mock).mockReturnValue({ invalid: [] });
+      (loadConfig as jest.Mock).mockReturnValue(repodogConfig);
+      newPackage();
+    });
+
+    afterAll(() => {
+      removeSync(resolve(process.cwd(), "packages/valid"));
+      process.cwd = jest.fn().mockReturnValue(LERNA_REPO_PATH);
+    });
+
+    it("then the function should execute the error function with the correct message", () => {
+      expect(error).toBeCalledWith("Repodog expected the project package.json to have a valid name and version.");
+    });
+  });
+
+  describe("when the project root package.json version is invalid", () => {
+    beforeAll(() => {
+      process.cwd = jest.fn().mockReturnValue(INVALID_VERSION_REPO_PATH);
+
+      (yargs.parse as jest.Mock).mockReturnValue({
+        desc: "A valid package description.",
+        name: "valid",
+      });
+
+      (validatePackageNames as jest.Mock).mockReturnValue({ invalid: [] });
+      (loadConfig as jest.Mock).mockReturnValue(repodogConfig);
+      newPackage();
+    });
+
+    afterAll(() => {
+      removeSync(resolve(process.cwd(), "packages/valid"));
+      process.cwd = jest.fn().mockReturnValue(LERNA_REPO_PATH);
+    });
+
+    it("then the function should execute the error function with the correct message", () => {
+      expect(error).toBeCalledWith("Repodog expected the project package.json to have a valid name and version.");
     });
   });
 });

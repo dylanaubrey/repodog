@@ -9,17 +9,11 @@ import { error } from "../helpers/commands/error";
 import { run } from "../helpers/commands/run";
 import { getSyncedDependencies } from "../helpers/get-synced-dependencies";
 import { loadConfig } from "../helpers/load-config";
-import { validatePackageNames } from "../helpers/validate-package-names";
 import { ObjectMap, PackageConfig } from "../types";
 
 export default async function newPackage() {
-  const argv = yargs
-    .array("dep")
-    .array("devDep")
-    .array("peerDep")
-    .parse();
-
-  const { dep = [], devDep = [], desc, name } = argv;
+  const argv = yargs.parse();
+  const { desc, name } = argv;
   const result = validate(name);
 
   if (!result.validForNewPackages) {
@@ -30,16 +24,10 @@ export default async function newPackage() {
     return error("Repodog expected desc to be a string.");
   }
 
-  const { invalid } = validatePackageNames([...dep, ...devDep]);
-
-  if (invalid.length) {
-    return error(`Repodog expected all dependencies to have valid names. Invalid: ${invalid.join(", ")}`);
-  }
-
   const repodogConfig = loadConfig();
   const { npmClient, packagesPath, scaffoldPath } = repodogConfig;
   const cwd = process.cwd();
-  const fullScaffoldPath = resolve(cwd, scaffoldPath);
+  const fullScaffoldPath = resolve(cwd, scaffoldPath, "new-package");
   const fullPackagePath = resolve(cwd, packagesPath, name);
 
   if (existsSync(fullPackagePath)) {

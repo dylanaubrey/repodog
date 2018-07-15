@@ -6,7 +6,7 @@ const WRONG_PATH = "src/__test__/repo";
 
 const repodogConfig = {
   packagesPath: "packages",
-  scaffoldPath: ".repodog/new-package",
+  scaffoldPath: ".repodog/scaffold",
 };
 
 describe("the loadConfig function", () => {

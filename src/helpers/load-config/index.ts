@@ -2,7 +2,7 @@ import { resolve } from "path";
 import { RepodogConfig } from "./types";
 
 const PACKAGES_PATH = "packages";
-const SCAFFOLD_PATH = ".repodog/new-package";
+const SCAFFOLD_PATH = ".repodog/scaffold";
 
 function setDefaults(): RepodogConfig {
   return {

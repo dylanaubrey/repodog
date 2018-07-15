@@ -23,7 +23,7 @@ jest.mock("../helpers/validate-package-names", () => ({ validatePackageNames: je
 const repodogConfig: RepodogConfig = {
   npmClient: "yarn",
   packagesPath: "packages",
-  scaffoldPath: ".repodog/new-package",
+  scaffoldPath: ".repodog/scaffold",
 };
 
 const LERNA_REPO_PATH = "src/__test__/lerna-repo";
@@ -79,37 +79,6 @@ describe("the newPackage function", () => {
 
     it("then the function should execute the error function with the correct message", () => {
       expect(error).toBeCalledWith("Repodog expected desc to be a string.");
-    });
-  });
-
-  describe("when no description argument is provided to the function", () => {
-    beforeAll(() => {
-      (yargs.parse as jest.Mock).mockReturnValue({ name: "valid" });
-      newPackage();
-    });
-
-    it("then the function should execute the error function with the correct message", () => {
-      expect(error).toBeCalledWith("Repodog expected desc to be a string.");
-    });
-  });
-
-  describe("when some of the dependencies provided to the function are invalid", () => {
-    beforeAll(() => {
-      (yargs.parse as jest.Mock).mockReturnValue({
-        desc: "A valid package description.",
-        name: "valid",
-      });
-
-      (validatePackageNames as jest.Mock).mockReturnValue({
-        invalid: ["alsoInvalid", "invalidAsWell"],
-      });
-
-      newPackage();
-    });
-
-    it("then the function should execute the error function with the correct message", () => {
-      const message = "Repodog expected all dependencies to have valid names. Invalid: alsoInvalid, invalidAsWell";
-      expect(error).toBeCalledWith(message);
     });
   });
 

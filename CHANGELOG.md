@@ -1,3 +1,9 @@
+#### 0.0.3 (2018-07-15)
+
+##### Bug Fixes
+
+* **new-package:**  Removing unnecessary args and changing config dir structure. ([62f168e4](https://github.com/dylanaubrey/repodog/commit/62f168e444aee7a3deb8ec397e7e3e85a7451ff4))
+
 #### 0.0.2 (2018-07-15)
 
 ##### New Features

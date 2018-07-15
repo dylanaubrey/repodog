@@ -1,16 +1,16 @@
 {
   "name": "repodog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An opinionated command line utility for managing a repository.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/bad-batch/repodog",
+  "homepage": "https://github.com/dylanaubrey/repodog",
   "bugs": {
-    "url": "https://github.com/bad-batch/repodog/issues"
+    "url": "https://github.com/dylanaubrey/repodog/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bad-batch/repodog"
+    "url": "https://github.com/dylanaubrey/repodog"
   },
   "keywords": [
     "command line",

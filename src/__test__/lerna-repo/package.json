@@ -1,9 +1,10 @@
 {
-  "name": "test",
+  "name": "lerna-test",
   "version": "0.0.1",
   "description": "This is a test repo.",
   "scripts": {
     "cutoff:pre-version": "yarn run stuff",
-    "cutoff:post-version": "yarn run more stuff"
+    "cutoff:post-version": "yarn run more stuff",
+    "new-package:post": "yarn run even more stuff"
   }
 }

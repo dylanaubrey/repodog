@@ -41,7 +41,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn run test"
+      "pre-commit": "yarn run test"
     }
   },
   "resolutions": {
@@ -50,7 +50,7 @@
   "dependencies": {
     "@babel/polyfill": "7.0.0-beta.44",
     "chalk": "^2.4.1",
-    "cutoff": "^0.0.14",
+    "cutoff": "^0.0.15",
     "fs-extra": "^6.0.1",
     "semver": "^5.5.0",
     "shelljs": "^0.8.1",

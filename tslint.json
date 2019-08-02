@@ -3,16 +3,16 @@
   "rules": {
     "curly": [true, "ignore-same-line"],
     "ordered-imports": [true, {
-      "import-sources-order": "case-insensitive",
-      "named-imports-order": "case-insensitive"
+      "import-sources-order": "lowercase-last",
+      "named-imports-order": "lowercase-last"
     }],
     "interface-name": [true, "never-prefix"],
     "no-implicit-dependencies": false,
     "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
-    "no-submodule-imports": [true, "promise-worker/register"],
-    "no-this-assignment": [true, {"allowed-names": ["_this"] }],
+    "no-namespace": true,
+    "no-this-assignment": [true, { "allowed-names": ["_this"] }],
     "no-var-requires": false,
-    "object-literal-sort-keys": [true, "ignore-case"],
+    "object-literal-sort-keys": [true, "locale-compare"],
     "prefer-conditional-expression": false,
     "prefer-function-over-method": true,
     "return-undefined": false,

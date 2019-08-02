@@ -1,0 +1,47 @@
+{
+  "name": "@repodog/new-package",
+  "version": "0.0.3",
+  "description": "The RepoDog new-package module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/main/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/types/index.d.ts",
+  "keywords": [
+    "command line",
+    "cli",
+    "lerna",
+    "yarn",
+    "releases",
+    "monorepos",
+    "repositories"
+  ],
+  "scripts": {
+    "compile": "concurrently npm:compile:*",
+    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
+    "compile:module": "cross-env BABEL_ENV=module babel ./src --out-dir ./lib/module --extensions \".ts\" --config-file ../../babel.config.js",
+    "compile:types": "tsc --build",
+    "docs": "typedoc --includes ./src/main --out ./docs --options ../../typedoc.js"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.0.0",
+    "core-js": "^2.0",
+    "lodash": "^4.17.5"
+  },
+  "dependencies": {
+    "@repodog/constants": "^0.0.3",
+    "@repodog/helpers": "^0.0.3",
+    "semver": "^6.3.0"
+  }
+}

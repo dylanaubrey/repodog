@@ -1,0 +1,39 @@
+{
+  "name": "@repodog/types",
+  "version": "0.0.3",
+  "description": "The RepoDog types module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/main/index.js",
+  "types": "lib/types/index.d.ts",
+  "keywords": [
+    "command line",
+    "cli",
+    "lerna",
+    "yarn",
+    "releases",
+    "monorepos",
+    "repositories"
+  ],
+  "scripts": {
+    "compile": "concurrently npm:compile:*",
+    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
+    "compile:types": "tsc --build"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.0.0",
+    "core-js": "^2.0",
+    "lodash": "^4.17.5"
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "name": "@repodog/types",
+  "name": "@repodog/typedoc-config",
   "version": "0.0.3",
-  "description": "The RepoDog types module.",
+  "description": "The RepoDog typedoc-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/dylanaubrey/repodog",
@@ -15,20 +15,17 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/main/index.js",
-  "types": "lib/types/index.d.ts",
+  "main": "lib/index.js",
   "keywords": [
-    "command line",
-    "cli",
-    "lerna",
-    "yarn",
-    "releases",
-    "monorepos",
-    "repositories"
+    "typedoc",
+    "configuration"
   ],
   "scripts": {
     "compile": "concurrently npm:compile:*",
-    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
-    "compile:types": "tsc --build"
+    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib --extensions \".js\" --config-file ../../babel.config.js"
+  },
+  "dependencies": {
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^2.1.0"
   }
 }

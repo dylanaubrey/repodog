@@ -1,7 +1,7 @@
 {
-  "name": "@repodog/types",
+  "name": "@repodog/tslint-config",
   "version": "0.0.3",
-  "description": "The RepoDog types module.",
+  "description": "The RepoDog tslint-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/dylanaubrey/repodog",
@@ -15,20 +15,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/main/index.js",
-  "types": "lib/types/index.d.ts",
+  "main": "lib/index.json",
   "keywords": [
-    "command line",
-    "cli",
-    "lerna",
-    "yarn",
-    "releases",
-    "monorepos",
-    "repositories"
+    "tslint",
+    "configuration"
   ],
   "scripts": {
     "compile": "concurrently npm:compile:*",
-    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
-    "compile:types": "tsc --build"
+    "compile:main": "copyfiles --up 1 ./src/**/* lib"
+  },
+  "dependencies": {
+    "tslint": "^5.10.0"
   }
 }

@@ -1,0 +1,3 @@
+{
+  "extends": "@repodog/eslint-config"
+}

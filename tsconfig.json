@@ -6,7 +6,6 @@
     "**/node_modules/**"
   ],
   "include": [
-    "integration",
     "packages"
   ]
 }

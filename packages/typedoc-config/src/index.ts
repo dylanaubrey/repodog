@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   excludeExternals: true,
   excludePrivate: true,
   excludeProtected: true,

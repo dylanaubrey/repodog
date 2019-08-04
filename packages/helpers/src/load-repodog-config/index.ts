@@ -1,6 +1,6 @@
 import { DEFAULT_PACKAGES_PATH, DEFAULT_SCAFFOLD_PATH, REPODOG_CONFIG_FILENAME } from "@repodog/constants";
 import { RepodogConfig } from "@repodog/types";
-import shell from "shelljs";
+import { info } from "../commands";
 import resolvePath from "../resolve-path";
 
 let repodogConfig: RepodogConfig;
@@ -14,7 +14,7 @@ export default function loadRepodogConfig() {
   try {
     if (repodogConfig) return repodogConfig;
 
-    shell.echo(">>>>>> Loading repodog config");
+    info("Loading repodog config");
 
     repodogConfig = {
       ...defaultRepodogConfig,

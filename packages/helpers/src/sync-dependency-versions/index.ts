@@ -1,19 +1,26 @@
-
 import { StringObjectMap } from "@repodog/types";
-import { warn } from "../commands";
+import semver from "semver";
+import { info, warn } from "../commands";
+import iterateDependencies from "../iterate-dependencies";
 import iteratePackages from "../iterate-packages";
 import { SyncDependencyVersionsParams } from "../type-defs";
 
 function syncVersions(name: string, dependencies: StringObjectMap) {
-  Object.keys(dependencies).forEach((key) => {
+  iterateDependencies(dependencies, ({ name: dependencyName }) => {
     iteratePackages(
       ({ packageJson }) => {
-        dependencies[key] = `^${packageJson.version}`;
+        if (
+          dependencyName === packageJson.name
+          && packageJson.version
+          && !semver.satisfies(packageJson.version, dependencies[dependencyName])
+        ) {
+          dependencies[dependencyName] = `^${packageJson.version}`;
+        }
       },
       () => {
-        warn(`Repodog expected a directory and package.json file to exist for the ${key} package.`);
-        warn(`Repodog is removing the ${key} package from ${name}'s dependencies.`);
-        Reflect.deleteProperty(dependencies, key);
+        warn(`Repodog expected a directory and package.json file to exist for the ${dependencyName} package.`);
+        warn(`Repodog is removing the ${dependencyName} package from ${name}'s dependencies.`);
+        Reflect.deleteProperty(dependencies, dependencyName);
       },
     );
   });
@@ -24,6 +31,8 @@ function syncVersions(name: string, dependencies: StringObjectMap) {
 export default function syncDependencyVersions(
   { dependencies = {}, devDependencies = {}, name }: SyncDependencyVersionsParams,
 ) {
+  info("Syncing dependency versions");
+
   return {
     dependencies: syncVersions(name, { ...dependencies }),
     devDependencies: syncVersions(name, { ...devDependencies }),

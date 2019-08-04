@@ -2,6 +2,7 @@
   "extends": "./tsconfig.settings.json",
   "files": [],
   "references": [
+    { "path": "./build-references" },
     { "path": "./constants" },
     { "path": "./helpers" },
     { "path": "./new-package" },

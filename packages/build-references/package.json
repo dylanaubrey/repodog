@@ -1,7 +1,7 @@
 {
-  "name": "@repodog/helpers",
+  "name": "@repodog/build-references",
   "version": "0.0.3",
-  "description": "The RepoDog helpers module.",
+  "description": "The RepoDog build-references module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/dylanaubrey/repodog",
@@ -27,6 +27,9 @@
     "monorepos",
     "repositories"
   ],
+  "bin": {
+    "build-references": "bin/build-references.js"
+  },
   "scripts": {
     "compile": "concurrently npm:compile:*",
     "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
@@ -41,8 +44,6 @@
   },
   "dependencies": {
     "@repodog/constants": "^0.0.3",
-    "chalk": "^2.4.2",
-    "semver": "^6.3.0",
-    "shelljs": "^0.8.3"
+    "@repodog/helpers": "^0.0.3"
   }
 }

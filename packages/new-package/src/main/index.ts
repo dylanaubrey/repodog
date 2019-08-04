@@ -1,23 +1,29 @@
+import buildReferences from "@repodog/build-references";
 import { NEW_PACKAGE_DIR_NAME, PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import {
   error,
+  exec,
+  info,
   loadRepodogConfig,
   loadRootPackageJson,
   resolvePath,
   run,
   syncDependencyVersions,
   validatePackageName,
+  writePackageJson,
 } from "@repodog/helpers";
 import { existsSync } from "fs";
-import { copySync, outputFileSync } from "fs-extra";
+import { copySync } from "fs-extra";
 import { isString } from "lodash";
+import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
 import yargs from "yargs";
 import { NewPackageParams } from "../type-defs";
 
 export default async function newPackage() {
-  const { desc, name } = yargs.argv as unknown as NewPackageParams;
+  info("Creating new package");
+  const { deps = [], desc, name } = yargs.array("deps").argv as unknown as NewPackageParams;
   const validated = validatePackageName(name);
 
   if (!validated.valid) {
@@ -36,6 +42,7 @@ export default async function newPackage() {
     return error(`Repodog did not expect a directory to exist for the ${name} package.`);
   }
 
+  info("Copying scaffold to new package");
   copySync(fullScaffoldPath, fullPackagePath);
   const rootPackageJson = loadRootPackageJson();
 
@@ -54,7 +61,8 @@ export default async function newPackage() {
   let scaffoldPackageJson: PackageJson = {};
 
   try {
-    scaffoldPackageJson = require(resolvePath(fullScaffoldPath, PACKAGE_JSON_FILENAME));
+    info("Loading scaffold package.json");
+    scaffoldPackageJson = require(resolve(fullScaffoldPath, PACKAGE_JSON_FILENAME));
   } catch (error) {
     // no catch
   } finally {
@@ -69,7 +77,17 @@ export default async function newPackage() {
       ...syncDependencyVersions({ dependencies, devDependencies, name: `${scope}/${name}` }),
     };
 
-    outputFileSync(resolvePath(fullPackagePath, PACKAGE_JSON_FILENAME), JSON.stringify(packageJson, null, 2));
+    writePackageJson(fullPackagePath, packageJson);
+
+    if (deps.length) {
+      info("Adding dependencies");
+
+      deps.forEach((dependancy) => {
+        exec(`lerna add ${dependancy} --scope ${packageJson.name}`);
+      });
+    }
+
+    buildReferences();
 
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-package:post"]) {
       run("new-package:post");

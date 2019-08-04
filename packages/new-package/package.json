@@ -27,6 +27,9 @@
     "monorepos",
     "repositories"
   ],
+  "bin": {
+    "new-package": "bin/new-package.js"
+  },
   "scripts": {
     "compile": "concurrently npm:compile:*",
     "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
@@ -40,6 +43,7 @@
     "lodash": "^4.17.5"
   },
   "dependencies": {
+    "@repodog/build-references": "^0.0.3",
     "@repodog/constants": "^0.0.3",
     "@repodog/helpers": "^0.0.3",
     "semver": "^6.3.0"

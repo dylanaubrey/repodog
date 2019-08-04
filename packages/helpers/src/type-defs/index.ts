@@ -1,12 +1,16 @@
 import { PackageJson } from "type-fest";
 
-export type IteratePackagesCallback = (params: { packageJson: PackageJson, packagePath: string }) => void;
+export type IterateDependenciesCallback = (params: { name: string, version: string }) => void;
 
-export type IteratePackagesErrorCallback = (params: { packagePath: string }) => void;
+export type IteratePackagesCallback = (
+  params: { dirName: string, fullPath: string, packageJson: PackageJson,  },
+) => void;
+
+export type IteratePackagesErrorCallback = (params: { dirName: string, fullPath: string }) => void;
 
 export interface SyncDependencyVersionsParams {
-  dependencies: PackageJson["dependencies"];
-  devDependencies: PackageJson["devDependencies"];
+  dependencies?: PackageJson.Dependency;
+  devDependencies?: PackageJson.Dependency;
   name: string;
 }
 

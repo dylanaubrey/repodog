@@ -6,7 +6,7 @@ import {
   loadRepodogConfig,
   loadRootPackageJson,
   loadTSConfig,
-  resolvePath,
+  resolvePathToCwd,
   writeTSConfig,
 } from "@repodog/helpers";
 import { TSConfigReference } from "@repodog/types";
@@ -63,6 +63,6 @@ export default function buildProjectReferences() {
   );
 
   const { packagesPath } = loadRepodogConfig();
-  const tsconfig = loadTSConfig(resolvePath(packagesPath));
+  const tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));
   writeTSConfig(packagesPath, { ...(tsconfig || {}), references });
 }

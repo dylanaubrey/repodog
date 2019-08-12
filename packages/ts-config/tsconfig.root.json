@@ -31,13 +31,5 @@
     "strictPropertyInitialization": true,
     "target": "esnext"
   },
-  "exclude": [
-    "**/bin/**",
-    "**/lib/**",
-    "**/node_modules/**"
-  ],
-  "include": [
-    "packages"
-  ],
   "$schema": "http://json.schemastore.org/tsconfig"
 }

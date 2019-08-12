@@ -1,7 +1,7 @@
 import { DEFAULT_PACKAGES_PATH, DEFAULT_SCAFFOLD_PATH, REPODOG_CONFIG_FILENAME } from "@repodog/constants";
 import { RepodogConfig } from "@repodog/types";
 import { info } from "../commands";
-import resolvePath from "../resolve-path";
+import resolvePathToCwd from "../resolve-path-to-cwd";
 
 let repodogConfig: RepodogConfig;
 
@@ -18,7 +18,7 @@ export default function loadRepodogConfig() {
 
     repodogConfig = {
       ...defaultRepodogConfig,
-      ...require(resolvePath(REPODOG_CONFIG_FILENAME)),
+      ...require(resolvePathToCwd(REPODOG_CONFIG_FILENAME)),
     };
 
     return repodogConfig;

@@ -15,16 +15,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.js",
+  "main": "index.js",
   "keywords": [
     "eslint",
     "configuration"
   ],
-  "scripts": {
-    "compile": "concurrently npm:compile:*",
-    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib --extensions \".js\" --config-file ../../babel.config.js"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "babel-eslint": "^10.0.2",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^17.1.0",

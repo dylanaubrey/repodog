@@ -1,3 +1,6 @@
 #!/usr/bin/env node
 
-require('../lib/main/main').default();
+const yargs = require('yargs');
+const newPackage = require('../lib/main/main').default();
+
+newPackage(yargs.array('deps').argv);

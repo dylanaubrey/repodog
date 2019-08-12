@@ -1,7 +1,7 @@
 import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import { PackageJson } from "type-fest";
 import { info } from "../commands";
-import resolvePath from "../resolve-path";
+import resolvePathToCwd from "../resolve-path-to-cwd";
 
 let packageJson: PackageJson;
 
@@ -11,7 +11,7 @@ export default function loadRootPackageJson(): PackageJson | undefined {
 
     info("Loading root package.json");
 
-    packageJson = require(resolvePath(PACKAGE_JSON_FILENAME));
+    packageJson = require(resolvePathToCwd(PACKAGE_JSON_FILENAME));
     return packageJson;
   } catch (error) {
     return undefined;

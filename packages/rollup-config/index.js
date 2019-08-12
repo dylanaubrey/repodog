@@ -1,16 +1,16 @@
-import { outputFileSync } from "fs-extra";
-import { basename, resolve } from "path";
-import { plugin as analyzer } from "rollup-plugin-analyzer";
-import babel from "rollup-plugin-babel";
-import commonjs from "rollup-plugin-commonjs";
-import json from "rollup-plugin-json";
-import nodeResolve from "rollup-plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
-import rootPackageJson from "./package.json";
+const { outputFileSync } = require('fs-extra');
+const { basename, resolve } = require('path');
+const { plugin as analyzer } = require('rollup-plugin-analyzer');
+const babel = require('rollup-plugin-babel');
+const commonjs = require('rollup-plugin-commonjs');
+const json = require('rollup-plugin-json');
+const nodeResolve = require('rollup-plugin-node-resolve');
+const { terser } = require('rollup-plugin-terser');
+const rootPackageJson = require('./package.json'); // eslint-disable-line import/no-unresolved
 
 const dirRoot = resolve(process.cwd());
 
-const packageJson = require(`${dirRoot}/package.json`);
+const packageJson = require(`${dirRoot}/package.json`); // eslint-disable-line import/no-dynamic-require
 
 const devDependencies = Object.keys(rootPackageJson.devDependencies);
 const peerDependencies = Object.keys(packageJson.peerDependencies);
@@ -18,10 +18,10 @@ const dependencies = Object.keys(packageJson.dependencies);
 const externalModuleNames = [...dependencies, ...peerDependencies, ...devDependencies];
 
 function external(id: string) {
-  return externalModuleNames.some((name) => id.startsWith(name));
+  return externalModuleNames.some(name => id.startsWith(name));
 }
 
-const extensions = [".mjs", ".js", ".jsx", "json", ".ts", ".tsx"];
+const extensions = ['.mjs', '.js', '.jsx', 'json', '.ts', '.tsx'];
 
 const defaultPlugins = [
   nodeResolve({
@@ -30,7 +30,7 @@ const defaultPlugins = [
   commonjs(),
   json(),
   babel({
-    configFile: "../../babel.config.js",
+    configFile: '../../babel.config.js',
     extensions,
     runtimeHelpers: true,
   }),
@@ -44,7 +44,7 @@ const dirName = basename(dirRoot);
 
 function sourcemapPathTransform(sourcePath: string) {
   if (/node_modules/.test(sourcePath)) return sourcePath;
-  return sourcePath.replace("../../src/", `../${dirName}/src/`);
+  return sourcePath.replace('../../src/', `../${dirName}/src/`);
 }
 
 const devConfig = {
@@ -52,7 +52,7 @@ const devConfig = {
   input: `${dirRoot}/src/index.ts`,
   output: {
     file: `${dirRoot}/lib/browser/index.js`,
-    format: "esm",
+    format: 'esm',
     sourcemap: true,
     sourcemapPathTransform,
   },
@@ -66,7 +66,7 @@ const prodConfig = {
   input: `${dirRoot}/src/index.ts`,
   output: {
     file: `${dirRoot}/lib/browser/index.js`,
-    format: "esm",
+    format: 'esm',
     sourcemap: true,
     sourcemapPathTransform,
   },
@@ -79,10 +79,10 @@ const prodConfig = {
 
 const config = [];
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === 'development') {
   config.push(devConfig);
 } else {
   config.push(prodConfig);
 }
 
-export default config;
+module.exports = config;

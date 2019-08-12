@@ -16,7 +16,6 @@
     "access": "public"
   },
   "main": "lib/main/index.js",
-  "module": "lib/module/index.js",
   "types": "lib/types/index.d.ts",
   "keywords": [
     "command line",
@@ -33,7 +32,6 @@
   "scripts": {
     "compile": "concurrently npm:compile:*",
     "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
-    "compile:module": "cross-env BABEL_ENV=module babel ./src --out-dir ./lib/module --extensions \".ts\" --config-file ../../babel.config.js",
     "compile:types": "tsc --build",
     "docs": "typedoc --includes ./src/main --out ./docs --options ../../typedoc.js"
   },

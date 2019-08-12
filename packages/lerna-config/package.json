@@ -15,16 +15,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.json",
+  "main": "index.json",
   "keywords": [
     "lerna",
     "configuration"
   ],
-  "scripts": {
-    "compile": "concurrently npm:compile:*",
-    "compile:main": "copyfiles --up 1 ./src/**/* lib"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "lerna": "^3.16.4"
   }
 }

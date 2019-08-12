@@ -1,10 +1,10 @@
 import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
-import { info } from "@repodog/helpers";
 import { readdirSync, statSync } from "fs";
 import { isFunction } from "lodash";
 import { resolve } from "path";
+import { info } from "../commands";
 import loadRepodogConfig from "../load-repodog-config";
-import resolvePath from "../resolve-path";
+import resolvePathToCwd from "../resolve-path-to-cwd";
 import { IteratePackagesCallback, IteratePackagesErrorCallback } from "../type-defs";
 
 export default function iteratePackages(
@@ -13,10 +13,10 @@ export default function iteratePackages(
 ) {
   info("Iterating packages");
   const { packagesPath } = loadRepodogConfig();
-  const fileNames = readdirSync(resolvePath(packagesPath));
+  const fileNames = readdirSync(resolvePathToCwd(packagesPath));
 
   fileNames.forEach((fileName) => {
-    const fullPath = resolvePath(packagesPath, fileName);
+    const fullPath = resolvePathToCwd(packagesPath, fileName);
     const stats = statSync(fullPath);
     if (!stats.isDirectory()) return;
 

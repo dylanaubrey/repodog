@@ -15,17 +15,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/root/index.json",
+  "main": "tsconfig.root.json",
   "keywords": [
     "typescript",
     "tsconfig",
     "configuration"
   ],
-  "scripts": {
-    "compile": "concurrently npm:compile:*",
-    "compile:main": "copyfiles --up 1 ./src/**/* lib"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "typescript": "^3.5.0"
   }
 }

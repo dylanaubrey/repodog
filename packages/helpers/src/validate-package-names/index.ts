@@ -1,5 +1,5 @@
-import { info } from "@repodog/helpers";
 import validate from "validate-npm-package-name";
+import { info } from "../commands";
 import { ValidatePackageNameResult, ValidatePackageNamesResult } from "../type-defs";
 
 export function validatePackageName(name: string): ValidatePackageNameResult {

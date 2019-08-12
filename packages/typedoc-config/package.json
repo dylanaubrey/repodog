@@ -15,16 +15,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.js",
+  "main": "index.js",
   "keywords": [
     "typedoc",
     "configuration"
   ],
-  "scripts": {
-    "compile": "concurrently npm:compile:*",
-    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib --extensions \".js\" --config-file ../../babel.config.js"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "typedoc": "^0.15.0",
     "typedoc-plugin-markdown": "^2.1.0"
   }

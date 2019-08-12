@@ -6,7 +6,7 @@ import {
   info,
   loadRepodogConfig,
   loadRootPackageJson,
-  resolvePath,
+  resolvePathToCwd,
   run,
   syncDependencyVersions,
   validatePackageName,
@@ -18,12 +18,11 @@ import { isString } from "lodash";
 import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
-import yargs from "yargs";
 import { NewPackageParams } from "../type-defs";
 
-export default async function newPackage() {
+export default async function newPackage(argv: NewPackageParams) {
   info("Creating new package");
-  const { deps = [], desc, name } = yargs.array("deps").argv as unknown as NewPackageParams;
+  const { deps = [], desc, name } = argv;
   const validated = validatePackageName(name);
 
   if (!validated.valid) {
@@ -31,12 +30,12 @@ export default async function newPackage() {
   }
 
   if (!isString(desc) || desc.length < 20) {
-    return error("Repodog expected desc to be a string with a length of at least 20 characters.");
+    return error("Repodog expected desc to have a length of at least 20 characters.");
   }
 
   const { packagesPath, scaffoldPath } = loadRepodogConfig();
-  const fullScaffoldPath = resolvePath(scaffoldPath, NEW_PACKAGE_DIR_NAME);
-  const fullPackagePath = resolvePath(packagesPath, name);
+  const fullScaffoldPath = resolvePathToCwd(scaffoldPath, NEW_PACKAGE_DIR_NAME);
+  const fullPackagePath = resolvePathToCwd(packagesPath, name);
 
   if (existsSync(fullPackagePath)) {
     return error(`Repodog did not expect a directory to exist for the ${name} package.`);

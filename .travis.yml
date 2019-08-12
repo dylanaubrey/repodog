@@ -12,6 +12,7 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
 install:
   - yarn run init
+  - yarn run build
 script:
   - yarn run lint
   - yarn run type-check

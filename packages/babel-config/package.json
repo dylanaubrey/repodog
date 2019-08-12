@@ -15,16 +15,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.js",
+  "main": "index.js",
   "keywords": [
     "babel",
     "configuration"
   ],
-  "scripts": {
-    "compile": "concurrently npm:compile:*",
-    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib --extensions \".ts\" --config-file ../../babel.config.js"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",

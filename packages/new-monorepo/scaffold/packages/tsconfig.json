@@ -1,3 +1,5 @@
 {
-  "extends": "@repodog/ts-config/packages"
+  "extends": "./tsconfig.settings.json",
+  "files": [],
+  "references": []
 }

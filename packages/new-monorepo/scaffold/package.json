@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@repodog/babel-config": "^0.0.3",
+    "@repodog/build-references": "^0.0.3",
     "@repodog/eslint-config": "^0.0.3",
     "@repodog/jest-config": "^0.0.3",
     "@repodog/lerna-config": "^0.0.3",

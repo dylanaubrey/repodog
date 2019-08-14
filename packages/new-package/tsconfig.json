@@ -7,5 +7,18 @@
   "include": [
     "src"
   ],
-  "references": []
+  "references": [
+    {
+      "path": "../build-references"
+    },
+    {
+      "path": "../constants"
+    },
+    {
+      "path": "../helpers"
+    },
+    {
+      "path": "../types"
+    }
+  ]
 }

@@ -25,6 +25,16 @@
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
-    }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Build references",
+      "program": "${workspaceFolder}/packages/build-references/bin/build-references.js",
+      "protocol": "inspector",
+      "stopOnEntry": false,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
   ]
 }

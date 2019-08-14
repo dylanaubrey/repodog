@@ -10,9 +10,9 @@ function syncVersions(name: string, dependencies: StringObjectMap) {
     iteratePackages(
       ({ packageJson }) => {
         if (
-          dependencyName === packageJson.name
-          && packageJson.version
-          && !semver.satisfies(packageJson.version, dependencies[dependencyName])
+          dependencyName === packageJson.name &&
+          packageJson.version &&
+          !semver.satisfies(packageJson.version, dependencies[dependencyName])
         ) {
           dependencies[dependencyName] = `^${packageJson.version}`;
         }
@@ -28,9 +28,11 @@ function syncVersions(name: string, dependencies: StringObjectMap) {
   return dependencies;
 }
 
-export default function syncDependencyVersions(
-  { dependencies = {}, devDependencies = {}, name }: SyncDependencyVersionsParams,
-) {
+export default function syncDependencyVersions({
+  dependencies = {},
+  devDependencies = {},
+  name,
+}: SyncDependencyVersionsParams) {
   info("Syncing dependency versions");
 
   return {

@@ -11,16 +11,19 @@ export function validatePackageName(name: string): ValidatePackageNameResult {
 export function validatePackageNames(names: readonly string[]): ValidatePackageNamesResult {
   info("Validating package names");
 
-  return names.reduce((result: ValidatePackageNamesResult, name) => {
-    const validated = validatePackageName(name);
+  return names.reduce(
+    (result: ValidatePackageNamesResult, name) => {
+      const validated = validatePackageName(name);
 
-    if (validated.valid) {
-      result.valid.push(name);
-    } else {
-      result.invalid.push(name);
-      result.errors.push(...validated.errors);
-    }
+      if (validated.valid) {
+        result.valid.push(name);
+      } else {
+        result.invalid.push(name);
+        result.errors.push(...validated.errors);
+      }
 
-    return result;
-  }, { errors: [], invalid: [], valid: [] });
+      return result;
+    },
+    { errors: [], invalid: [], valid: [] },
+  );
 }

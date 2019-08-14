@@ -12,7 +12,7 @@ export function loadPackageJson(path: string) {
       return packageJsons.get(path);
     }
 
-    info("Loading package.json");
+    info(`Loading package.json from "${path}"`);
     const packageJson: PackageJson = require(resolve(path, PACKAGE_JSON_FILENAME));
     packageJsons.set(path, packageJson);
     return packageJson;
@@ -22,7 +22,7 @@ export function loadPackageJson(path: string) {
 }
 
 export function writePackageJson(fullPath: string, config: PackageJson) {
-  info("Writing package.json");
+  info(`Writing package.json to "${fullPath}"`);
   outputFileSync(resolve(fullPath, PACKAGE_JSON_FILENAME), JSON.stringify(config, null, 2));
   packageJsons.delete(fullPath);
 }

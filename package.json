@@ -31,6 +31,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "yarn run clean:libs && yarn run compile",
+    "build-references": "node ./packages/build-references/bin/build-references.js",
     "clean": "yarn run clean:packages && yarn run clean:libs && yarn run clean:docs && yarn run clean:repo",
     "clean:docs": "lerna exec --parallel -- del-cli ./docs",
     "clean:libs": "lerna exec --parallel -- del-cli ./lib",
@@ -45,7 +46,7 @@
     "docs": "lerna run docs --parallel",
     "init": "yarn && yarn run bootstrap",
     "lint": "tslint --project ./tsconfig.json",
-    "new-package": "node ./packages/new-package/bin/new-package",
+    "new-package": "node ./packages/new-package/bin/new-package.js",
     "new-package:post": "yarn run bootstrap",
     "publish-cutoff": "publish-lerna-cutoff",
     "test": "jest --logHeapUsage",

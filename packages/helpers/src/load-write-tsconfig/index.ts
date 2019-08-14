@@ -12,7 +12,7 @@ export function loadTSConfig(fullPath: string) {
       return tsConfigs.get(fullPath);
     }
 
-    info("Loading tsconfig");
+    info(`Loading tsconfig from "${fullPath}"`);
     const tsconfig: TSConfig = require(resolve(fullPath, TSCONFIG_FILENAME));
     tsConfigs.set(fullPath, tsconfig);
     return tsconfig;
@@ -22,7 +22,7 @@ export function loadTSConfig(fullPath: string) {
 }
 
 export function writeTSConfig(fullPath: string, config: TSConfig) {
-  info("Writing tsconfig");
+  info(`Writing tsconfig to "${fullPath}"`);
   outputFileSync(resolve(fullPath, TSCONFIG_FILENAME), JSON.stringify(config, null, 2));
   tsConfigs.delete(fullPath);
 }

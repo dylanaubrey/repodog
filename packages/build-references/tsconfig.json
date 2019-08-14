@@ -7,5 +7,15 @@
   "include": [
     "src"
   ],
-  "references": []
+  "references": [
+    {
+      "path": "../constants"
+    },
+    {
+      "path": "../helpers"
+    },
+    {
+      "path": "../types"
+    }
+  ]
 }

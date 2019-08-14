@@ -1,7 +1,12 @@
 import { JsonObject } from "type-fest";
 import { CompilerOptions } from "typescript";
 
+export interface BuildReferencesConfig {
+  global?: string[];
+}
+
 export interface RepodogConfig {
+  buildReferences?: BuildReferencesConfig;
   packagesPath: string;
   scaffoldPath: string;
 }

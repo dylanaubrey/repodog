@@ -5,7 +5,7 @@ export default function iterateDependencies(
   dependencies: PackageJson.Dependency,
   callback: IterateDependenciesCallback,
 ) {
-  Object.keys(dependencies).forEach((name) => {
+  Object.keys(dependencies).forEach(name => {
     callback({ name, version: dependencies[name] });
   });
 }

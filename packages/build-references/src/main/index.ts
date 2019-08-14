@@ -10,27 +10,43 @@ import {
   writeTSConfig,
 } from "@repodog/helpers";
 import { TSConfigReference } from "@repodog/types";
+import { get } from "lodash";
 import { BuildPackageReferencesParams, SetReferencesFromDependenciesParams } from "../type-defs";
 
-function setReferencesFromDependencies({ dependencies, references, scope }: SetReferencesFromDependenciesParams) {
+function setReferencesFromDependencies({
+  dependencies,
+  globalRefs,
+  references,
+  scope,
+}: SetReferencesFromDependenciesParams) {
   iterateDependencies(dependencies, ({ name }) => {
-    if (name.startsWith(scope)) {
+    if (name.startsWith(`@${scope}`)) {
       references.push({ path: `../${name.replace(`@${scope}/`, "")}` });
     }
   });
+
+  if (globalRefs.length) {
+    references.push(...globalRefs.map(name => ({ path: `../${name.replace(`@${scope}/`, "")}` })));
+  }
 }
 
-export function buildPackageReferences({ fullPath, packageJson, scope, tsconfig }: BuildPackageReferencesParams) {
+export function buildPackageReferences({
+  fullPath,
+  globalRefs,
+  packageJson,
+  scope,
+  tsconfig,
+}: BuildPackageReferencesParams) {
   if (!packageJson.dependencies && !packageJson.devDependencies) return;
 
   const references: TSConfigReference[] = [];
 
   if (packageJson.dependencies) {
-    setReferencesFromDependencies({ dependencies: packageJson.dependencies, references, scope });
+    setReferencesFromDependencies({ dependencies: packageJson.dependencies, globalRefs, references, scope });
   }
 
   if (packageJson.devDependencies) {
-    setReferencesFromDependencies({ dependencies: packageJson.devDependencies, references, scope });
+    setReferencesFromDependencies({ dependencies: packageJson.devDependencies, globalRefs, references, scope });
   }
 
   writeTSConfig(fullPath, { ...tsconfig, references });
@@ -50,6 +66,9 @@ export default function buildProjectReferences() {
     return error("Repodog expected the project package.json to have a name.");
   }
 
+  const { buildReferences, packagesPath } = loadRepodogConfig();
+  const globalRefs = get(buildReferences, ["global"], []);
+
   const references: TSConfigReference[] = [];
 
   iteratePackages(({ dirName, fullPath, packageJson }) => {
@@ -57,10 +76,9 @@ export default function buildProjectReferences() {
     if (!packageTSConfig) return;
 
     references.push({ path: `./${dirName}` });
-    buildPackageReferences({ fullPath, packageJson, scope, tsconfig: packageTSConfig });
+    buildPackageReferences({ fullPath, globalRefs, packageJson, scope, tsconfig: packageTSConfig });
   });
 
-  const { packagesPath } = loadRepodogConfig();
   const tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));
   writeTSConfig(packagesPath, { ...(tsconfig || {}), references });
 }

@@ -15,7 +15,7 @@ export default function iteratePackages(
   const { packagesPath } = loadRepodogConfig();
   const fileNames = readdirSync(resolvePathToCwd(packagesPath));
 
-  fileNames.forEach((fileName) => {
+  fileNames.forEach(fileName => {
     const fullPath = resolvePathToCwd(packagesPath, fileName);
     const stats = statSync(fullPath);
     if (!stats.isDirectory()) return;

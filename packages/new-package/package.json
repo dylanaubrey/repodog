@@ -1,6 +1,6 @@
 {
   "name": "@repodog/new-package",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "The RepoDog new-package module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
@@ -41,9 +41,9 @@
     "lodash": "^4.17.5"
   },
   "dependencies": {
-    "@repodog/build-references": "^0.0.3",
-    "@repodog/constants": "^0.0.3",
-    "@repodog/helpers": "^0.0.3",
+    "@repodog/build-references": "^0.1.0",
+    "@repodog/constants": "^0.1.0",
+    "@repodog/helpers": "^0.1.0",
     "fs-extra": "^8.1.0",
     "semver": "^6.3.0",
     "yargs": "^13.3.0"

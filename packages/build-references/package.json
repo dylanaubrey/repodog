@@ -1,6 +1,6 @@
 {
   "name": "@repodog/build-references",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "The RepoDog build-references module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
@@ -41,7 +41,7 @@
     "lodash": "^4.17.5"
   },
   "dependencies": {
-    "@repodog/constants": "^0.0.3",
-    "@repodog/helpers": "^0.0.3"
+    "@repodog/constants": "^0.1.0",
+    "@repodog/helpers": "^0.1.0"
   }
 }

@@ -1,4 +1,4 @@
-# Repodog
+# RepoDog
 
 An opinionated command line utility for managing monorepos.
 

@@ -84,6 +84,7 @@
     "codecov": "^3.0.0",
     "concurrently": "^4.1.1",
     "cross-env": "^5.1.6",
+    "cutoff": "^0.2.7",
     "del-cli": "^2.0.0",
     "dotenv": "^8.0.0",
     "eslint": "^6.1.0",

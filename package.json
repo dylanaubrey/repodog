@@ -96,6 +96,7 @@
     "copyfiles": "^2.1.1",
     "core-js": "^2.6.5",
     "cross-env": "^5.1.6",
+    "cutoff": "^0.2.7",
     "del-cli": "^2.0.0",
     "dotenv": "^8.0.0",
     "dts-gen": "^0.5.7",

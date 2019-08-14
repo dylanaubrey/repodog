@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-require('../lib/main/main').default();
+const buildReferences = require('../lib/main/main').default;
+
+buildReferences();

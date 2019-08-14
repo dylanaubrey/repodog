@@ -1,5 +1,8 @@
 {
-  "extends": "tslint:latest",
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
   "rules": {
     "curly": [true, "ignore-same-line"],
     "ordered-imports": [true, {

@@ -1,7 +1,7 @@
 {
-  "name": "@repodog/eslint-config",
+  "name": "@repodog/prettier-config",
   "version": "0.0.3",
-  "description": "The RepoDog eslint-config module.",
+  "description": "The RepoDog prettier-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/dylanaubrey/repodog",
@@ -17,19 +17,13 @@
   },
   "main": "index.js",
   "keywords": [
-    "eslint",
+    "prettier",
     "configuration"
   ],
   "peerDependencies": {
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "@babel/runtime": "^7.0.0",
+    "core-js": "^2.0",
+    "lodash": "^4.17.5",
     "prettier": "^1.18.2"
   }
 }

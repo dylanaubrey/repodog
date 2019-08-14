@@ -1,0 +1,27 @@
+{
+  "name": "@repodog/commitlint-config",
+  "version": "0.0.3",
+  "description": "The RepoDog commitlint-config module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "keywords": [
+    "commitlint",
+    "configuration"
+  ],
+  "peerDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0"
+  }
+}

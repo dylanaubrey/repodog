@@ -35,9 +35,15 @@
     "wipe:packages": "lerna exec --parallel -- del-cli ./yarn.lock ./node_modules",
     "wipe:repo": "del-cli ./yarn.lock ./node_modules"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "dependencies": {
     "@repodog/babel-config": "^0.0.3",
     "@repodog/build-references": "^0.0.3",
+    "@repodog/commitlint-config": "^0.0.3",
     "@repodog/eslint-config": "^0.0.3",
     "@repodog/jest-config": "^0.0.3",
     "@repodog/lerna-config": "^0.0.3",
@@ -67,6 +73,8 @@
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "7.5.5",
     "@babel/runtime": "^7.5.5",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@types/fs-extra": "^8.0.0",
     "@types/jest": "^24.0.16",
     "@types/lodash": "^4.14.110",
@@ -87,6 +95,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "fs-extra": "^8.1.0",
+    "husky": "^3.0.3",
     "jest": "^24.8.0",
     "lerna": "^3.16.4",
     "lodash": "^4.17.5",

@@ -2,6 +2,9 @@
 
 The RepoDog build-references command.
 
+[![npm version](https://badge.fury.io/js/%40repodog%2Fbuild-references.svg)](https://badge.fury.io/js/%40repodog%2Fbuild-references)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ## Installation
 
 ```shell

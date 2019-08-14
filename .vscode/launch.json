@@ -7,17 +7,6 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Cut release",
-      "program": "${workspaceFolder}/lib/cut-release/index.js",
-      "args": [
-        "--type", "patch",
-      ],
-      "protocol": "inspector",
-      "stopOnEntry": false
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "Jest - all",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
@@ -36,6 +25,16 @@
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
-    }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Build references",
+      "program": "${workspaceFolder}/packages/build-references/bin/build-references.js",
+      "protocol": "inspector",
+      "stopOnEntry": false,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
   ]
 }

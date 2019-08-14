@@ -1,0 +1,51 @@
+{
+  "name": "@repodog/new-monorepo",
+  "version": "0.0.3",
+  "description": "The RepoDog new-monorepo module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/main/index.js",
+  "types": "lib/types/index.d.ts",
+  "keywords": [
+    "command line",
+    "cli",
+    "lerna",
+    "yarn",
+    "releases",
+    "monorepos",
+    "repositories"
+  ],
+  "bin": {
+    "new-monorepo": "bin/new-monorepo.js"
+  },
+  "scripts": {
+    "compile": "concurrently npm:compile:*",
+    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
+    "compile:types": "tsc --build",
+    "docs": "typedoc --includes ./src/main --out ./docs --options ../../typedoc.js"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.0.0",
+    "core-js": "^2.0",
+    "lodash": "^4.17.5"
+  },
+  "dependencies": {
+    "@repodog/build-references": "^0.0.3",
+    "@repodog/constants": "^0.0.3",
+    "@repodog/helpers": "^0.0.3",
+    "fs-extra": "^8.1.0",
+    "semver": "^6.3.0",
+    "yargs": "^13.3.0"
+  }
+}

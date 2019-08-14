@@ -1,36 +1,51 @@
 # Repodog
 
-An opinionated command line utility for managing a repository.
+An opinionated command line utility for managing monorepos.
 
 [![Build Status](https://travis-ci.org/dylanaubrey/repodog.svg?branch=master)](https://travis-ci.org/dylanaubrey/repodog)
-[![codecov](https://codecov.io/gh/dylanaubrey/repodog/branch/master/graph/badge.svg)](https://codecov.io/gh/dylanaubrey/repodog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![npm version](https://badge.fury.io/js/repodog.svg)](https://badge.fury.io/js/repodog)
-[![dependencies Status](https://david-dm.org/dylanaubrey/repodog/status.svg)](https://david-dm.org/dylanaubrey/repodog)
-[![devDependencies Status](https://david-dm.org/dylanaubrey/repodog/dev-status.svg)](https://david-dm.org/dylanaubrey/repodog?type=dev)
+
+## Summary
+
+* Extensible configurations for Typescript, popular linters, and build tools.
+* CLI commands for creating a monorepo and individual packages within it.
+* Set of scripts for common repository management tasks.
 
 ## Installation
 
-```bash
-yarn add repodog --dev
+RepoDog is structured as a [monorepo](https://github.com/lerna/lerna), so each package is published to npm under the
+`@repodog` scope and can be installed in a project in the same way as any other npm package.
+
+```shell
+yarn add @repodog/<package>
 ```
 
-## Commands
+## Packages
 
-### new-package
+* [@repodog/babel-config](packages/babel-config)
+* [@repodog/build-references](packages/build-references)
+* [@repodog/constants](packages/constants)
+* [@repodog/eslint-config](packages/eslint-config)
+* [@repodog/helpers](packages/helpers)
+* [@repodog/jest-config](packages/jest-config)
+* [@repodog/lerna-config](packages/lerna-config)
+* [@repodog/markdownlint-config](packages/markdownlint-config)
+* [@repodog/new-monorepo](packages/new-monorepo)
+* [@repodog/new-package](packages/new-package)
+* [@repodog/rollup-config](packages/rollup-config)
+* [@repodog/ts-config](packages/ts-config)
+* [@repodog/tslint-config](packages/tslint-config)
+* [@repodog/typedoc-config](packages/typedoc-config)
+* [@repodog/types](packages/types)
 
-The script creates a new monorepo package from scaffolding files in the `.repodog/scaffold/new-package/` folder and
-generates/updates the package's package.json with the name and description arguments passed to the script. The package
-version is taken from the package.json in the root of the project. The script also provides a `new-package:post` script
-hook that runs after a new package has been created.
+## Usage
 
-```json
-"scripts": {
-  "new-package": "new-package",
-  "new-package:post": "lerna bootstrap"
-}
-```
+For usage instructions, see the individual package README files.
 
-```bash
-yarn run new-package --name valid-name --desc "A valid package description."
-```
+## Changelog
+
+Check out the [features, fixes and more](CHANGELOG.md) that go into each major, minor and patch version.
+
+## License
+
+RepoDog is [MIT Licensed](LICENSE).

@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.settings.json",
+  "compilerOptions": {
+    "outDir": "lib/types",
+    "rootDir": "src"
+  },
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "../constants"
+    },
+    {
+      "path": "../helpers"
+    },
+    {
+      "path": "../types"
+    }
+  ]
+}

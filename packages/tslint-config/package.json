@@ -1,0 +1,29 @@
+{
+  "name": "@repodog/tslint-config",
+  "version": "0.0.3",
+  "description": "The RepoDog tslint-config module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.json",
+  "keywords": [
+    "tslint",
+    "configuration"
+  ],
+  "peerDependencies": {
+    "prettier": "^1.18.2",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1"
+  }
+}

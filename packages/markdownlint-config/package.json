@@ -1,0 +1,26 @@
+{
+  "name": "@repodog/markdownlint-config",
+  "version": "0.0.3",
+  "description": "The RepoDog markdownlint-config module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.json",
+  "keywords": [
+    "markdownlint",
+    "configuration"
+  ],
+  "peerDependencies": {
+    "markdownlint-cli": "^0.17.0"
+  }
+}

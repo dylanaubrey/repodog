@@ -1,0 +1,22 @@
+{
+  "references": [
+    {
+      "path": "./build-references"
+    },
+    {
+      "path": "./constants"
+    },
+    {
+      "path": "./helpers"
+    },
+    {
+      "path": "./new-monorepo"
+    },
+    {
+      "path": "./new-package"
+    },
+    {
+      "path": "./types"
+    }
+  ]
+}

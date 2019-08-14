@@ -1,0 +1,27 @@
+{
+  "name": "@repodog/ts-config",
+  "version": "0.0.3",
+  "description": "The RepoDog ts-config module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "tsconfig.root.json",
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "configuration"
+  ],
+  "peerDependencies": {
+    "typescript": "^3.5.0"
+  }
+}

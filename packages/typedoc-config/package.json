@@ -1,0 +1,27 @@
+{
+  "name": "@repodog/typedoc-config",
+  "version": "0.0.3",
+  "description": "The RepoDog typedoc-config module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "keywords": [
+    "typedoc",
+    "configuration"
+  ],
+  "peerDependencies": {
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^2.1.0"
+  }
+}

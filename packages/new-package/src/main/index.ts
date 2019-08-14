@@ -81,7 +81,7 @@ export default async function newPackage(argv: NewPackageParams) {
     if (deps.length) {
       info("Adding dependencies");
 
-      deps.forEach((dependancy) => {
+      deps.forEach(dependancy => {
         exec(`lerna add ${dependancy} --scope ${packageJson.name}`);
       });
     }

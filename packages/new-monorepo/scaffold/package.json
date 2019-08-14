@@ -102,6 +102,7 @@
     "ts-toolbelt": "^3.2.13",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "type-fest": "^0.6.0",
     "typedoc": "^0.15.0",
     "typedoc-plugin-markdown": "^2.1.0",

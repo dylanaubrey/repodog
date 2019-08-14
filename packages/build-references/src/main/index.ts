@@ -52,15 +52,13 @@ export default function buildProjectReferences() {
 
   const references: TSConfigReference[] = [];
 
-  iteratePackages(
-    ({ dirName, fullPath, packageJson }) => {
-      const packageTSConfig = loadTSConfig(fullPath);
-      if (!packageTSConfig) return;
+  iteratePackages(({ dirName, fullPath, packageJson }) => {
+    const packageTSConfig = loadTSConfig(fullPath);
+    if (!packageTSConfig) return;
 
-      references.push({ path: `./${dirName}` });
-      buildPackageReferences({ fullPath, packageJson, scope, tsconfig: packageTSConfig });
-    },
-  );
+    references.push({ path: `./${dirName}` });
+    buildPackageReferences({ fullPath, packageJson, scope, tsconfig: packageTSConfig });
+  });
 
   const { packagesPath } = loadRepodogConfig();
   const tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));

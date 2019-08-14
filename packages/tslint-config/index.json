@@ -1,7 +1,8 @@
 {
   "extends": [
     "tslint:latest",
-    "tslint-config-prettier"
+    "tslint-config-prettier",
+    "tslint-plugin-prettier"
   ],
   "rules": {
     "curly": [true, "ignore-same-line"],
@@ -18,6 +19,7 @@
     "object-literal-sort-keys": [true, "locale-compare"],
     "prefer-conditional-expression": false,
     "prefer-function-over-method": true,
+    "prettier": true,
     "return-undefined": false,
     "space-before-function-paren": [true, {
       "anonymous": "always",

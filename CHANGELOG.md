@@ -1,3 +1,9 @@
+#### 0.2.3 (2019-08-15)
+
+##### Bug Fixes
+
+* **new-monorepo:**  correct scaffold path constant ([f42d606c](https://github.com/dylanaubrey/repodog/commit/f42d606ce47bd7a20ea9b2885db53cbb77b367b5))
+
 #### 0.2.2 (2019-08-15)
 
 ##### Documentation Changes

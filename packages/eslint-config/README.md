@@ -13,9 +13,9 @@ yarn add @repodog/eslint-config --dev
 
 ## Usage
 
-```json
-// .eslintrc
-{
-  "extends": "@repodog/eslint-config"
-}
+```javascript
+// .eslintrc.js
+module.exports = {
+  extends: ['@repodog/eslint-config']
+};
 ```

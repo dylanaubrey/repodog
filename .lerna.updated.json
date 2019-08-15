@@ -1,19 +1,19 @@
 [
   {
-    "name": "@repodog/new-monorepo",
+    "name": "@repodog/eslint-config",
     "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/eslint-config"
+  },
+  {
+    "name": "@repodog/new-monorepo",
+    "version": "0.2.0",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
   },
   {
-    "name": "@repodog/new-package",
-    "version": "0.1.1",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-package"
-  },
-  {
     "name": "@repodog/stylelint-config",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/stylelint-config"
   }

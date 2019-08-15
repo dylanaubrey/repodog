@@ -1,3 +1,9 @@
+#### 0.2.1 (2019-08-15)
+
+##### Bug Fixes
+
+* **eslint:**  changing config file to js ([8c5ce17e](https://github.com/dylanaubrey/repodog/commit/8c5ce17e7515e102f200af42cb8c7432f3b1f88e))
+
 ### 0.2.0 (2019-08-15)
 
 ##### New Features

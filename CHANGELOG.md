@@ -1,3 +1,9 @@
+#### 0.2.4 (2019-08-15)
+
+##### Bug Fixes
+
+* **new-monorepo:**  wrong path to write merged package.json ([3c80ee94](https://github.com/dylanaubrey/repodog/commit/3c80ee942198ca7b814fad47edfcaf569259a5b4))
+
 #### 0.2.3 (2019-08-15)
 
 ##### Bug Fixes

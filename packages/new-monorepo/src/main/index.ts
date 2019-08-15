@@ -35,11 +35,13 @@ export default function newMonorepo() {
 
   const { newMonorepo: newMonorepoConfig } = loadRepodogConfig();
   const exclude = get(newMonorepoConfig, ["scaffold", "exclude"], []);
+  const overwrite = get(newMonorepoConfig, ["scaffold", "overwrite"], false);
 
   info("Copying scaffold to new monorepo");
 
   copySync(resolvePathToCwd(SCAFFOLD_DIR_PATH), ".", {
     filter: src => !exclude.find(regexp => regexp.test(src)),
+    overwrite,
   });
 
   const scaffoldFullDirPath = resolvePathToCwd(SCAFFOLD_DIR_PATH);

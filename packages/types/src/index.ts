@@ -10,7 +10,8 @@ export interface NewMonorepoConfig {
 }
 
 export interface NewMonorepoScaffoldConfig {
-  exclude: RegExp[];
+  exclude?: RegExp[];
+  overwrite?: boolean;
 }
 
 export interface RepodogConfig {

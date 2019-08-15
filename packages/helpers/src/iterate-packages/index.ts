@@ -1,8 +1,8 @@
 import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
-import { readdirSync, statSync } from "fs";
 import { isFunction } from "lodash";
 import { resolve } from "path";
 import { info } from "../commands";
+import iterateDirectory from "../iterate-directory";
 import loadRepodogConfig from "../load-repodog-config";
 import resolvePathToCwd from "../resolve-path-to-cwd";
 import { IteratePackagesCallback, IteratePackagesErrorCallback } from "../type-defs";
@@ -13,24 +13,21 @@ export default function iteratePackages(
 ) {
   info("Iterating packages");
   const { packagesPath } = loadRepodogConfig();
-  const fileNames = readdirSync(resolvePathToCwd(packagesPath));
 
-  fileNames.forEach(fileName => {
-    const fullPath = resolvePathToCwd(packagesPath, fileName);
-    const stats = statSync(fullPath);
+  iterateDirectory(resolvePathToCwd(packagesPath), ({ fileName, filePath, stats }) => {
     if (!stats.isDirectory()) return;
 
     try {
-      const packageJson = require(resolve(fullPath, PACKAGE_JSON_FILENAME));
+      const packageJson = require(resolve(filePath, PACKAGE_JSON_FILENAME));
 
       if (!packageJson && isFunction(errorCallback)) {
-        errorCallback({ dirName: fileName, fullPath });
+        errorCallback({ dirName: fileName, fullPath: filePath });
         return;
       }
 
-      callback({ dirName: fileName, packageJson, fullPath });
+      callback({ dirName: fileName, packageJson, fullPath: filePath });
     } catch (error) {
-      if (isFunction(errorCallback)) errorCallback({ dirName: fileName, fullPath });
+      if (isFunction(errorCallback)) errorCallback({ dirName: fileName, fullPath: filePath });
     }
   });
 }

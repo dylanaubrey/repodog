@@ -36,5 +36,20 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "New package",
+      "program": "${workspaceFolder}/packages/new-package/bin/new-package.js",
+      "args": [
+        "--type", "config",
+        "--name", "test",
+        "--desc", "This is a test description."
+      ],
+      "protocol": "inspector",
+      "stopOnEntry": false,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
   ]
 }

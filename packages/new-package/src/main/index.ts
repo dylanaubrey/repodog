@@ -22,7 +22,7 @@ import { NewPackageParams } from "../type-defs";
 
 export default async function newPackage(argv: NewPackageParams) {
   info("Creating new package");
-  const { deps = [], desc, name } = argv;
+  const { deps = [], desc, name, type = "" } = argv;
   const validated = validatePackageName(name);
 
   if (!validated.valid) {
@@ -34,7 +34,7 @@ export default async function newPackage(argv: NewPackageParams) {
   }
 
   const { packagesPath, scaffoldPath } = loadRepodogConfig();
-  const fullScaffoldPath = resolvePathToCwd(scaffoldPath, NEW_PACKAGE_DIR_NAME);
+  const fullScaffoldPath = resolvePathToCwd(scaffoldPath, NEW_PACKAGE_DIR_NAME, type);
   const fullPackagePath = resolvePathToCwd(packagesPath, name);
 
   if (existsSync(fullPackagePath)) {

@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "keywords": [
+    "configuration"
+  ],
+  "peerDependencies": {}
+}

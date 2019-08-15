@@ -1,0 +1,30 @@
+{
+  "name": "@repodog/stylelint-config",
+  "version": "0.1.1",
+  "description": "The RepoDog stylelint-config module.",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "keywords": [
+    "configuration"
+  ],
+  "peerDependencies": {
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-prettier": "^1.1.1"
+  }
+}

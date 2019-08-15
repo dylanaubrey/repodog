@@ -1,3 +1,13 @@
+#### 0.1.1 (2019-08-15)
+
+##### Documentation Changes
+
+* **badges:**  adding license and npm badges to each package ([8a4b5463](https://github.com/dylanaubrey/repodog/commit/8a4b5463eafb96c78e1937ac0eb5f1db7bbc5e30))
+
+##### New Features
+
+* **new-monorepo:**  add ability to exclude scaffold files from copy ([0e46d89a](https://github.com/dylanaubrey/repodog/commit/0e46d89a328fee4d6f8c65211c8ea52a3d7d0251))
+
 ### 0.1.0 (2019-08-14)
 
 ##### Breaking Changes

@@ -16,7 +16,7 @@
 
 • **SCAFFOLD_DIR_PATH**: *"node_modules/@repodog/new-monorepo/scaffold"* = "node_modules/@repodog/new-monorepo/scaffold"
 
-*Defined in [constants/index.ts:1](https://github.com/dylanaubrey/repodog/blob/4c1f645/packages/new-monorepo/src/constants/index.ts#L1)*
+*Defined in [constants/index.ts:1](https://github.com/dylanaubrey/repodog/blob/0e46d89/packages/new-monorepo/src/constants/index.ts#L1)*
 
 ## Functions
 
@@ -24,6 +24,6 @@
 
 ▸ **newMonorepo**(): *void*
 
-*Defined in [main/index.ts:18](https://github.com/dylanaubrey/repodog/blob/4c1f645/packages/new-monorepo/src/main/index.ts#L18)*
+*Defined in [main/index.ts:19](https://github.com/dylanaubrey/repodog/blob/0e46d89/packages/new-monorepo/src/main/index.ts#L19)*
 
 **Returns:** *void*

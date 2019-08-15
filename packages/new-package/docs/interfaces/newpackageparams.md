@@ -22,7 +22,7 @@
 
 • **deps**: *string[]*
 
-*Defined in [type-defs/index.ts:2](https://github.com/dylanaubrey/repodog/blob/4c1f645/packages/new-package/src/type-defs/index.ts#L2)*
+*Defined in [type-defs/index.ts:2](https://github.com/dylanaubrey/repodog/blob/0e46d89/packages/new-package/src/type-defs/index.ts#L2)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **desc**: *string*
 
-*Defined in [type-defs/index.ts:3](https://github.com/dylanaubrey/repodog/blob/4c1f645/packages/new-package/src/type-defs/index.ts#L3)*
+*Defined in [type-defs/index.ts:3](https://github.com/dylanaubrey/repodog/blob/0e46d89/packages/new-package/src/type-defs/index.ts#L3)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **name**: *string*
 
-*Defined in [type-defs/index.ts:4](https://github.com/dylanaubrey/repodog/blob/4c1f645/packages/new-package/src/type-defs/index.ts#L4)*
+*Defined in [type-defs/index.ts:4](https://github.com/dylanaubrey/repodog/blob/0e46d89/packages/new-package/src/type-defs/index.ts#L4)*

@@ -1,5 +1,5 @@
 import buildReferences from "@repodog/build-references";
-import { DEFAULT_SCAFFOLD_PATH, PACKAGE_JSON_FILENAME } from "@repodog/constants";
+import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import {
   error,
   info,
@@ -15,6 +15,7 @@ import { get, merge } from "lodash";
 import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
+import { SCAFFOLD_DIR_PATH } from "../constants";
 
 export default function newMonorepo() {
   info("Creating new monorepo");
@@ -37,11 +38,11 @@ export default function newMonorepo() {
 
   info("Copying scaffold to new monorepo");
 
-  copySync(resolvePathToCwd(DEFAULT_SCAFFOLD_PATH), ".", {
+  copySync(resolvePathToCwd(SCAFFOLD_DIR_PATH), ".", {
     filter: src => !exclude.find(regexp => regexp.test(src)),
   });
 
-  const scaffoldFullDirPath = resolvePathToCwd(DEFAULT_SCAFFOLD_PATH);
+  const scaffoldFullDirPath = resolvePathToCwd(SCAFFOLD_DIR_PATH);
   const scaffoldPackageJson: PackageJson = require(resolve(scaffoldFullDirPath, PACKAGE_JSON_FILENAME));
   const mergedPackageJson = merge(rootPackageJson, scaffoldPackageJson);
   writePackageJson(scaffoldFullDirPath, mergedPackageJson);

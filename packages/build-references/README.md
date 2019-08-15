@@ -16,6 +16,8 @@ yarn add @repodog/build-references --dev
 The command iterates through each package in a monorepo and adds the `references` objects into each package's
 `tsconfig.json` based on the "internal" dependencies in a package's `package.json`.
 
+The command can be configured through the `repodog.config.js` configuration file.
+
 ```json
 // package.json
 {
@@ -23,6 +25,15 @@ The command iterates through each package in a monorepo and adds the `references
     "build-references": "build-references"
   }
 }
+```
+
+```javascript
+// repodog.config.js
+module.exports = {
+  buildReferences: {
+    global: ['@repodog/types'],
+  },
+};
 ```
 
 ```shell

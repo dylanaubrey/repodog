@@ -3,6 +3,7 @@ import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import {
   error,
   info,
+  loadRepodogConfig,
   loadRootPackageJson,
   resolvePathToCwd,
   run,
@@ -10,7 +11,7 @@ import {
   writePackageJson,
 } from "@repodog/helpers";
 import { copySync } from "fs-extra";
-import { merge } from "lodash";
+import { get, merge } from "lodash";
 import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
@@ -31,8 +32,15 @@ export default function newMonorepo() {
     return error("Repodog expected the project package.json to have a valid version.");
   }
 
+  const { newMonorepo: newMonorepoConfig } = loadRepodogConfig();
+  const exclude = get(newMonorepoConfig, ["scaffold", "exclude"], []);
+
   info("Copying scaffold to new monorepo");
-  copySync(resolvePathToCwd(SCAFFOLD_DIR_PATH), ".");
+
+  copySync(resolvePathToCwd(SCAFFOLD_DIR_PATH), ".", {
+    filter: src => !exclude.find(regexp => regexp.test(src)),
+  });
+
   const scaffoldFullDirPath = resolvePathToCwd(SCAFFOLD_DIR_PATH);
   const scaffoldPackageJson: PackageJson = require(resolve(scaffoldFullDirPath, PACKAGE_JSON_FILENAME));
   const mergedPackageJson = merge(rootPackageJson, scaffoldPackageJson);

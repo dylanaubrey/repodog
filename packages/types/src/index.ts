@@ -5,8 +5,17 @@ export interface BuildReferencesConfig {
   global?: string[];
 }
 
+export interface NewMonorepoConfig {
+  scaffold: NewMonorepoScaffoldConfig;
+}
+
+export interface NewMonorepoScaffoldConfig {
+  exclude: RegExp[];
+}
+
 export interface RepodogConfig {
   buildReferences?: BuildReferencesConfig;
+  newMonorepo?: NewMonorepoConfig;
   packagesPath: string;
   scaffoldPath: string;
 }

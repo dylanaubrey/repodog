@@ -1,6 +1,6 @@
 {
   "name": "@repodog/rollup-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The RepoDog rollup-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

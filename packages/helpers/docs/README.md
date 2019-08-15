@@ -11,6 +11,7 @@
 ### Type aliases
 
 * [IterateDependenciesCallback](README.md#iteratedependenciescallback)
+* [IterateDirectoryCallback](README.md#iteratedirectorycallback)
 * [IteratePackagesCallback](README.md#iteratepackagescallback)
 * [IteratePackagesErrorCallback](README.md#iteratepackageserrorcallback)
 
@@ -27,6 +28,7 @@
 * [exec](README.md#exec)
 * [info](README.md#info)
 * [iterateDependencies](README.md#iteratedependencies)
+* [iterateDirectory](README.md#iteratedirectory)
 * [iteratePackages](README.md#iteratepackages)
 * [loadPackageJson](README.md#loadpackagejson)
 * [loadRepodogConfig](README.md#loadrepodogconfig)
@@ -52,7 +54,7 @@
 
 Ƭ **IterateDependenciesCallback**: *function*
 
-*Defined in [type-defs/index.ts:3](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/type-defs/index.ts#L3)*
+*Defined in [type-defs/index.ts:4](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/type-defs/index.ts#L4)*
 
 #### Type declaration:
 
@@ -69,11 +71,33 @@ Name | Type |
 
 ___
 
+###  IterateDirectoryCallback
+
+Ƭ **IterateDirectoryCallback**: *function*
+
+*Defined in [type-defs/index.ts:6](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/type-defs/index.ts#L6)*
+
+#### Type declaration:
+
+▸ (`params`: object): *void*
+
+**Parameters:**
+
+▪ **params**: *object*
+
+Name | Type |
+------ | ------ |
+`fileName` | string |
+`filePath` | string |
+`stats` | `Stats` |
+
+___
+
 ###  IteratePackagesCallback
 
 Ƭ **IteratePackagesCallback**: *function*
 
-*Defined in [type-defs/index.ts:5](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/type-defs/index.ts#L5)*
+*Defined in [type-defs/index.ts:8](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/type-defs/index.ts#L8)*
 
 #### Type declaration:
 
@@ -95,7 +119,7 @@ ___
 
 Ƭ **IteratePackagesErrorCallback**: *function*
 
-*Defined in [type-defs/index.ts:7](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/type-defs/index.ts#L7)*
+*Defined in [type-defs/index.ts:10](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/type-defs/index.ts#L10)*
 
 #### Type declaration:
 
@@ -116,7 +140,7 @@ Name | Type |
 
 • **packageJson**: *`PackageJson`*
 
-*Defined in [load-root-package-json/index.ts:6](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-root-package-json/index.ts#L6)*
+*Defined in [load-root-package-json/index.ts:6](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-root-package-json/index.ts#L6)*
 
 ___
 
@@ -124,7 +148,7 @@ ___
 
 • **packageJsons**: *`Map<string, PackageJson>`* =  new Map()
 
-*Defined in [load-write-package-json/index.ts:7](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-write-package-json/index.ts#L7)*
+*Defined in [load-write-package-json/index.ts:7](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-write-package-json/index.ts#L7)*
 
 ___
 
@@ -132,7 +156,7 @@ ___
 
 • **repodogConfig**: *`RepodogConfig`*
 
-*Defined in [load-repodog-config/index.ts:6](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-repodog-config/index.ts#L6)*
+*Defined in [load-repodog-config/index.ts:6](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-repodog-config/index.ts#L6)*
 
 ___
 
@@ -140,7 +164,7 @@ ___
 
 • **tsConfigs**: *`Map<string, TSConfig>`* =  new Map()
 
-*Defined in [load-write-tsconfig/index.ts:7](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-write-tsconfig/index.ts#L7)*
+*Defined in [load-write-tsconfig/index.ts:7](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-write-tsconfig/index.ts#L7)*
 
 ## Functions
 
@@ -148,7 +172,7 @@ ___
 
 ▸ **error**(`message`: string): *void*
 
-*Defined in [commands/index.ts:5](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/commands/index.ts#L5)*
+*Defined in [commands/index.ts:5](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/commands/index.ts#L5)*
 
 **Parameters:**
 
@@ -164,7 +188,7 @@ ___
 
 ▸ **exec**(`command`: string, `options`: `ExecOptions`): *void*
 
-*Defined in [commands/index.ts:10](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/commands/index.ts#L10)*
+*Defined in [commands/index.ts:10](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/commands/index.ts#L10)*
 
 **Parameters:**
 
@@ -181,7 +205,7 @@ ___
 
 ▸ **info**(`message`: string): *void*
 
-*Defined in [commands/index.ts:14](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/commands/index.ts#L14)*
+*Defined in [commands/index.ts:14](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/commands/index.ts#L14)*
 
 **Parameters:**
 
@@ -197,7 +221,7 @@ ___
 
 ▸ **iterateDependencies**(`dependencies`: `Dependency`, `callback`: [IterateDependenciesCallback](README.md#iteratedependenciescallback)): *void*
 
-*Defined in [iterate-dependencies/index.ts:4](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/iterate-dependencies/index.ts#L4)*
+*Defined in [iterate-dependencies/index.ts:4](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/iterate-dependencies/index.ts#L4)*
 
 **Parameters:**
 
@@ -210,11 +234,28 @@ Name | Type |
 
 ___
 
+###  iterateDirectory
+
+▸ **iterateDirectory**(`fullPath`: string, `callback`: [IterateDirectoryCallback](README.md#iteratedirectorycallback)): *void*
+
+*Defined in [iterate-directory/index.ts:6](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/iterate-directory/index.ts#L6)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`fullPath` | string |
+`callback` | [IterateDirectoryCallback](README.md#iteratedirectorycallback) |
+
+**Returns:** *void*
+
+___
+
 ###  iteratePackages
 
 ▸ **iteratePackages**(`callback`: [IteratePackagesCallback](README.md#iteratepackagescallback), `errorCallback?`: [IteratePackagesErrorCallback](README.md#iteratepackageserrorcallback)): *void*
 
-*Defined in [iterate-packages/index.ts:10](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/iterate-packages/index.ts#L10)*
+*Defined in [iterate-packages/index.ts:10](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/iterate-packages/index.ts#L10)*
 
 **Parameters:**
 
@@ -231,7 +272,7 @@ ___
 
 ▸ **loadPackageJson**(`path`: string): *undefined | object & `NonStandardEntryPoints` & `TypeScriptConfiguration` & `YarnConfiguration` & `JSPMConfiguration` & object*
 
-*Defined in [load-write-package-json/index.ts:9](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-write-package-json/index.ts#L9)*
+*Defined in [load-write-package-json/index.ts:9](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-write-package-json/index.ts#L9)*
 
 **Parameters:**
 
@@ -247,7 +288,7 @@ ___
 
 ▸ **loadRepodogConfig**(): *`RepodogConfig`*
 
-*Defined in [load-repodog-config/index.ts:13](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-repodog-config/index.ts#L13)*
+*Defined in [load-repodog-config/index.ts:13](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-repodog-config/index.ts#L13)*
 
 **Returns:** *`RepodogConfig`*
 
@@ -257,7 +298,7 @@ ___
 
 ▸ **loadRootPackageJson**(): *`PackageJson` | undefined*
 
-*Defined in [load-root-package-json/index.ts:8](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-root-package-json/index.ts#L8)*
+*Defined in [load-root-package-json/index.ts:8](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-root-package-json/index.ts#L8)*
 
 **Returns:** *`PackageJson` | undefined*
 
@@ -267,7 +308,7 @@ ___
 
 ▸ **loadTSConfig**(`fullPath`: string): *undefined | `TSConfig`*
 
-*Defined in [load-write-tsconfig/index.ts:9](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-write-tsconfig/index.ts#L9)*
+*Defined in [load-write-tsconfig/index.ts:9](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-write-tsconfig/index.ts#L9)*
 
 **Parameters:**
 
@@ -283,7 +324,7 @@ ___
 
 ▸ **resolvePathToCwd**(...`path`: keyof string[]): *string*
 
-*Defined in [resolve-path-to-cwd/index.ts:3](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/resolve-path-to-cwd/index.ts#L3)*
+*Defined in [resolve-path-to-cwd/index.ts:3](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/resolve-path-to-cwd/index.ts#L3)*
 
 **Parameters:**
 
@@ -299,7 +340,7 @@ ___
 
 ▸ **run**(`command`: string, `options`: `ExecOptions`): *void*
 
-*Defined in [commands/index.ts:18](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/commands/index.ts#L18)*
+*Defined in [commands/index.ts:18](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/commands/index.ts#L18)*
 
 **Parameters:**
 
@@ -316,7 +357,7 @@ ___
 
 ▸ **syncDependencyVersions**(`__namedParameters`: object): *object*
 
-*Defined in [sync-dependency-versions/index.ts:31](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/sync-dependency-versions/index.ts#L31)*
+*Defined in [sync-dependency-versions/index.ts:31](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/sync-dependency-versions/index.ts#L31)*
 
 **Parameters:**
 
@@ -340,7 +381,7 @@ ___
 
 ▸ **syncVersions**(`name`: string, `dependencies`: `StringObjectMap`): *`StringObjectMap`*
 
-*Defined in [sync-dependency-versions/index.ts:8](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/sync-dependency-versions/index.ts#L8)*
+*Defined in [sync-dependency-versions/index.ts:8](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/sync-dependency-versions/index.ts#L8)*
 
 **Parameters:**
 
@@ -357,7 +398,7 @@ ___
 
 ▸ **validatePackageName**(`name`: string): *[ValidatePackageNameResult](interfaces/validatepackagenameresult.md)*
 
-*Defined in [validate-package-names/index.ts:5](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/validate-package-names/index.ts#L5)*
+*Defined in [validate-package-names/index.ts:5](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/validate-package-names/index.ts#L5)*
 
 **Parameters:**
 
@@ -373,7 +414,7 @@ ___
 
 ▸ **validatePackageNames**(`names`: keyof string[]): *[ValidatePackageNamesResult](interfaces/validatepackagenamesresult.md)*
 
-*Defined in [validate-package-names/index.ts:11](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/validate-package-names/index.ts#L11)*
+*Defined in [validate-package-names/index.ts:11](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/validate-package-names/index.ts#L11)*
 
 **Parameters:**
 
@@ -389,7 +430,7 @@ ___
 
 ▸ **warn**(`message`: string): *void*
 
-*Defined in [commands/index.ts:22](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/commands/index.ts#L22)*
+*Defined in [commands/index.ts:22](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/commands/index.ts#L22)*
 
 **Parameters:**
 
@@ -405,7 +446,7 @@ ___
 
 ▸ **writePackageJson**(`fullPath`: string, `config`: `PackageJson`): *void*
 
-*Defined in [load-write-package-json/index.ts:24](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-write-package-json/index.ts#L24)*
+*Defined in [load-write-package-json/index.ts:24](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-write-package-json/index.ts#L24)*
 
 **Parameters:**
 
@@ -422,7 +463,7 @@ ___
 
 ▸ **writeTSConfig**(`fullPath`: string, `config`: `TSConfig`): *void*
 
-*Defined in [load-write-tsconfig/index.ts:24](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-write-tsconfig/index.ts#L24)*
+*Defined in [load-write-tsconfig/index.ts:24](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-write-tsconfig/index.ts#L24)*
 
 **Parameters:**
 
@@ -439,16 +480,16 @@ Name | Type |
 
 ### ▪ **defaultRepodogConfig**: *object*
 
-*Defined in [load-repodog-config/index.ts:8](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-repodog-config/index.ts#L8)*
+*Defined in [load-repodog-config/index.ts:8](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-repodog-config/index.ts#L8)*
 
 ###  packagesPath
 
 • **packagesPath**: *string* =  DEFAULT_PACKAGES_PATH
 
-*Defined in [load-repodog-config/index.ts:9](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-repodog-config/index.ts#L9)*
+*Defined in [load-repodog-config/index.ts:9](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-repodog-config/index.ts#L9)*
 
 ###  scaffoldPath
 
 • **scaffoldPath**: *string* =  DEFAULT_SCAFFOLD_PATH
 
-*Defined in [load-repodog-config/index.ts:10](https://github.com/dylanaubrey/repodog/blob/fe27fae/packages/helpers/src/load-repodog-config/index.ts#L10)*
+*Defined in [load-repodog-config/index.ts:10](https://github.com/dylanaubrey/repodog/blob/628ce48/packages/helpers/src/load-repodog-config/index.ts#L10)*

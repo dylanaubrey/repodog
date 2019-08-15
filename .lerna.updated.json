@@ -1,14 +1,56 @@
 [
   {
+    "name": "@repodog/babel-config",
+    "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/babel-config"
+  },
+  {
+    "name": "@repodog/build-references",
+    "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/build-references"
+  },
+  {
+    "name": "@repodog/eslint-config",
+    "version": "0.1.2",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/eslint-config"
+  },
+  {
+    "name": "@repodog/helpers",
+    "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/helpers"
+  },
+  {
+    "name": "@repodog/jest-config",
+    "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/jest-config"
+  },
+  {
     "name": "@repodog/new-monorepo",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
   },
   {
-    "name": "@repodog/types",
+    "name": "@repodog/new-package",
+    "version": "0.2.0",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-package"
+  },
+  {
+    "name": "@repodog/rollup-config",
     "version": "0.1.1",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/types"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/rollup-config"
+  },
+  {
+    "name": "@repodog/stylelint-config",
+    "version": "0.2.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/stylelint-config"
   }
 ]

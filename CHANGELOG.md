@@ -1,3 +1,15 @@
+#### 0.2.6 (2019-08-15)
+
+##### Bug Fixes
+
+* **linting:**  update linting of various packages ([628ce483](https://github.com/dylanaubrey/repodog/commit/628ce483ea0adcdf8a510769dbfbb8e88a328f62))
+* **new-monorepo:**  fix typo in dependency name ([d42aba65](https://github.com/dylanaubrey/repodog/commit/d42aba65f0602bdeff123276a3e0e34b36c9c3f5))
+* **stylelint-config:**  add missing dependency ([446038cf](https://github.com/dylanaubrey/repodog/commit/446038cf1dfb108f4683e13adb7961f9e157d903))
+
+##### Refactors
+
+* **helpers:**  create iterateDirectory helper and update types ([ebb38791](https://github.com/dylanaubrey/repodog/commit/ebb387916bf2d69b252eeaa04a9dc9c471d0e8bf))
+
 #### 0.2.5 (2019-08-15)
 
 ##### New Features

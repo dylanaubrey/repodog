@@ -1,6 +1,6 @@
 const { outputFileSync } = require('fs-extra');
 const { basename, resolve } = require('path');
-const { plugin as analyzer } = require('rollup-plugin-analyzer');
+const { plugin: analyzer } = require('rollup-plugin-analyzer');
 const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
 const json = require('rollup-plugin-json');
@@ -56,9 +56,7 @@ const devConfig = {
     sourcemap: true,
     sourcemapPathTransform,
   },
-  plugins: [
-    ...defaultPlugins,
-  ],
+  plugins: [...defaultPlugins],
 };
 
 const prodConfig = {
@@ -70,11 +68,7 @@ const prodConfig = {
     sourcemap: true,
     sourcemapPathTransform,
   },
-  plugins: [
-    ...defaultPlugins,
-    terser(),
-    analyzer({ writeTo }),
-  ],
+  plugins: [...defaultPlugins, terser(), analyzer({ writeTo })],
 };
 
 const config = [];

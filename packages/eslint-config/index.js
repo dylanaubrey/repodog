@@ -17,4 +17,9 @@ module.exports = {
     'sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
     'sort-vars': ['error', { ignoreCase: false }],
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };

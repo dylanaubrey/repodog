@@ -1,3 +1,13 @@
+#### 0.2.2 (2019-08-15)
+
+##### Documentation Changes
+
+* **readme:**  add stylelint config link ([f1b22923](https://github.com/dylanaubrey/repodog/commit/f1b229237db1e5d0a86c6206fc8fadb3e81091cd))
+
+##### Bug Fixes
+
+* **new-monorepo:**  add missing import for constant ([02843716](https://github.com/dylanaubrey/repodog/commit/028437164fa395ec014fdc286aed2f1ea85f8d4e))
+
 #### 0.2.1 (2019-08-15)
 
 ##### Bug Fixes

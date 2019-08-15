@@ -1,5 +1,5 @@
 import buildReferences from "@repodog/build-references";
-import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
+import { DEFAULT_SCAFFOLD_PATH, PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import {
   error,
   info,
@@ -37,11 +37,11 @@ export default function newMonorepo() {
 
   info("Copying scaffold to new monorepo");
 
-  copySync(resolvePathToCwd(SCAFFOLD_DIR_PATH), ".", {
+  copySync(resolvePathToCwd(DEFAULT_SCAFFOLD_PATH), ".", {
     filter: src => !exclude.find(regexp => regexp.test(src)),
   });
 
-  const scaffoldFullDirPath = resolvePathToCwd(SCAFFOLD_DIR_PATH);
+  const scaffoldFullDirPath = resolvePathToCwd(DEFAULT_SCAFFOLD_PATH);
   const scaffoldPackageJson: PackageJson = require(resolve(scaffoldFullDirPath, PACKAGE_JSON_FILENAME));
   const mergedPackageJson = merge(rootPackageJson, scaffoldPackageJson);
   writePackageJson(scaffoldFullDirPath, mergedPackageJson);

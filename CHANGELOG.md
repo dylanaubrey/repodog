@@ -1,3 +1,9 @@
+#### 0.2.5 (2019-08-15)
+
+##### New Features
+
+* **new-monorepo:**  add overwrite flag for scaffold files ([fe27fae5](https://github.com/dylanaubrey/repodog/commit/fe27fae5be3610e5db2a415b732817453446c39e))
+
 #### 0.2.4 (2019-08-15)
 
 ##### Bug Fixes

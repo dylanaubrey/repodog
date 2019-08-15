@@ -53,7 +53,7 @@
     "@repodog/rollup-config": "^0.0.3",
     "@repodog/ts-config": "^0.0.3",
     "@repodog/tslint-config": "^0.0.3",
-    "@repodog/typdoc-config": "^0.0.3"
+    "@repodog/typedoc-config": "^0.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

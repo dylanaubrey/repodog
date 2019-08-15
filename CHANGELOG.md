@@ -1,3 +1,9 @@
+### 0.2.0 (2019-08-15)
+
+##### New Features
+
+* **stylelint:**  adding stylelint config module ([74a341e4](https://github.com/dylanaubrey/repodog/commit/74a341e4bf80c74b12917264a108da269cbbd53b))
+
 #### 0.1.1 (2019-08-15)
 
 ##### Documentation Changes

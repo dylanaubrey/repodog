@@ -16,7 +16,7 @@ const peerDependencies = Object.keys(packageJson.peerDependencies);
 const dependencies = Object.keys(packageJson.dependencies);
 const externalModuleNames = [...dependencies, ...peerDependencies, ...devDependencies];
 
-function external(id: string) {
+function external(id) {
   return externalModuleNames.some(name => id.startsWith(name));
 }
 
@@ -35,13 +35,13 @@ const defaultPlugins = [
   }),
 ];
 
-function writeTo(analysisString: string) {
+function writeTo(analysisString) {
   outputFileSync(`${dirRoot}/lib/browser/production.analysis.txt`, analysisString);
 }
 
 const dirName = basename(dirRoot);
 
-function sourcemapPathTransform(sourcePath: string) {
+function sourcemapPathTransform(sourcePath) {
   if (/node_modules/.test(sourcePath)) return sourcePath;
   return sourcePath.replace('../../src/', `../${dirName}/src/`);
 }
@@ -70,12 +70,4 @@ const prodConfig = {
   plugins: [...defaultPlugins, terser(), analyzer({ writeTo })],
 };
 
-let config;
-
-if (process.env.NODE_ENV === 'development') {
-  config = devConfig;
-} else {
-  config = prodConfig;
-}
-
-module.exports = config;
+module.exports = process.env.NODE_ENV === 'development' ? devConfig : prodConfig;

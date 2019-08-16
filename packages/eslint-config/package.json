@@ -1,6 +1,6 @@
 {
   "name": "@repodog/eslint-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "The RepoDog eslint-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

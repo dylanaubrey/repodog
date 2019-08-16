@@ -1,3 +1,9 @@
+#### 0.2.8 (2019-08-16)
+
+##### Bug Fixes
+
+* **eslint-config:**  update rules ([0c392870](https://github.com/dylanaubrey/repodog/commit/0c39287086248c9f4babb3f5a1e5c89a9cd5abd8))
+
 #### 0.2.7 (2019-08-16)
 
 ##### New Features

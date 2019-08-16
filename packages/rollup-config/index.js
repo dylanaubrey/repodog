@@ -9,7 +9,6 @@ const { terser } = require('rollup-plugin-terser');
 const rootPackageJson = require('./package.json'); // eslint-disable-line import/no-unresolved
 
 const dirRoot = resolve(process.cwd());
-
 const packageJson = require(`${dirRoot}/package.json`); // eslint-disable-line import/no-dynamic-require
 
 const devDependencies = Object.keys(rootPackageJson.devDependencies);
@@ -71,12 +70,12 @@ const prodConfig = {
   plugins: [...defaultPlugins, terser(), analyzer({ writeTo })],
 };
 
-const config = [];
+let config;
 
 if (process.env.NODE_ENV === 'development') {
-  config.push(devConfig);
+  config = devConfig;
 } else {
-  config.push(prodConfig);
+  config = prodConfig;
 }
 
 module.exports = config;

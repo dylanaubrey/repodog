@@ -1,3 +1,9 @@
+#### 0.2.9 (2019-08-16)
+
+##### Bug Fixes
+
+* **eslint,lerna:**  update eslint version and add to lerna config ([28b997e6](https://github.com/dylanaubrey/repodog/commit/28b997e664a25acad0a15ccf1593d48caa709e72))
+
 #### 0.2.8 (2019-08-16)
 
 ##### Bug Fixes

@@ -21,7 +21,7 @@
 
 • **errors**: *string[]*
 
-*Defined in [type-defs/index.ts:19](https://github.com/dylanaubrey/repodog/blob/0c39287/packages/helpers/src/type-defs/index.ts#L19)*
+*Defined in [type-defs/index.ts:19](https://github.com/dylanaubrey/repodog/blob/28b997e/packages/helpers/src/type-defs/index.ts#L19)*
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 • **valid**: *boolean*
 
-*Defined in [type-defs/index.ts:20](https://github.com/dylanaubrey/repodog/blob/0c39287/packages/helpers/src/type-defs/index.ts#L20)*
+*Defined in [type-defs/index.ts:20](https://github.com/dylanaubrey/repodog/blob/28b997e/packages/helpers/src/type-defs/index.ts#L20)*

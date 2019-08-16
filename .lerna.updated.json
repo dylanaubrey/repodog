@@ -1,8 +1,20 @@
 [
   {
     "name": "@repodog/eslint-config",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/eslint-config"
+  },
+  {
+    "name": "@repodog/lerna-config",
+    "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/lerna-config"
+  },
+  {
+    "name": "@repodog/new-monorepo",
+    "version": "0.2.7",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
   }
 ]

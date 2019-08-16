@@ -1,3 +1,13 @@
+#### 0.2.7 (2019-08-16)
+
+##### New Features
+
+* **babel-config:**  add react preset ([ce4f9d96](https://github.com/dylanaubrey/repodog/commit/ce4f9d96a1da0fd7c45eb4bbf8e99eea027f856e))
+
+##### Bug Fixes
+
+* **eslint-config:**  remove unnecessary rule reset ([7f4d3718](https://github.com/dylanaubrey/repodog/commit/7f4d371888a0f95560764fa04c80466e44a932f6))
+
 #### 0.2.6 (2019-08-15)
 
 ##### Bug Fixes

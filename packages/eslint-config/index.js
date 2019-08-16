@@ -10,6 +10,7 @@ module.exports = {
     'max-len': [2, 120, 4],
     'no-param-reassign': ['error', { props: false }],
     'no-underscore-dangle': 0,
+    'no-use-before-define': ['error', { functions: false }],
     'one-var': ['error', { initialized: 'never' }],
     'one-var-declaration-per-line': ['error', 'initializations'],
     'prettier/prettier': ['error'],

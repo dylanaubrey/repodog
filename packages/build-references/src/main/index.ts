@@ -68,7 +68,6 @@ export default function buildProjectReferences() {
 
   const { buildReferences, packagesPath } = loadRepodogConfig();
   const globalRefs = get(buildReferences, ["global"], []);
-
   const references: TSConfigReference[] = [];
 
   iteratePackages(({ dirName, fullPath, packageJson }) => {

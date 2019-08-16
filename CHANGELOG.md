@@ -1,3 +1,11 @@
+#### 0.2.10 (2019-08-16)
+
+##### Bug Fixes
+
+* **rollup-config:**
+  *  removing types from js file ([e17624c9](https://github.com/dylanaubrey/repodog/commit/e17624c991a7a881f7fe2d29dda0c19190b24a2f))
+  *  return object rather than array ([b7c3ad9e](https://github.com/dylanaubrey/repodog/commit/b7c3ad9e401f4ea1c9b1396bb5943f3eaac51e59))
+
 #### 0.2.9 (2019-08-16)
 
 ##### Bug Fixes

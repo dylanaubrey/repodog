@@ -7,7 +7,6 @@ module.exports = {
   plugins: ['eslint-plugin-prettier'],
   rules: {
     'import/no-extraneous-dependencies': 0,
-    'linebreak-style': 0,
     'max-len': [2, 120, 4],
     'no-param-reassign': ['error', { props: false }],
     'no-underscore-dangle': 0,

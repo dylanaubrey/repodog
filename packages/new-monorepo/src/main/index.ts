@@ -46,7 +46,7 @@ export default function newMonorepo() {
 
   const scaffoldFullDirPath = resolvePathToCwd(SCAFFOLD_DIR_PATH);
   const scaffoldPackageJson: PackageJson = require(resolve(scaffoldFullDirPath, PACKAGE_JSON_FILENAME));
-  const mergedPackageJson = merge(rootPackageJson, scaffoldPackageJson);
+  const mergedPackageJson = merge(scaffoldPackageJson, rootPackageJson);
   writePackageJson(".", mergedPackageJson);
   run("init");
   buildReferences();

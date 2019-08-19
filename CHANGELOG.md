@@ -1,3 +1,10 @@
+#### 0.2.11 (2019-08-19)
+
+##### Bug Fixes
+
+* **new-monorepo:**  change merge order for root package json ([e26cf876](https://github.com/dylanaubrey/repodog/commit/e26cf876e525cba74a894220f56cc7c9933c7c14))
+* **rollup-config:**  change root package json import path ([1bfd2b2a](https://github.com/dylanaubrey/repodog/commit/1bfd2b2a443b20f4ee5667e97b0be9de3cb2ac03))
+
 #### 0.2.10 (2019-08-16)
 
 ##### Bug Fixes

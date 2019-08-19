@@ -6,10 +6,10 @@ const commonjs = require('rollup-plugin-commonjs');
 const json = require('rollup-plugin-json');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const { terser } = require('rollup-plugin-terser');
-const rootPackageJson = require('./package.json'); // eslint-disable-line import/no-unresolved
+const rootPackageJson = require('../../../package.json'); // eslint-disable-line import/no-unresolved
 
-const dirRoot = resolve(process.cwd());
-const packageJson = require(`${dirRoot}/package.json`); // eslint-disable-line import/no-dynamic-require
+const packageDir = resolve(process.cwd());
+const packageJson = require(`${packageDir}/package.json`); // eslint-disable-line import/no-dynamic-require
 
 const devDependencies = Object.keys(rootPackageJson.devDependencies);
 const peerDependencies = Object.keys(packageJson.peerDependencies);
@@ -36,10 +36,10 @@ const defaultPlugins = [
 ];
 
 function writeTo(analysisString) {
-  outputFileSync(`${dirRoot}/lib/browser/production.analysis.txt`, analysisString);
+  outputFileSync(`${packageDir}/lib/browser/production.analysis.txt`, analysisString);
 }
 
-const dirName = basename(dirRoot);
+const dirName = basename(packageDir);
 
 function sourcemapPathTransform(sourcePath) {
   if (/node_modules/.test(sourcePath)) return sourcePath;
@@ -48,9 +48,9 @@ function sourcemapPathTransform(sourcePath) {
 
 const devConfig = {
   external,
-  input: `${dirRoot}/src/index.ts`,
+  input: `${packageDir}/src/index.ts`,
   output: {
-    file: `${dirRoot}/lib/browser/index.js`,
+    file: `${packageDir}/lib/browser/index.js`,
     format: 'esm',
     sourcemap: true,
     sourcemapPathTransform,
@@ -60,9 +60,9 @@ const devConfig = {
 
 const prodConfig = {
   external,
-  input: `${dirRoot}/src/index.ts`,
+  input: `${packageDir}/src/index.ts`,
   output: {
-    file: `${dirRoot}/lib/browser/index.js`,
+    file: `${packageDir}/lib/browser/index.js`,
     format: 'esm',
     sourcemap: true,
     sourcemapPathTransform,

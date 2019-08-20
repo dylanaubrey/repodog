@@ -1,5 +1,6 @@
 const { outputFileSync } = require('fs-extra');
 const { basename, resolve } = require('path');
+const glob = require('glob');
 const { plugin: analyzer } = require('rollup-plugin-analyzer');
 const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
@@ -10,6 +11,8 @@ const rootPackageJson = require('../../../package.json'); // eslint-disable-line
 
 const packageDir = resolve(process.cwd());
 const packageJson = require(`${packageDir}/package.json`); // eslint-disable-line import/no-dynamic-require
+
+const inputFile = glob.sync(`${packageDir}/src/index.+(js|ts)`)[0];
 
 const devDependencies = Object.keys(rootPackageJson.devDependencies);
 const peerDependencies = Object.keys(packageJson.peerDependencies);
@@ -48,7 +51,7 @@ function sourcemapPathTransform(sourcePath) {
 
 const devConfig = {
   external,
-  input: `${packageDir}/src/index.ts`,
+  input: inputFile,
   output: {
     file: `${packageDir}/lib/browser/index.js`,
     format: 'esm',
@@ -60,7 +63,7 @@ const devConfig = {
 
 const prodConfig = {
   external,
-  input: `${packageDir}/src/index.ts`,
+  input: inputFile,
   output: {
     file: `${packageDir}/lib/browser/index.js`,
     format: 'esm',

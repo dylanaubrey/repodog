@@ -9,9 +9,11 @@ export interface NewMonorepoConfig {
   scaffold: NewMonorepoScaffoldConfig;
 }
 
+export type CopyBehaviour = "overwrite" | "duplicate" | "fail";
+
 export interface NewMonorepoScaffoldConfig {
+  copyBehaviour?: CopyBehaviour;
   exclude?: RegExp[];
-  overwrite?: boolean;
 }
 
 export interface RepodogConfig {

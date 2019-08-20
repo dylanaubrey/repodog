@@ -24,6 +24,7 @@ yarn add @repodog/<package>
 
 * [@repodog/babel-config](packages/babel-config)
 * [@repodog/build-references](packages/build-references)
+* [@repodog/commitlint-config](packages/commitlint-config)
 * [@repodog/constants](packages/constants)
 * [@repodog/eslint-config](packages/eslint-config)
 * [@repodog/helpers](packages/helpers)

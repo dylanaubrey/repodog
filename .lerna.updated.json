@@ -1,14 +1,32 @@
 [
   {
     "name": "@repodog/new-monorepo",
-    "version": "0.2.8",
+    "version": "0.2.9",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
   },
   {
     "name": "@repodog/rollup-config",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/rollup-config"
+  },
+  {
+    "name": "@repodog/stylelint-config",
+    "version": "0.2.2",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/stylelint-config"
+  },
+  {
+    "name": "@repodog/ts-config",
+    "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/ts-config"
+  },
+  {
+    "name": "@repodog/types",
+    "version": "0.1.2",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/types"
   }
 ]

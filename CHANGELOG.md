@@ -1,3 +1,9 @@
+#### 0.2.12 (2019-08-20)
+
+##### Bug Fixes
+
+* **rollup-config,ts-config:**  minor bug fixes ([4a1e1b5f](https://github.com/dylanaubrey/repodog/commit/4a1e1b5faad0a299dabe205942293ebd985676b3))
+
 #### 0.2.11 (2019-08-19)
 
 ##### Bug Fixes

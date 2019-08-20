@@ -1,3 +1,9 @@
+#### 0.2.13 (2019-08-20)
+
+##### Bug Fixes
+
+* **rollup, babel:**  resolve minor bugs ([0a1bd96a](https://github.com/dylanaubrey/repodog/commit/0a1bd96ae8161e5161f61bf22f937f5840e6f40d))
+
 #### 0.2.12 (2019-08-20)
 
 ##### Bug Fixes

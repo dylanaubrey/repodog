@@ -9,7 +9,7 @@ module.exports = api => {
   const modules = env === 'main' || env === 'test' ? 'commonjs' : false;
   let targets;
 
-  if (env === 'web') {
+  if (env === 'browser') {
     targets = { browsers: 'last 2 versions' };
   } else {
     targets = { node: '10' };

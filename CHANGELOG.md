@@ -1,3 +1,9 @@
+#### 0.2.14 (2019-08-21)
+
+##### New Features
+
+* **eslint:**  add new rules to config ([b44d719c](https://github.com/dylanaubrey/repodog/commit/b44d719c8bf426b95a0bde800ab90b54ab065f9c))
+
 #### 0.2.13 (2019-08-20)
 
 ##### Bug Fixes

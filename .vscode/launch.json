@@ -51,5 +51,16 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "New monorepo",
+      "program": "${workspaceFolder}/packages/new-monorepo/bin/new-monorepo.js",
+      "args": [],
+      "protocol": "inspector",
+      "stopOnEntry": false,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
   ]
 }

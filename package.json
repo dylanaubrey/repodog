@@ -1,9 +1,17 @@
 {
   "name": "repodog",
   "version": "0.2.15",
+  "private": true,
   "description": "An opinionated command line utility for managing a repository.",
-  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
-  "license": "MIT",
+  "keywords": [
+    "cli",
+    "command line",
+    "lerna",
+    "monorepos",
+    "releases",
+    "repositories",
+    "yarn"
+  ],
   "homepage": "https://github.com/dylanaubrey/repodog",
   "bugs": {
     "url": "https://github.com/dylanaubrey/repodog/issues"
@@ -12,19 +20,8 @@
     "type": "git",
     "url": "https://github.com/dylanaubrey/repodog"
   },
-  "engines": {
-    "node": "^10.16.0"
-  },
-  "keywords": [
-    "command line",
-    "cli",
-    "lerna",
-    "yarn",
-    "releases",
-    "monorepos",
-    "repositories"
-  ],
-  "private": true,
+  "license": "MIT",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "workspaces": [
     "packages/*"
   ],
@@ -38,6 +35,7 @@
     "clean:packages": "lerna exec --parallel -- del-cli ./node_modules",
     "clean:repo": "del-cli ./node_modules",
     "compile": "lerna run compile --stream",
+    "compile-watch": "lerna run compile-watch --parallel",
     "compile:main": "lerna run compile:main --stream",
     "compile:module": "lerna run compile:module --stream",
     "compile:types": "lerna run compile:types --stream",
@@ -48,6 +46,7 @@
     "lint": "yarn run lint:js && yarn run lint:ts",
     "lint:js": "eslint .",
     "lint:ts": "tslint --project ./tsconfig.json",
+    "new-monorepo": "node ./packages/new-monorepo/bin/new-monorepo.js",
     "new-package": "node ./packages/new-package/bin/new-package.js",
     "new-package:post": "yarn run bootstrap",
     "publish-cutoff": "publish-lerna-cutoff",
@@ -145,5 +144,8 @@
     "typescript": "^3.5.2",
     "utility-types": "^3.7.0",
     "yargs": "^13.3.0"
+  },
+  "engines": {
+    "node": "^10.16.0"
   }
 }

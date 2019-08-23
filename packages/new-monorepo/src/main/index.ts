@@ -15,18 +15,18 @@ import {
   writePackageJson,
 } from "@repodog/helpers";
 import { NewMonorepoCopyBehaviour, NewMonorepoCopyBehaviourOptions } from "@repodog/types";
-import { copyFileSync, existsSync, mkdirSync, unlinkSync } from "fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, unlinkSync } from "fs";
 import { outputFileSync } from "fs-extra";
-import { get, merge } from "lodash";
+import { get, merge, union } from "lodash";
 import { parse, resolve } from "path";
 import semver from "semver";
 import { JsonObject, PackageJson } from "type-fest";
-import { SCAFFOLD_DIR_PATH } from "../constants";
+import { COPY_BEHAVIOUR, ENCODING, FILES_EXCLUDED_FROM_MERGE, JSON_EXT, SCAFFOLD_DIR_PATH } from "../constants";
 
 function copyFiles(
   destPath: string,
   exclude: RegExp[],
-  [copyBehaviour, { mergeJsonFiles = true } = {}]: [NewMonorepoCopyBehaviour, NewMonorepoCopyBehaviourOptions?],
+  [copyBehaviour, { mergeIfPossible = true } = {}]: [NewMonorepoCopyBehaviour, NewMonorepoCopyBehaviourOptions?],
 ): IterateDirectoryCallback {
   const rootPackageJson = loadRootPackageJson();
 
@@ -36,8 +36,11 @@ function copyFiles(
     const destSubPath = resolve(destPath, fileName);
 
     if (stats.isDirectory()) {
-      mkdirSync(destSubPath);
-      iterateDirectory(filePath, copyFiles(destSubPath, exclude, [copyBehaviour, { mergeJsonFiles }]));
+      if (!existsSync(destSubPath)) {
+        mkdirSync(destSubPath);
+      }
+
+      iterateDirectory(filePath, copyFiles(destSubPath, exclude, [copyBehaviour, { mergeIfPossible }]));
     } else if (existsSync(destSubPath)) {
       const { base, dir, name, ext } = parse(destSubPath);
 
@@ -45,16 +48,24 @@ function copyFiles(
         const scaffoldPackageJson: PackageJson = require(destSubPath);
         const mergedPackageJson = merge(scaffoldPackageJson, rootPackageJson);
         writePackageJson(".", mergedPackageJson);
-      } else if (ext === ".json" && copyBehaviour !== "fail" && mergeJsonFiles) {
-        const scaffoldJson: JsonObject = require(filePath);
-        const destJson: JsonObject = require(destSubPath);
-        const mergedJson = merge(scaffoldJson, destJson);
-        unlinkSync(destSubPath);
-        outputFileSync(destSubPath, JSON.stringify(sortObject(mergedJson), null, 2));
-      } else if (copyBehaviour === "overwrite") {
+      } else if (copyBehaviour !== COPY_BEHAVIOUR.FAIL && mergeIfPossible) {
+        if (ext === JSON_EXT && !FILES_EXCLUDED_FROM_MERGE.includes(name)) {
+          const scaffoldJson: JsonObject = require(filePath);
+          const destJson: JsonObject = require(destSubPath);
+          const mergedJson = merge(scaffoldJson, destJson);
+          unlinkSync(destSubPath);
+          outputFileSync(destSubPath, JSON.stringify(sortObject(mergedJson, ["extends"]), null, 2));
+        } else if (!ext && !FILES_EXCLUDED_FROM_MERGE.includes(name)) {
+          const scaffoldFile = readFileSync(filePath, { encoding: ENCODING }).split("\n");
+          const destFile = readFileSync(destSubPath, { encoding: ENCODING }).split("\n");
+          const mergedFile = union(scaffoldFile, destFile).sort();
+          unlinkSync(destSubPath);
+          outputFileSync(destSubPath, mergedFile.join("\n"));
+        }
+      } else if (copyBehaviour === COPY_BEHAVIOUR.OVERWRITE) {
         unlinkSync(destSubPath);
         copyFileSync(filePath, destSubPath);
-      } else if (copyBehaviour === "duplicate") {
+      } else if (copyBehaviour === COPY_BEHAVIOUR.DUPLICATE) {
         copyFileSync(filePath, `${dir}/${name}.copy${ext}`);
       } else {
         warn(`Copy of file "${fileName}" failed. The file already exists in the destination directory.`);
@@ -91,7 +102,7 @@ export default function newMonorepo() {
 
   info("Copying scaffold to new monorepo");
   iterateDirectory(resolvePathToCwd(SCAFFOLD_DIR_PATH), copyFiles(resolvePathToCwd("."), exclude, copyBehaviour));
-  run("init");
+  run("install && lerna bootstrap");
   buildReferences();
 
   if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {

@@ -10,7 +10,6 @@ export default function iterateDirectory(fullPath: string, callback: IterateDire
   fileNames.forEach(fileName => {
     const filePath = resolve(fullPath, fileName);
     const stats = statSync(filePath);
-    if (!stats.isDirectory()) return;
     callback({ fileName, filePath, stats });
   });
 }

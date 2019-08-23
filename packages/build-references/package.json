@@ -31,8 +31,9 @@
   },
   "scripts": {
     "compile": "concurrently npm:compile:*",
-    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --config-file ../../babel.config.js",
+    "compile:main": "cross-env BABEL_ENV=main babel ./src --out-dir ./lib/main --extensions \".ts\" --source-maps --config-file ../../babel.config.js",
     "compile:types": "tsc --build",
+    "compile-watch": "yarn run compile:main --watch",
     "docs": "typedoc --includes ./src/main --out ./docs --options ../../typedoc.js"
   },
   "peerDependencies": {

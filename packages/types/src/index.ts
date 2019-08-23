@@ -12,7 +12,7 @@ export interface NewMonorepoConfig {
 export type NewMonorepoCopyBehaviour = "overwrite" | "duplicate" | "fail";
 
 export interface NewMonorepoCopyBehaviourOptions {
-  mergeJsonFiles?: boolean;
+  mergeIfPossible?: boolean;
 }
 
 export interface NewMonorepoScaffoldConfig {

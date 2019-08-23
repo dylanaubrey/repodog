@@ -1,6 +1,6 @@
 {
   "name": "@repodog/new-package",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "The RepoDog new-package module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

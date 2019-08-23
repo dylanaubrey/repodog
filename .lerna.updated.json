@@ -1,31 +1,37 @@
 [
   {
     "name": "@repodog/build-references",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/build-references"
   },
   {
+    "name": "@repodog/constants",
+    "version": "0.1.1",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/constants"
+  },
+  {
     "name": "@repodog/helpers",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/helpers"
   },
   {
     "name": "@repodog/new-monorepo",
-    "version": "0.2.10",
+    "version": "0.2.11",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
   },
   {
     "name": "@repodog/new-package",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-package"
   },
   {
     "name": "@repodog/types",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/types"
   }

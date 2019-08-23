@@ -1,3 +1,9 @@
+#### 0.2.20 (2019-08-23)
+
+##### Bug Fixes
+
+* **new-monorepo:**  update npmignore ([ba625eb5](https://github.com/dylanaubrey/repodog/commit/ba625eb5c58d2bde1ef18f7973b6993b1a72fcac))
+
 #### 0.2.19 (2019-08-23)
 
 ##### Bug Fixes

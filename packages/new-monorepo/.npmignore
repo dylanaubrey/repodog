@@ -1,6 +1,5 @@
-!scaffold/
 *.log
-.*
+.npmignore
 docs/
 src/
 tsconfig.*

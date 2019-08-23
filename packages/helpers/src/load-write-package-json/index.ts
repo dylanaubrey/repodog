@@ -1,6 +1,7 @@
 import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import { outputFileSync } from "fs-extra";
 import { resolve } from "path";
+import sortPackageJson from "sort-package-json";
 import { PackageJson } from "type-fest";
 import { info } from "../commands";
 
@@ -23,6 +24,6 @@ export function loadPackageJson(path: string) {
 
 export function writePackageJson(fullPath: string, config: PackageJson) {
   info(`Writing package.json to "${fullPath}"`);
-  outputFileSync(resolve(fullPath, PACKAGE_JSON_FILENAME), JSON.stringify(config, null, 2));
+  outputFileSync(resolve(fullPath, PACKAGE_JSON_FILENAME), JSON.stringify(sortPackageJson(config), null, 2));
   packageJsons.delete(fullPath);
 }

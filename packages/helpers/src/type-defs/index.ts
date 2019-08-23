@@ -9,6 +9,8 @@ export type IteratePackagesCallback = (params: { dirName: string; fullPath: stri
 
 export type IteratePackagesErrorCallback = (params: { dirName: string; fullPath: string }) => void;
 
+export type SortObjectComparator<T> = ReadonlyArray<keyof T> | ((a: keyof T, b: keyof T) => number);
+
 export interface SyncDependencyVersionsParams {
   dependencies?: PackageJson.Dependency;
   devDependencies?: PackageJson.Dependency;

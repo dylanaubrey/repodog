@@ -9,10 +9,14 @@ export interface NewMonorepoConfig {
   scaffold: NewMonorepoScaffoldConfig;
 }
 
-export type CopyBehaviour = "overwrite" | "duplicate" | "fail";
+export type NewMonorepoCopyBehaviour = "overwrite" | "duplicate" | "fail";
+
+export interface NewMonorepoCopyBehaviourOptions {
+  mergeJsonFiles?: boolean;
+}
 
 export interface NewMonorepoScaffoldConfig {
-  copyBehaviour?: CopyBehaviour;
+  copyBehaviour?: [NewMonorepoCopyBehaviour, NewMonorepoCopyBehaviourOptions?];
   exclude?: RegExp[];
 }
 
@@ -23,7 +27,7 @@ export interface RepodogConfig {
   scaffoldPath: string;
 }
 
-export type ObjectMap = JsonObject;
+export type ObjectMap = JsonObject & { [key: string]: undefined };
 
 export interface StringObjectMap {
   [key: string]: string;

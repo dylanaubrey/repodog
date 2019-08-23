@@ -79,5 +79,5 @@ export default function buildProjectReferences() {
   });
 
   const tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));
-  writeTSConfig(packagesPath, { ...(tsconfig || {}), references });
+  writeTSConfig(resolvePathToCwd(packagesPath), { ...(tsconfig || {}), references });
 }

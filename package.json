@@ -1,6 +1,6 @@
 {
   "name": "repodog",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "description": "An opinionated command line utility for managing a repository.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

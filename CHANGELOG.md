@@ -1,3 +1,9 @@
+#### 0.2.15 (2019-08-23)
+
+##### Bug Fixes
+
+* **new-monorepo:**  resolve errors in copying scaffold ([91ec68b4](https://github.com/dylanaubrey/repodog/commit/91ec68b42a893d9c48133125457645bd8126c7ee))
+
 #### 0.2.14 (2019-08-21)
 
 ##### New Features

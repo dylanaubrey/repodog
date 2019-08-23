@@ -102,7 +102,7 @@ export default function newMonorepo() {
 
   info("Copying scaffold to new monorepo");
   iterateDirectory(resolvePathToCwd(SCAFFOLD_DIR_PATH), copyFiles(resolvePathToCwd("."), exclude, copyBehaviour));
-  run("install && lerna bootstrap");
+  run("init");
   buildReferences();
 
   if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {

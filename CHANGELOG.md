@@ -1,3 +1,10 @@
+#### 0.2.17 (2019-08-23)
+
+##### Bug Fixes
+
+* **new-monorepo, build-references:**  minor bugs ([65d32dde](https://github.com/dylanaubrey/repodog/commit/65d32ddeb5af6b701930a649fb5e4a636cc61366))
+* **new-monorepo:**  revert command back to init ([dea2af0d](https://github.com/dylanaubrey/repodog/commit/dea2af0d07d7c3780792b9ae9c311fde97c85ecf))
+
 #### 0.2.16 (2019-08-23)
 
 ##### Bug Fixes

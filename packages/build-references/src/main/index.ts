@@ -54,30 +54,35 @@ export function buildPackageReferences({
 
 export default function buildProjectReferences() {
   info("Building project references");
-  const rootPackageJson = loadRootPackageJson();
 
-  if (!rootPackageJson) {
-    return error("Repodog expected a package.json to exist in the project root.");
+  try {
+    const rootPackageJson = loadRootPackageJson();
+
+    if (!rootPackageJson) {
+      return error("Repodog expected a package.json to exist in the project root.");
+    }
+
+    const scope = rootPackageJson.name;
+
+    if (!scope) {
+      return error("Repodog expected the project package.json to have a name.");
+    }
+
+    const { buildReferences, packagesPath } = loadRepodogConfig();
+    const globalRefs = get(buildReferences, ["global"], []);
+    const references: TSConfigReference[] = [];
+
+    iteratePackages(({ dirName, fullPath, packageJson }) => {
+      const packageTSConfig = loadTSConfig(fullPath);
+      if (!packageTSConfig) return;
+
+      references.push({ path: `./${dirName}` });
+      buildPackageReferences({ fullPath, globalRefs, packageJson, scope, tsconfig: packageTSConfig });
+    });
+
+    const tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));
+    writeTSConfig(resolvePathToCwd(packagesPath), { ...(tsconfig || {}), references });
+  } catch (errors) {
+    return error(errors);
   }
-
-  const scope = rootPackageJson.name;
-
-  if (!scope) {
-    return error("Repodog expected the project package.json to have a name.");
-  }
-
-  const { buildReferences, packagesPath } = loadRepodogConfig();
-  const globalRefs = get(buildReferences, ["global"], []);
-  const references: TSConfigReference[] = [];
-
-  iteratePackages(({ dirName, fullPath, packageJson }) => {
-    const packageTSConfig = loadTSConfig(fullPath);
-    if (!packageTSConfig) return;
-
-    references.push({ path: `./${dirName}` });
-    buildPackageReferences({ fullPath, globalRefs, packageJson, scope, tsconfig: packageTSConfig });
-  });
-
-  const tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));
-  writeTSConfig(resolvePathToCwd(packagesPath), { ...(tsconfig || {}), references });
 }

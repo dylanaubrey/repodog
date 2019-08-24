@@ -78,34 +78,39 @@ function copyFiles(
 
 export default function newMonorepo() {
   info("Creating new monorepo");
-  const rootPackageJson = loadRootPackageJson();
 
-  if (!rootPackageJson) {
-    return error("Repodog expected a package.json to exist in the project root.");
-  }
+  try {
+    const rootPackageJson = loadRootPackageJson();
 
-  if (!rootPackageJson.name || !validatePackageName(rootPackageJson.name).valid) {
-    return error("Repodog expected the project package.json to have a valid name.");
-  }
+    if (!rootPackageJson) {
+      return error("Repodog expected a package.json to exist in the project root.");
+    }
 
-  if (!rootPackageJson.version || !semver.valid(rootPackageJson.version)) {
-    return error("Repodog expected the project package.json to have a valid version.");
-  }
+    if (!rootPackageJson.name || !validatePackageName(rootPackageJson.name).valid) {
+      return error("Repodog expected the project package.json to have a valid name.");
+    }
 
-  const { newMonorepo: newMonorepoConfig } = loadRepodogConfig();
-  const exclude = get(newMonorepoConfig, ["scaffold", "exclude"], []);
+    if (!rootPackageJson.version || !semver.valid(rootPackageJson.version)) {
+      return error("Repodog expected the project package.json to have a valid version.");
+    }
 
-  const copyBehaviour = get(newMonorepoConfig, ["scaffold", "copyBehaviour"], ["duplicate"] as [
-    NewMonorepoCopyBehaviour,
-    NewMonorepoCopyBehaviourOptions?,
-  ]);
+    const { newMonorepo: newMonorepoConfig } = loadRepodogConfig();
+    const exclude = get(newMonorepoConfig, ["scaffold", "exclude"], []);
 
-  info("Copying scaffold to new monorepo");
-  iterateDirectory(resolvePathToCwd(SCAFFOLD_DIR_PATH), copyFiles(resolvePathToCwd("."), exclude, copyBehaviour));
-  run("init");
-  buildReferences();
+    const copyBehaviour = get(newMonorepoConfig, ["scaffold", "copyBehaviour"], ["duplicate"] as [
+      NewMonorepoCopyBehaviour,
+      NewMonorepoCopyBehaviourOptions?,
+    ]);
 
-  if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {
-    run("new-monorepo:post");
+    info("Copying scaffold to new monorepo");
+    iterateDirectory(resolvePathToCwd(SCAFFOLD_DIR_PATH), copyFiles(resolvePathToCwd("."), exclude, copyBehaviour));
+    run("init");
+    buildReferences();
+
+    if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {
+      run("new-monorepo:post");
+    }
+  } catch (errors) {
+    return error(errors);
   }
 }

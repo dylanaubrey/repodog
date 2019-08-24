@@ -1,3 +1,9 @@
+#### 0.2.22 (2019-08-24)
+
+##### Bug Fixes
+
+* **commands:**  add error catching ([89333412](https://github.com/dylanaubrey/repodog/commit/893334127b39bca8af7d8e3b4a8cbace10b97c7a))
+
 #### 0.2.21 (2019-08-24)
 
 ##### Bug Fixes

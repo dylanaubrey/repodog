@@ -1,3 +1,9 @@
+#### 0.2.21 (2019-08-24)
+
+##### Bug Fixes
+
+* **npmignore:**  update all packages to include src in package ([c6c65c94](https://github.com/dylanaubrey/repodog/commit/c6c65c949f584cb722817cda3439687252016e10))
+
 #### 0.2.20 (2019-08-23)
 
 ##### Bug Fixes

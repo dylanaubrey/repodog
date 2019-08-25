@@ -1,3 +1,9 @@
+#### 0.2.23 (2019-08-25)
+
+##### Bug Fixes
+
+* **file loading:**  remove require in place of readFileSync ([1cf4524f](https://github.com/dylanaubrey/repodog/commit/1cf4524f7d442dbb678e474612566c35bc9f152a))
+
 #### 0.2.22 (2019-08-24)
 
 ##### Bug Fixes

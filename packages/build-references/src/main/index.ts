@@ -7,9 +7,10 @@ import {
   loadRootPackageJson,
   loadTSConfig,
   resolvePathToCwd,
+  warn,
   writeTSConfig,
 } from "@repodog/helpers";
-import { TSConfigReference } from "@repodog/types";
+import { TSConfig, TSConfigReference } from "@repodog/types";
 import { get } from "lodash";
 import { BuildPackageReferencesParams, SetReferencesFromDependenciesParams } from "../type-defs";
 
@@ -73,15 +74,29 @@ export default function buildProjectReferences() {
     const references: TSConfigReference[] = [];
 
     iteratePackages(({ dirName, fullPath, packageJson }) => {
-      const packageTSConfig = loadTSConfig(fullPath);
-      if (!packageTSConfig) return;
+      let packageTSConfig: TSConfig | undefined;
 
-      references.push({ path: `./${dirName}` });
-      buildPackageReferences({ fullPath, globalRefs, packageJson, scope, tsconfig: packageTSConfig });
+      try {
+        packageTSConfig = loadTSConfig(fullPath);
+      } catch (errors) {
+        warn(errors);
+      } finally {
+        if (packageTSConfig) {
+          references.push({ path: `./${dirName}` });
+          buildPackageReferences({ fullPath, globalRefs, packageJson, scope, tsconfig: packageTSConfig });
+        }
+      }
     });
 
-    const tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));
-    writeTSConfig(resolvePathToCwd(packagesPath), { ...(tsconfig || {}), references });
+    let tsconfig: TSConfig | undefined;
+
+    try {
+      tsconfig = loadTSConfig(resolvePathToCwd(packagesPath));
+    } catch (errors) {
+      warn(errors);
+    } finally {
+      writeTSConfig(resolvePathToCwd(packagesPath), { ...(tsconfig || {}), references });
+    }
   } catch (errors) {
     return error(errors);
   }

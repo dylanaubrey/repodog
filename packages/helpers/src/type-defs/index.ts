@@ -5,7 +5,11 @@ export type IterateDependenciesCallback = (params: { name: string; version: stri
 
 export type IterateDirectoryCallback = (params: { fileName: string; filePath: string; stats: Stats }) => void;
 
-export type IteratePackagesCallback = (params: { dirName: string; fullPath: string; packageJson: PackageJson }) => void;
+export type IteratePackagesCallback = (params: {
+  dirName: string;
+  fullPath: string;
+  packageJson?: PackageJson;
+}) => void;
 
 export type IteratePackagesErrorCallback = (params: { dirName: string; fullPath: string }) => void;
 

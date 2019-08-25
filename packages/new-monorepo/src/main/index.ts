@@ -1,5 +1,5 @@
 import buildReferences from "@repodog/build-references";
-import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
+import { FILE_ENCODING, PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   error,
@@ -21,7 +21,7 @@ import { get, merge, union } from "lodash";
 import { parse, resolve } from "path";
 import semver from "semver";
 import { JsonObject, PackageJson } from "type-fest";
-import { COPY_BEHAVIOUR, ENCODING, FILES_EXCLUDED_FROM_MERGE, JSON_EXT, SCAFFOLD_DIR_PATH } from "../constants";
+import { COPY_BEHAVIOUR, FILES_EXCLUDED_FROM_MERGE, JSON_EXT, SCAFFOLD_DIR_PATH } from "../constants";
 
 function copyFiles(
   destPath: string,
@@ -56,8 +56,8 @@ function copyFiles(
           unlinkSync(destSubPath);
           outputFileSync(destSubPath, JSON.stringify(sortObject(mergedJson, ["extends"]), null, 2));
         } else if (!ext && !FILES_EXCLUDED_FROM_MERGE.includes(name)) {
-          const scaffoldFile = readFileSync(filePath, { encoding: ENCODING }).split("\n");
-          const destFile = readFileSync(destSubPath, { encoding: ENCODING }).split("\n");
+          const scaffoldFile = readFileSync(filePath, { encoding: FILE_ENCODING }).split("\n");
+          const destFile = readFileSync(destSubPath, { encoding: FILE_ENCODING }).split("\n");
           const mergedFile = union(scaffoldFile, destFile).sort();
           unlinkSync(destSubPath);
           outputFileSync(destSubPath, mergedFile.join("\n"));

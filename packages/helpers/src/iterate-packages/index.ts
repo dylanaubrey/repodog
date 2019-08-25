@@ -1,9 +1,8 @@
-import { PACKAGE_JSON_FILENAME } from "@repodog/constants";
 import { isFunction } from "lodash";
-import { resolve } from "path";
 import { info } from "../commands";
 import iterateDirectory from "../iterate-directory";
 import loadRepodogConfig from "../load-repodog-config";
+import { loadPackageJson } from "../load-write-package-json";
 import resolvePathToCwd from "../resolve-path-to-cwd";
 import { IteratePackagesCallback, IteratePackagesErrorCallback } from "../type-defs";
 
@@ -18,7 +17,7 @@ export default function iteratePackages(
     if (!stats.isDirectory()) return;
 
     try {
-      const packageJson = require(resolve(filePath, PACKAGE_JSON_FILENAME));
+      const packageJson = loadPackageJson(filePath);
 
       if (!packageJson && isFunction(errorCallback)) {
         errorCallback({ dirName: fileName, fullPath: filePath });

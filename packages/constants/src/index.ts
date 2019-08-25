@@ -7,3 +7,5 @@ export const REPODOG_CONFIG_FILENAME = "repodog.config.js";
 export const TSCONFIG_FILENAME = "tsconfig.json";
 
 export const TERMINAL_ECHO_PREFIX = ">>>>>>";
+
+export const FILE_ENCODING = "utf8";

@@ -10,6 +10,7 @@ function syncVersions(name: string, dependencies: StringObjectMap) {
     iteratePackages(
       ({ packageJson }) => {
         if (
+          packageJson &&
           dependencyName === packageJson.name &&
           packageJson.version &&
           !semver.satisfies(packageJson.version, dependencies[dependencyName])

@@ -74,6 +74,8 @@ export default function buildProjectReferences() {
     const references: TSConfigReference[] = [];
 
     iteratePackages(({ dirName, fullPath, packageJson }) => {
+      if (!packageJson) return;
+
       let packageTSConfig: TSConfig | undefined;
 
       try {

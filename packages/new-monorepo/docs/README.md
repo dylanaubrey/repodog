@@ -4,7 +4,6 @@
 
 ### Variables
 
-* [ENCODING](README.md#const-encoding)
 * [FILES_EXCLUDED_FROM_MERGE](README.md#const-files_excluded_from_merge)
 * [JSON_EXT](README.md#const-json_ext)
 * [SCAFFOLD_DIR_PATH](README.md#const-scaffold_dir_path)
@@ -20,19 +19,11 @@
 
 ## Variables
 
-### `Const` ENCODING
-
-• **ENCODING**: *"utf8"* = "utf8"
-
-*Defined in [constants/index.ts:7](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L7)*
-
-___
-
 ### `Const` FILES_EXCLUDED_FROM_MERGE
 
 • **FILES_EXCLUDED_FROM_MERGE**: *string[]* =  ["LICENSE"]
 
-*Defined in [constants/index.ts:8](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L8)*
+*Defined in [constants/index.ts:7](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/constants/index.ts#L7)*
 
 ___
 
@@ -40,7 +31,7 @@ ___
 
 • **JSON_EXT**: *".json"* = ".json"
 
-*Defined in [constants/index.ts:9](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L9)*
+*Defined in [constants/index.ts:8](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/constants/index.ts#L8)*
 
 ___
 
@@ -48,7 +39,7 @@ ___
 
 • **SCAFFOLD_DIR_PATH**: *"node_modules/@repodog/new-monorepo/scaffold"* = "node_modules/@repodog/new-monorepo/scaffold"
 
-*Defined in [constants/index.ts:10](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L10)*
+*Defined in [constants/index.ts:9](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/constants/index.ts#L9)*
 
 ## Functions
 
@@ -56,7 +47,7 @@ ___
 
 ▸ **copyFiles**(`destPath`: string, `exclude`: `RegExp`[], `__namedParameters`: ["duplicate" | "fail" | "overwrite", any]): *`IterateDirectoryCallback`*
 
-*Defined in [main/index.ts:26](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/main/index.ts#L26)*
+*Defined in [main/index.ts:26](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/main/index.ts#L26)*
 
 **Parameters:**
 
@@ -74,7 +65,7 @@ ___
 
 ▸ **newMonorepo**(): *void*
 
-*Defined in [main/index.ts:79](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/main/index.ts#L79)*
+*Defined in [main/index.ts:79](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/main/index.ts#L79)*
 
 **Returns:** *void*
 
@@ -84,22 +75,22 @@ ___
 
 ### ▪ **COPY_BEHAVIOUR**: *object*
 
-*Defined in [constants/index.ts:1](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L1)*
+*Defined in [constants/index.ts:1](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/constants/index.ts#L1)*
 
 ###  DUPLICATE
 
-• **DUPLICATE**: *string* = "duplicate"
+• **DUPLICATE**: *"duplicate"* =  "duplicate" as const
 
-*Defined in [constants/index.ts:2](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L2)*
+*Defined in [constants/index.ts:2](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/constants/index.ts#L2)*
 
 ###  FAIL
 
-• **FAIL**: *string* = "fail"
+• **FAIL**: *"fail"* =  "fail" as const
 
-*Defined in [constants/index.ts:3](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L3)*
+*Defined in [constants/index.ts:3](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/constants/index.ts#L3)*
 
 ###  OVERWRITE
 
-• **OVERWRITE**: *string* = "overwrite"
+• **OVERWRITE**: *"overwrite"* =  "overwrite" as const
 
-*Defined in [constants/index.ts:4](https://github.com/dylanaubrey/repodog/blob/8933341/packages/new-monorepo/src/constants/index.ts#L4)*
+*Defined in [constants/index.ts:4](https://github.com/dylanaubrey/repodog/blob/8eb64eb/packages/new-monorepo/src/constants/index.ts#L4)*

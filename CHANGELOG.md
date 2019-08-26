@@ -1,3 +1,9 @@
+#### 0.2.24 (2019-08-26)
+
+##### Bug Fixes
+
+* **linting:**  resolve type errors ([8eb64eb1](https://github.com/dylanaubrey/repodog/commit/8eb64eb1163149b325a8d44bbc957c818a43e83b))
+
 #### 0.2.23 (2019-08-25)
 
 ##### Bug Fixes

@@ -1,26 +1,92 @@
 [
   {
-    "name": "@repodog/build-references",
-    "version": "0.1.10",
+    "name": "@repodog/babel-config",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/build-references"
+    "version": "0.1.5"
+  },
+  {
+    "name": "@repodog/build-references",
+    "private": false,
+    "version": "0.1.11"
+  },
+  {
+    "name": "@repodog/commitlint-config",
+    "private": false,
+    "version": "0.1.2"
+  },
+  {
+    "name": "@repodog/constants",
+    "private": false,
+    "version": "0.1.4"
+  },
+  {
+    "name": "@repodog/eslint-config",
+    "private": false,
+    "version": "0.1.8"
   },
   {
     "name": "@repodog/helpers",
-    "version": "0.1.7",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/helpers"
+    "version": "0.1.8"
+  },
+  {
+    "name": "@repodog/jest-config",
+    "private": false,
+    "version": "0.1.3"
+  },
+  {
+    "name": "@repodog/lerna-config",
+    "private": false,
+    "version": "0.1.3"
+  },
+  {
+    "name": "@repodog/markdownlint-config",
+    "private": false,
+    "version": "0.1.2"
   },
   {
     "name": "@repodog/new-monorepo",
-    "version": "0.2.20",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
+    "version": "0.2.21"
   },
   {
     "name": "@repodog/new-package",
-    "version": "0.2.9",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-package"
+    "version": "0.2.10"
+  },
+  {
+    "name": "@repodog/prettier-config",
+    "private": false,
+    "version": "0.1.2"
+  },
+  {
+    "name": "@repodog/rollup-config",
+    "private": false,
+    "version": "0.1.7"
+  },
+  {
+    "name": "@repodog/stylelint-config",
+    "private": false,
+    "version": "0.2.4"
+  },
+  {
+    "name": "@repodog/ts-config",
+    "private": false,
+    "version": "0.1.3"
+  },
+  {
+    "name": "@repodog/tslint-config",
+    "private": false,
+    "version": "0.1.2"
+  },
+  {
+    "name": "@repodog/typedoc-config",
+    "private": false,
+    "version": "0.1.2"
+  },
+  {
+    "name": "@repodog/types",
+    "private": false,
+    "version": "0.1.6"
   }
 ]

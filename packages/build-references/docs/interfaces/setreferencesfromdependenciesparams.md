@@ -23,7 +23,7 @@
 
 • **dependencies**: *`Dependency`*
 
-*Defined in [type-defs/index.ts:13](https://github.com/dylanaubrey/repodog/blob/e1b2c29/packages/build-references/src/type-defs/index.ts#L13)*
+*Defined in [type-defs/index.ts:13](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/build-references/src/type-defs/index.ts#L13)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **globalRefs**: *string[]*
 
-*Defined in [type-defs/index.ts:14](https://github.com/dylanaubrey/repodog/blob/e1b2c29/packages/build-references/src/type-defs/index.ts#L14)*
+*Defined in [type-defs/index.ts:14](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/build-references/src/type-defs/index.ts#L14)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **references**: *`TSConfigReference`[]*
 
-*Defined in [type-defs/index.ts:15](https://github.com/dylanaubrey/repodog/blob/e1b2c29/packages/build-references/src/type-defs/index.ts#L15)*
+*Defined in [type-defs/index.ts:15](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/build-references/src/type-defs/index.ts#L15)*
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 • **scope**: *string*
 
-*Defined in [type-defs/index.ts:16](https://github.com/dylanaubrey/repodog/blob/e1b2c29/packages/build-references/src/type-defs/index.ts#L16)*
+*Defined in [type-defs/index.ts:16](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/build-references/src/type-defs/index.ts#L16)*

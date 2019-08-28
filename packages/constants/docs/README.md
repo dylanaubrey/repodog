@@ -19,7 +19,7 @@
 
 • **DEFAULT_PACKAGES_PATH**: *"packages"* = "packages"
 
-*Defined in [index.ts:1](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L1)*
+*Defined in [index.ts:1](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L1)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **DEFAULT_SCAFFOLD_PATH**: *".repodog/scaffold"* = ".repodog/scaffold"
 
-*Defined in [index.ts:2](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L2)*
+*Defined in [index.ts:2](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L2)*
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **FILE_ENCODING**: *"utf8"* = "utf8"
 
-*Defined in [index.ts:11](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L11)*
+*Defined in [index.ts:11](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L11)*
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **NEW_PACKAGE_DIR_NAME**: *"new-package"* = "new-package"
 
-*Defined in [index.ts:3](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L3)*
+*Defined in [index.ts:3](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L3)*
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **PACKAGE_JSON_FILENAME**: *"package.json"* = "package.json"
 
-*Defined in [index.ts:5](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L5)*
+*Defined in [index.ts:5](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L5)*
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 • **REPODOG_CONFIG_FILENAME**: *"repodog.config.js"* = "repodog.config.js"
 
-*Defined in [index.ts:6](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L6)*
+*Defined in [index.ts:6](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L6)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 • **TERMINAL_ECHO_PREFIX**: *">>>>>>"* = ">>>>>>"
 
-*Defined in [index.ts:9](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L9)*
+*Defined in [index.ts:9](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L9)*
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 • **TSCONFIG_FILENAME**: *"tsconfig.json"* = "tsconfig.json"
 
-*Defined in [index.ts:7](https://github.com/dylanaubrey/repodog/blob/699e9fd/packages/constants/src/index.ts#L7)*
+*Defined in [index.ts:7](https://github.com/dylanaubrey/repodog/blob/5d53de0/packages/constants/src/index.ts#L7)*

@@ -1,3 +1,9 @@
+#### 0.2.27 (2019-08-28)
+
+##### Bug Fixes
+
+* **file loading:**  change back to require ([5d53de0f](https://github.com/dylanaubrey/repodog/commit/5d53de0f5759bf0252f347c93548351d813804c6))
+
 #### 0.2.26 (2019-08-28)
 
 #### 0.2.25 (2019-08-28)

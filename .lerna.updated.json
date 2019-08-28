@@ -1,92 +1,14 @@
 [
   {
-    "name": "@repodog/babel-config",
-    "private": false,
-    "version": "0.1.5"
-  },
-  {
     "name": "@repodog/build-references",
+    "version": "0.2.26",
     "private": false,
-    "version": "0.1.11"
-  },
-  {
-    "name": "@repodog/commitlint-config",
-    "private": false,
-    "version": "0.1.2"
-  },
-  {
-    "name": "@repodog/constants",
-    "private": false,
-    "version": "0.1.4"
-  },
-  {
-    "name": "@repodog/eslint-config",
-    "private": false,
-    "version": "0.1.8"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/build-references"
   },
   {
     "name": "@repodog/helpers",
+    "version": "0.2.26",
     "private": false,
-    "version": "0.1.8"
-  },
-  {
-    "name": "@repodog/jest-config",
-    "private": false,
-    "version": "0.1.3"
-  },
-  {
-    "name": "@repodog/lerna-config",
-    "private": false,
-    "version": "0.1.3"
-  },
-  {
-    "name": "@repodog/markdownlint-config",
-    "private": false,
-    "version": "0.1.2"
-  },
-  {
-    "name": "@repodog/new-monorepo",
-    "private": false,
-    "version": "0.2.21"
-  },
-  {
-    "name": "@repodog/new-package",
-    "private": false,
-    "version": "0.2.10"
-  },
-  {
-    "name": "@repodog/prettier-config",
-    "private": false,
-    "version": "0.1.2"
-  },
-  {
-    "name": "@repodog/rollup-config",
-    "private": false,
-    "version": "0.1.7"
-  },
-  {
-    "name": "@repodog/stylelint-config",
-    "private": false,
-    "version": "0.2.4"
-  },
-  {
-    "name": "@repodog/ts-config",
-    "private": false,
-    "version": "0.1.3"
-  },
-  {
-    "name": "@repodog/tslint-config",
-    "private": false,
-    "version": "0.1.2"
-  },
-  {
-    "name": "@repodog/typedoc-config",
-    "private": false,
-    "version": "0.1.2"
-  },
-  {
-    "name": "@repodog/types",
-    "private": false,
-    "version": "0.1.6"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/helpers"
   }
 ]

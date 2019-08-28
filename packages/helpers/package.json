@@ -36,11 +36,11 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.0.0",
+    "@repodog/constants": "^0.1.4",
     "core-js": "^2.0",
     "lodash": "^4.17.5"
   },
   "dependencies": {
-    "@repodog/constants": "^0.1.0",
     "chalk": "^2.4.2",
     "semver": "^6.3.0",
     "shelljs": "^0.8.3",

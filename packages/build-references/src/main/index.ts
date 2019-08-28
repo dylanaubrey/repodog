@@ -50,6 +50,10 @@ export function buildPackageReferences({
     setReferencesFromDependencies({ dependencies: packageJson.devDependencies, globalRefs, references, scope });
   }
 
+  if (packageJson.peerDependencies) {
+    setReferencesFromDependencies({ dependencies: packageJson.peerDependencies, globalRefs, references, scope });
+  }
+
   writeTSConfig(fullPath, { ...tsconfig, references });
 }
 

@@ -1,3 +1,13 @@
+#### 0.2.25 (2019-08-28)
+
+##### Chores
+
+* **security:**  upgrade eslint packages ([e1b2c290](https://github.com/dylanaubrey/repodog/commit/e1b2c290f3f7d39ffe738037883afb1caba5bc2f))
+
+##### Bug Fixes
+
+* **dependencies:**  moving internal dependencies to peer ([cc6dd9ba](https://github.com/dylanaubrey/repodog/commit/cc6dd9bad5cd265409784d8f0157cd7b7470a4ef))
+
 #### 0.2.24 (2019-08-26)
 
 ##### Bug Fixes

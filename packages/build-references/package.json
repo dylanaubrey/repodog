@@ -1,6 +1,6 @@
 {
   "name": "@repodog/build-references",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "The RepoDog build-references module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

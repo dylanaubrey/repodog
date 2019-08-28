@@ -11,7 +11,6 @@ export interface BuildPackageReferencesParams {
 
 export interface SetReferencesFromDependenciesParams {
   dependencies: PackageJson.Dependency;
-  globalRefs: string[];
   references: TSConfigReference[];
   scope: string;
 }

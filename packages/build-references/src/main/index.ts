@@ -14,21 +14,12 @@ import { TSConfig, TSConfigReference } from "@repodog/types";
 import { get } from "lodash";
 import { BuildPackageReferencesParams, SetReferencesFromDependenciesParams } from "../type-defs";
 
-function setReferencesFromDependencies({
-  dependencies,
-  globalRefs,
-  references,
-  scope,
-}: SetReferencesFromDependenciesParams) {
+function setReferencesFromDependencies({ dependencies, references, scope }: SetReferencesFromDependenciesParams) {
   iterateDependencies(dependencies, ({ name }) => {
     if (name.startsWith(`@${scope}`)) {
       references.push({ path: `../${name.replace(`@${scope}/`, "")}` });
     }
   });
-
-  if (globalRefs.length) {
-    references.push(...globalRefs.map(name => ({ path: `../${name.replace(`@${scope}/`, "")}` })));
-  }
 }
 
 export function buildPackageReferences({
@@ -43,15 +34,19 @@ export function buildPackageReferences({
   const references: TSConfigReference[] = [];
 
   if (packageJson.dependencies) {
-    setReferencesFromDependencies({ dependencies: packageJson.dependencies, globalRefs, references, scope });
+    setReferencesFromDependencies({ dependencies: packageJson.dependencies, references, scope });
   }
 
   if (packageJson.devDependencies) {
-    setReferencesFromDependencies({ dependencies: packageJson.devDependencies, globalRefs, references, scope });
+    setReferencesFromDependencies({ dependencies: packageJson.devDependencies, references, scope });
   }
 
   if (packageJson.peerDependencies) {
-    setReferencesFromDependencies({ dependencies: packageJson.peerDependencies, globalRefs, references, scope });
+    setReferencesFromDependencies({ dependencies: packageJson.peerDependencies, references, scope });
+  }
+
+  if (globalRefs.length) {
+    references.push(...globalRefs.map(name => ({ path: `../${name.replace(`@${scope}/`, "")}` })));
   }
 
   writeTSConfig(fullPath, { ...tsconfig, references });

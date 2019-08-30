@@ -1,3 +1,9 @@
+#### 0.2.28 (2019-08-30)
+
+##### New Features
+
+* **tslint:**  add member sort rule to config ([03426f8e](https://github.com/dylanaubrey/repodog/commit/03426f8ed717f20b8252cada8c0a452c0411fdff))
+
 #### 0.2.27 (2019-08-28)
 
 ##### Bug Fixes

@@ -1,14 +1,8 @@
 [
   {
-    "name": "@repodog/build-references",
+    "name": "@repodog/tslint-config",
     "version": "0.2.26",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/build-references"
-  },
-  {
-    "name": "@repodog/helpers",
-    "version": "0.2.26",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/helpers"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/tslint-config"
   }
 ]

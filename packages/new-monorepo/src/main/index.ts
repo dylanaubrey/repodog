@@ -23,6 +23,10 @@ import semver from "semver";
 import { JsonObject, PackageJson } from "type-fest";
 import { COPY_BEHAVIOUR, FILES_EXCLUDED_FROM_MERGE, JSON_EXT, SCAFFOLD_DIR_PATH } from "../constants";
 
+function formatFileContents(contents: string) {
+  return contents.split("\n").map(content => content.replace("\r", ""));
+}
+
 function copyFiles(
   destPath: string,
   exclude: RegExp[],
@@ -56,8 +60,8 @@ function copyFiles(
           unlinkSync(destSubPath);
           outputFileSync(destSubPath, JSON.stringify(sortObject(mergedJson, ["extends"]), null, 2));
         } else if (!ext && !FILES_EXCLUDED_FROM_MERGE.includes(name)) {
-          const scaffoldFile = readFileSync(filePath, { encoding: FILE_ENCODING }).split("\n");
-          const destFile = readFileSync(destSubPath, { encoding: FILE_ENCODING }).split("\n");
+          const scaffoldFile = formatFileContents(readFileSync(filePath, { encoding: FILE_ENCODING }));
+          const destFile = formatFileContents(readFileSync(destSubPath, { encoding: FILE_ENCODING }));
           const mergedFile = union(scaffoldFile, destFile).sort();
           unlinkSync(destSubPath);
           outputFileSync(destSubPath, mergedFile.join("\n"));

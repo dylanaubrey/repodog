@@ -1,3 +1,9 @@
+#### 0.2.30 (2019-08-30)
+
+##### Bug Fixes
+
+* **new-monorepo:**  scaffold package json path wrong ([028fda76](https://github.com/dylanaubrey/repodog/commit/028fda76d9bc1e341ccce05144883850b2a5b258))
+
 #### 0.2.29 (2019-08-30)
 
 ##### Bug Fixes

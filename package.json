@@ -1,6 +1,6 @@
 {
   "name": "repodog",
-  "version": "0.2.28",
+  "version": "0.2.29",
   "private": true,
   "description": "An opinionated command line utility for managing a repository.",
   "keywords": [
@@ -43,7 +43,7 @@
     "cutoff:post-version": "yarn run compile && yarn run docs",
     "docs": "lerna run docs --parallel",
     "init": "yarn && yarn run bootstrap",
-    "lint": "yarn run lint:js && yarn run lint:ts",
+    "lint": "concurrently npm:lint:*",
     "lint:js": "eslint .",
     "lint:ts": "tslint --project ./tsconfig.json",
     "new-monorepo": "node ./packages/new-monorepo/bin/new-monorepo.js",

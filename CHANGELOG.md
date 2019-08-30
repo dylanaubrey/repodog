@@ -1,3 +1,9 @@
+#### 0.2.29 (2019-08-30)
+
+##### Bug Fixes
+
+* **new-monorepo:**  remove carriage returns from file lines ([54d5ea26](https://github.com/dylanaubrey/repodog/commit/54d5ea26e97b9fb60bbe7654daa43948ee15ac6b))
+
 #### 0.2.28 (2019-08-30)
 
 ##### New Features

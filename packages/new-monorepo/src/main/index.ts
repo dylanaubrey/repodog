@@ -49,7 +49,7 @@ function copyFiles(
       const { base, dir, name, ext } = parse(destSubPath);
 
       if (base === PACKAGE_JSON_FILENAME) {
-        const scaffoldPackageJson: PackageJson = require(destSubPath);
+        const scaffoldPackageJson: PackageJson = require(filePath);
         const mergedPackageJson = merge(scaffoldPackageJson, rootPackageJson);
         writePackageJson(".", mergedPackageJson);
       } else if (copyBehaviour !== COPY_BEHAVIOUR.FAIL && mergeIfPossible) {

@@ -1,3 +1,13 @@
+#### 0.2.31 (2019-09-02)
+
+##### Bug Fixes
+
+* **scripts:**  change way watch is called ([a84ad77b](https://github.com/dylanaubrey/repodog/commit/a84ad77b8c1d071896576148ffe57c83b877825e))
+
+##### Refactors
+
+* **new-monorepo:**  move to q&a style installation ([#2](https://github.com/dylanaubrey/repodog/pull/2)) ([a30f8b08](https://github.com/dylanaubrey/repodog/commit/a30f8b0811207adade6b3ed9dc61c0a6dc3adbb6))
+
 #### 0.2.30 (2019-08-30)
 
 ##### Bug Fixes

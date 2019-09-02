@@ -1,3 +1,9 @@
+#### 0.2.32 (2019-09-02)
+
+##### Bug Fixes
+
+* **new-monorepo:**  exception due to undefined variable ([5d63eb44](https://github.com/dylanaubrey/repodog/commit/5d63eb4431834524e8741eaa133d14fdb7547d4d))
+
 #### 0.2.31 (2019-09-02)
 
 ##### Bug Fixes

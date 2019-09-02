@@ -22,7 +22,7 @@
 
 • **errors**: *string[]*
 
-*Defined in [type-defs/index.ts:34](https://github.com/dylanaubrey/repodog/blob/a30f8b0/packages/helpers/src/type-defs/index.ts#L34)*
+*Defined in [type-defs/index.ts:34](https://github.com/dylanaubrey/repodog/blob/5d63eb4/packages/helpers/src/type-defs/index.ts#L34)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **invalid**: *string[]*
 
-*Defined in [type-defs/index.ts:35](https://github.com/dylanaubrey/repodog/blob/a30f8b0/packages/helpers/src/type-defs/index.ts#L35)*
+*Defined in [type-defs/index.ts:35](https://github.com/dylanaubrey/repodog/blob/5d63eb4/packages/helpers/src/type-defs/index.ts#L35)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **valid**: *string[]*
 
-*Defined in [type-defs/index.ts:36](https://github.com/dylanaubrey/repodog/blob/a30f8b0/packages/helpers/src/type-defs/index.ts#L36)*
+*Defined in [type-defs/index.ts:36](https://github.com/dylanaubrey/repodog/blob/5d63eb4/packages/helpers/src/type-defs/index.ts#L36)*

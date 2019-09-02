@@ -125,7 +125,7 @@ function executeCopyBehaviour(
   srcPath: string,
   parsedPath: ParsedPath,
 ) {
-  const { dir, ext } = parsedPath;
+  const { dir, ext, name } = parsedPath;
 
   switch (copyBehaviour) {
     case DUPLICATE:

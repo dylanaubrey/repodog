@@ -3,7 +3,11 @@ import { PackageJson } from "type-fest";
 
 export type IterateDependenciesCallback = (params: { name: string; version: string }) => void;
 
-export type IterateDirectoryCallback = (params: { fileName: string; filePath: string; stats: Stats }) => void;
+export type IterateDirectoryCallback = (params: { fileName: string; filePath: string; stats: Stats }) => Promise<void>;
+
+export interface IterateDirectoryOptions {
+  sync?: boolean;
+}
 
 export type IteratePackagesCallback = (params: {
   dirName: string;

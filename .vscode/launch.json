@@ -55,7 +55,7 @@
       "type": "node",
       "request": "launch",
       "name": "New monorepo",
-      "program": "${workspaceFolder}/packages/new-monorepo/bin/new-monorepo.js",
+      "program": "${workspaceFolder}/packages/new-monorepo/bin/cli.js",
       "args": [],
       "protocol": "inspector",
       "stopOnEntry": false,

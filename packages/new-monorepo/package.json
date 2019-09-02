@@ -27,7 +27,7 @@
     "repositories"
   ],
   "bin": {
-    "new-monorepo": "bin/new-monorepo.js"
+    "new-monorepo": "bin/cli.js"
   },
   "scripts": {
     "compile": "concurrently npm:compile:*",
@@ -46,6 +46,8 @@
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.0",
+    "js-yaml": "^3.13.1",
     "semver": "^6.3.0",
     "yargs": "^13.3.0"
   }

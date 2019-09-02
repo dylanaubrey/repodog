@@ -13,7 +13,7 @@ export default function iteratePackages(
   info("Iterating packages");
   const { packagesPath } = loadRepodogConfig();
 
-  iterateDirectory(resolvePathToCwd(packagesPath), ({ fileName, filePath, stats }) => {
+  iterateDirectory(resolvePathToCwd(packagesPath), async ({ fileName, filePath, stats }) => {
     if (!stats.isDirectory()) return;
 
     try {

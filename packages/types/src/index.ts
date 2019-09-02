@@ -5,24 +5,8 @@ export interface BuildReferencesConfig {
   global?: string[];
 }
 
-export interface NewMonorepoConfig {
-  scaffold: NewMonorepoScaffoldConfig;
-}
-
-export type NewMonorepoCopyBehaviour = "overwrite" | "duplicate" | "fail";
-
-export interface NewMonorepoCopyBehaviourOptions {
-  mergeIfPossible?: boolean;
-}
-
-export interface NewMonorepoScaffoldConfig {
-  copyBehaviour?: [NewMonorepoCopyBehaviour, NewMonorepoCopyBehaviourOptions?];
-  exclude?: RegExp[];
-}
-
 export interface RepodogConfig {
   buildReferences?: BuildReferencesConfig;
-  newMonorepo?: NewMonorepoConfig;
   packagesPath: string;
   scaffoldPath: string;
 }

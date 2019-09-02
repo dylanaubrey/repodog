@@ -6,6 +6,7 @@ import {
   exec,
   info,
   iterateDirectory,
+  loadPackageJson,
   loadRootPackageJson,
   resolvePathToCwd,
   run,
@@ -18,7 +19,7 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, unlinkSync } from "f
 import { outputFileSync } from "fs-extra";
 import inquirer from "inquirer";
 import { safeDump, safeLoad } from "js-yaml";
-import { merge, union } from "lodash";
+import { difference, merge, union } from "lodash";
 import { ParsedPath, parse, resolve } from "path";
 import semver from "semver";
 import { JsonObject, PackageJson } from "type-fest";
@@ -31,6 +32,7 @@ import {
   EXTS_EXCLUDED_FROM_MERGE,
   FAIL,
   FILE_NAMES_EXCLUDED_FROM_MERGE,
+  FILE_NAMES_TO_PKG_NAMES,
   JSON_EXT,
   MERGE,
   MERGE_STRATEGY,
@@ -39,10 +41,12 @@ import {
   REPO_FEATURES_TO_REPO_PKGS,
   REPO_FEATURES_TO_SCAFFOLD_FILE_NAMES,
   SCAFFOLD_DIR_PATH,
+  TYPESCRIPT,
   YAML_EXT,
 } from "./constants";
-import { CopyBehaviour, MergeStrategy, RepositoryFeatures } from "./types";
+import { CopyBehaviour, MergeStrategy, RepositoryFeatures, ScaffoldFileName } from "./types";
 
+const failedFileNames = new Set<ScaffoldFileName>();
 let rootPackageJson: PackageJson | undefined;
 let repoFeatures: RepositoryFeatures = [];
 
@@ -95,7 +99,9 @@ function copyFiles(destPath: string): IterateDirectoryCallback {
       }
 
       if (!existsSync(destSubPath)) {
-        if (copyBehaviour !== FAIL) {
+        if (copyBehaviour === FAIL) {
+          failedFileNames.add(fileName as ScaffoldFileName);
+        } else {
           copyFileSync(srcPath, destSubPath);
         }
 
@@ -126,6 +132,7 @@ function executeCopyBehaviour(
       copyFileSync(srcPath, `${dir}/${name}.copy${ext}`);
       break;
     case FAIL:
+      failedFileNames.add(fileName as ScaffoldFileName);
       warn(`Copy of file "${fileName}" failed.`);
       break;
     case MERGE:
@@ -149,10 +156,32 @@ function getIncludedFileNames() {
 }
 
 function getIncludedPackages() {
-  return repoFeatures.reduce((included, feature) => {
+  const includedPackages = repoFeatures.reduce((included, feature) => {
     const repoPackages = REPO_FEATURES_TO_REPO_PKGS[feature];
     return [...new Set([...included, ...repoPackages])];
   }, Object.values(BASE_REPO_PKGS));
+
+  const excludedPackages = [...failedFileNames].reduce(
+    (excluded, fileName) => {
+      const pkgNames = FILE_NAMES_TO_PKG_NAMES[fileName];
+      return [...new Set([...excluded, ...pkgNames])];
+    },
+    [] as string[],
+  );
+
+  return difference(includedPackages, excludedPackages);
+}
+
+function getPackagePeerDependencies(pkgNames: string[]) {
+  return pkgNames.reduce(
+    (pkgDeps, pkgName) => {
+      const pkgJson = loadPackageJson(resolvePathToCwd(`node_modules/${pkgName}`));
+      if (!pkgJson || !pkgJson.peerDependencies) return pkgDeps;
+
+      return [...new Set([...pkgDeps, ...Object.keys(pkgJson.peerDependencies)])];
+    },
+    [] as string[],
+  );
 }
 
 function isFileExcluded(fileName: string) {
@@ -222,9 +251,15 @@ export default async function newMonorepo() {
 
     info("Copying scaffold to new monorepo");
     await iterateDirectory(resolvePathToCwd(SCAFFOLD_DIR_PATH), copyFiles(resolvePathToCwd(".")), { sync: true });
-    exec(`yarn add ${getIncludedPackages().join(" ")} --dev -W`);
-    run("init");
-    buildReferences();
+    exec("yarn");
+    const includedPackages = getIncludedPackages();
+    exec(`yarn add ${includedPackages.join(" ")} --dev -W`);
+    exec(`yarn add ${getPackagePeerDependencies(includedPackages).join(" ")} --dev -W`);
+    exec("lerna bootstrap");
+
+    if (features.includes(TYPESCRIPT)) {
+      buildReferences();
+    }
 
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {
       run("new-monorepo:post");

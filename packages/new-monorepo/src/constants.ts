@@ -119,6 +119,7 @@ export const EXTS_EXCLUDED_FROM_MERGE = [JS_EXT, MARKDOWN_EXT];
 
 export const BABEL_CONFIG_PKG = "@repodog/babel-config";
 export const BUILD_REFERENCES_PKG = "@repodog/build-references";
+export const CODECOV = "codecov";
 export const COMMITLINT_CONFIG_PKG = "@repodog/commitlint-config";
 export const ESLINT_CONFIG_PKG = "@repodog/eslint-config";
 export const JEST_CONFIG_PKG = "@repodog/jest-config";
@@ -135,6 +136,7 @@ export const TYPEDOC_CONFIG_PKG = "@repodog/typedoc-config";
 export const BASE_REPO_PKGS = {
   BABEL_CONFIG_PKG,
   BUILD_REFERENCES_PKG,
+  CODECOV,
   COMMITLINT_CONFIG_PKG,
   ESLINT_CONFIG_PKG,
   JEST_CONFIG_PKG,
@@ -153,7 +155,7 @@ export const REPO_FEATURES_TO_REPO_PKGS = {
 
 export const FILE_NAMES_TO_PKG_NAMES = {
   [BABEL_CONFIG]: [BABEL_CONFIG_PKG],
-  [CODECOV_CONFIG]: [],
+  [CODECOV_CONFIG]: [CODECOV],
   [COMMITLINT_CONFIG]: [COMMITLINT_CONFIG_PKG],
   [EDITOR_CONFIG]: [],
   [ESLINT_CONFIG]: [ESLINT_CONFIG_PKG],

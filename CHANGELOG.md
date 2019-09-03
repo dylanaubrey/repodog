@@ -1,3 +1,13 @@
+#### 0.2.33 (2019-09-03)
+
+##### New Features
+
+* **new-monorepo:**  adding pause to check repo before install ([f7ac3866](https://github.com/dylanaubrey/repodog/commit/f7ac3866982611a415075ccbe7757411646447c5))
+
+##### Bug Fixes
+
+* **codecov:**  adding to installation configuration ([643f955b](https://github.com/dylanaubrey/repodog/commit/643f955b06431d97fb820aede47b2cdc88992fe8))
+
 #### 0.2.32 (2019-09-02)
 
 ##### Bug Fixes

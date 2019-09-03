@@ -1,6 +1,6 @@
 {
   "name": "repodog",
-  "version": "0.2.32",
+  "version": "0.2.33",
   "private": true,
   "description": "An opinionated command line utility for managing a repository.",
   "keywords": [
@@ -52,6 +52,7 @@
     "publish-cutoff": "publish-lerna-cutoff",
     "test": "jest --logHeapUsage",
     "type-check": "tsc --noEmit",
+    "validate": "yarn run build && yarn run lint && yarn run type-check",
     "wipe": "yarn run wipe:packages && yarn run wipe:repo",
     "wipe:packages": "lerna exec --parallel -- del-cli ./yarn.lock ./node_modules",
     "wipe:repo": "del-cli ./yarn.lock ./node_modules"

@@ -1,3 +1,15 @@
+#### 0.2.34 (2019-09-06)
+
+##### New Features
+
+* **tslint:**  add no any rule ([b71d8b3a](https://github.com/dylanaubrey/repodog/commit/b71d8b3a6d43e4f73092b91ffe24a6b493790141))
+* **new-monorepo:**  add ts-jest and move all ts packages to config ([4e178b67](https://github.com/dylanaubrey/repodog/commit/4e178b67dc21d581c07a3a2162bf6378cf69294d))
+* **repo:**  add watch mode for ts packages ([0a678e8e](https://github.com/dylanaubrey/repodog/commit/0a678e8ec6c12f3a511243e3aeafdc816133703d))
+
+##### Refactors
+
+* **packages:**  update file structure ([432037e9](https://github.com/dylanaubrey/repodog/commit/432037e996850b7cee76fa1e197e771739b32397))
+
 #### 0.2.33 (2019-09-03)
 
 ##### New Features

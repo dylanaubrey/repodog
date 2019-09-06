@@ -6,6 +6,7 @@
   ],
   "rules": {
     "curly": [true, "ignore-same-line"],
+    "no-any": [true, { "ignore-rest-args": true }],
     "ordered-imports": [true, {
       "import-sources-order": "lowercase-last",
       "named-imports-order": "lowercase-last"
@@ -37,6 +38,7 @@
     "no-implicit-dependencies": false,
     "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
     "no-namespace": true,
+    "no-submodule-imports": [true, "ts-jest/utils"],
     "no-this-assignment": [true, { "allowed-names": ["_this"] }],
     "no-var-requires": false,
     "object-literal-sort-keys": [true, "locale-compare"],

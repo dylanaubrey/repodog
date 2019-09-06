@@ -1,7 +1,7 @@
 import { readdirSync, statSync } from "fs";
 import { resolve } from "path";
 import { info } from "../commands";
-import { IterateDirectoryCallback, IterateDirectoryOptions } from "../type-defs";
+import { IterateDirectoryCallback, IterateDirectoryOptions } from "../types";
 
 export default async function iterateDirectory(
   fullPath: string,

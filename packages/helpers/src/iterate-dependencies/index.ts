@@ -1,5 +1,5 @@
 import { PackageJson } from "type-fest";
-import { IterateDependenciesCallback } from "../type-defs";
+import { IterateDependenciesCallback } from "../types";
 
 export default function iterateDependencies(
   dependencies: PackageJson.Dependency,

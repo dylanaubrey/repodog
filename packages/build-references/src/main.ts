@@ -12,7 +12,7 @@ import {
 } from "@repodog/helpers";
 import { TSConfig, TSConfigReference } from "@repodog/types";
 import { get } from "lodash";
-import { BuildPackageReferencesParams, SetReferencesFromDependenciesParams } from "../type-defs";
+import { BuildPackageReferencesParams, SetReferencesFromDependenciesParams } from "./types";
 
 function setReferencesFromDependencies({ dependencies, references, scope }: SetReferencesFromDependenciesParams) {
   iterateDependencies(dependencies, ({ name }) => {

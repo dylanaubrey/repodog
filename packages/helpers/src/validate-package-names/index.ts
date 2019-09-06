@@ -1,6 +1,6 @@
 import validate from "validate-npm-package-name";
 import { info } from "../commands";
-import { ValidatePackageNameResult, ValidatePackageNamesResult } from "../type-defs";
+import { ValidatePackageNameResult, ValidatePackageNamesResult } from "../types";
 
 export function validatePackageName(name: string): ValidatePackageNameResult {
   info("Validating package name");

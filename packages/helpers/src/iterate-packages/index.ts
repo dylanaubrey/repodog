@@ -4,7 +4,7 @@ import iterateDirectory from "../iterate-directory";
 import loadRepodogConfig from "../load-repodog-config";
 import { loadPackageJson } from "../load-write-package-json";
 import resolvePathToCwd from "../resolve-path-to-cwd";
-import { IteratePackagesCallback, IteratePackagesErrorCallback } from "../type-defs";
+import { IteratePackagesCallback, IteratePackagesErrorCallback } from "../types";
 
 export default function iteratePackages(
   callback: IteratePackagesCallback,

@@ -18,7 +18,7 @@ import { isString } from "lodash";
 import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
-import { NewPackageParams } from "../type-defs";
+import { NewPackageParams } from "./types";
 
 export default async function newPackage(argv: NewPackageParams) {
   info("Creating new package");

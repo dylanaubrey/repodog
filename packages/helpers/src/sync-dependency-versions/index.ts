@@ -3,7 +3,7 @@ import semver from "semver";
 import { info, warn } from "../commands";
 import iterateDependencies from "../iterate-dependencies";
 import iteratePackages from "../iterate-packages";
-import { SyncDependencyVersionsParams } from "../type-defs";
+import { SyncDependencyVersionsParams } from "../types";
 
 function syncVersions(name: string, dependencies: StringObjectMap) {
   iterateDependencies(dependencies, ({ name: dependencyName }) => {

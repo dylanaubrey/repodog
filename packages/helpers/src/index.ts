@@ -9,5 +9,5 @@ export { loadTSConfig, writeTSConfig } from "./load-write-tsconfig";
 export { default as resolvePathToCwd } from "./resolve-path-to-cwd";
 export { default as sortObject } from "./sort-object";
 export { default as syncDependencyVersions } from "./sync-dependency-versions";
-export * from "./type-defs";
+export * from "./types";
 export { validatePackageName, validatePackageNames } from "./validate-package-names";

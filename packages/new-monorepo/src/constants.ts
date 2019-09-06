@@ -119,7 +119,6 @@ export const EXTS_EXCLUDED_FROM_MERGE = [JS_EXT, MARKDOWN_EXT];
 
 export const BABEL_CONFIG_PKG = "@repodog/babel-config";
 export const BUILD_REFERENCES_PKG = "@repodog/build-references";
-export const CODECOV = "codecov";
 export const COMMITLINT_CONFIG_PKG = "@repodog/commitlint-config";
 export const ESLINT_CONFIG_PKG = "@repodog/eslint-config";
 export const JEST_CONFIG_PKG = "@repodog/jest-config";
@@ -132,6 +131,17 @@ export const STYLELINT_CONFIG_PKG = "@repodog/stylelint-config";
 export const TS_CONFIG_PKG = "@repodog/ts-config";
 export const TSLINT_CONFIG_PKG = "@repodog/tslint-config";
 export const TYPEDOC_CONFIG_PKG = "@repodog/typedoc-config";
+
+export const TYPES_FS_EXTRA = "@types/fs-extra";
+export const TYPES_JEST = "@types/jest";
+export const TYPES_LODASH = "@types/lodash";
+export const TYPES_NODE = "@types/node";
+
+export const CODECOV = "codecov";
+export const TS_JEST = "ts-jest";
+export const TS_TOOLBELT = "ts-toolbelt";
+export const TYPE_FEST = "type-fest";
+export const UTILITY_TYPES = "utility-types";
 
 export const BASE_REPO_PKGS = {
   BABEL_CONFIG_PKG,
@@ -173,7 +183,17 @@ export const FILE_NAMES_TO_PKG_NAMES = {
   [ROLLUP_CONFIG]: [ROLLUP_CONFIG_PKG],
   [STYLELINT_CONFIG]: [STYLELINT_CONFIG_PKG],
   [TRAVIS_CONFIG]: [],
-  [TSCONFIG]: [TS_CONFIG_PKG],
+  [TSCONFIG]: [
+    TS_CONFIG_PKG,
+    TYPES_FS_EXTRA,
+    TYPES_JEST,
+    TYPES_LODASH,
+    TYPES_NODE,
+    TS_JEST,
+    TS_TOOLBELT,
+    TYPE_FEST,
+    UTILITY_TYPES,
+  ],
   [TSLINT_CONFIG]: [TSLINT_CONFIG_PKG],
   [TYPEDOC_CONFIG]: [TYPEDOC_CONFIG_PKG],
 };

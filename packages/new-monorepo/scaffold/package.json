@@ -41,10 +41,6 @@
     }
   },
   "devDependencies": {
-    "@types/fs-extra": "^8.0.0",
-    "@types/jest": "^24.0.16",
-    "@types/lodash": "^4.14.110",
-    "@types/node": "^12.6.9",
     "concurrently": "^4.1.1",
     "cross-env": "^5.1.6",
     "cutoff": "^0.2.7",
@@ -52,9 +48,6 @@
     "dotenv": "^8.0.0",
     "fs-extra": "^8.1.0",
     "husky": "^3.0.3",
-    "lodash": "^4.17.5",
-    "ts-toolbelt": "^3.2.13",
-    "type-fest": "^0.6.0",
-    "utility-types": "^3.7.0"
+    "lodash": "^4.17.5"
   }
 }

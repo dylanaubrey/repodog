@@ -1,13 +1,5 @@
-import { JsonValue } from "type-fest";
+export type CopyBehaviour = "duplicate" | "fail" | "merge" | "overwrite";
 
-export type Func = (...args: any[]) => Value;
+export type MergeStrategy = "destIntoScaffold" | "scaffoldIntoDest";
 
-export type Value = JsonValue | Func | undefined;
-
-export interface ObjectMap {
-  [key: string]: Value;
-}
-
-export interface StringObjectMap {
-  [key: string]: string;
-}
+export type RepositoryFeatures = Array<"browser" | "css" | "react" | "typescript">;

@@ -1,9 +1,3 @@
-export type CopyBehaviour = "duplicate" | "fail" | "merge" | "overwrite";
-
-export type MergeStrategy = "destIntoScaffold" | "scaffoldIntoDest";
-
-export type RepositoryFeatures = Array<"browser" | "css" | "react" | "typescript">;
-
 export type BABEL_CONFIG = "babel.config.js";
 export type CODECOV_CONFIG = "codecov.yml";
 export type COMMITLINT_CONFIG = "commitlint.config.js";

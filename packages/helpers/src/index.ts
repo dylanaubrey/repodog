@@ -1,4 +1,5 @@
 export * from "./commands";
+export { default as copyFile } from "./copy-file";
 export { default as iterateDependencies } from "./iterate-dependencies";
 export { default as iterateDirectory } from "./iterate-directory";
 export { default as iteratePackages } from "./iterate-packages";
@@ -6,6 +7,7 @@ export { loadPackageJson, writePackageJson } from "./load-write-package-json";
 export { default as loadRepodogConfig } from "./load-repodog-config";
 export { default as loadRootPackageJson } from "./load-root-package-json";
 export { loadTSConfig, writeTSConfig } from "./load-write-tsconfig";
+export { default as mergeFile } from "./merge-file";
 export { default as resolvePathToCwd } from "./resolve-path-to-cwd";
 export { default as sortObject } from "./sort-object";
 export { default as syncDependencyVersions } from "./sync-dependency-versions";

@@ -9,16 +9,10 @@
   ],
   "references": [
     {
-      "path": "../build-references"
-    },
-    {
       "path": "../constants"
     },
     {
       "path": "../helpers"
-    },
-    {
-      "path": "../new-repo"
     },
     {
       "path": "../types"

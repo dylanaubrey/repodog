@@ -18,6 +18,9 @@
       "path": "./new-package"
     },
     {
+      "path": "./new-repo"
+    },
+    {
       "path": "./types"
     }
   ]

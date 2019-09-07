@@ -1,5 +1,4 @@
-import buildReferences from "@repodog/build-references";
-import { REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
+import { REPO_FEATURES } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -12,14 +11,13 @@ import {
   run,
   validatePackageName,
 } from "@repodog/helpers";
-import { getIncludedPackages, getPackagePeerDependencies, isFileExcluded } from "@repodog/new-repo";
 import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
-import { existsSync, mkdirSync } from "fs";
 import inquirer from "inquirer";
 import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
 import { SCAFFOLD_DIR_PATH } from "./constants";
+import { getIncludedPackages, getPackagePeerDependencies, isFileExcluded } from "./helpers";
 
 const failedFileNames = new Set<ScaffoldFileName>();
 let rootPackageJson: PackageJson | undefined;
@@ -31,20 +29,14 @@ function createIterateDirCallback(destPath: string): IterateDirectoryCallback {
 
     const destSubPath = resolve(destPath, fileName);
 
-    if (stats.isDirectory()) {
-      if (!existsSync(destSubPath)) {
-        mkdirSync(destSubPath);
-      }
-
-      await iterateDirectory(srcPath, createIterateDirCallback(destSubPath), { sync: true });
-    } else {
+    if (stats.isFile()) {
       await copyFile(fileName, destSubPath, srcPath, failedFileNames);
     }
   };
 }
 
-export default async function newMonorepo() {
-  info("Creating new monorepo");
+export default async function newRepo() {
+  info("Creating new repository");
 
   try {
     rootPackageJson = loadRootPackageJson();
@@ -70,7 +62,7 @@ export default async function newMonorepo() {
 
     repoFeatures = features;
 
-    info("Copying scaffold to new monorepo");
+    info("Copying scaffold to new repository");
 
     await iterateDirectory(resolvePathToCwd(SCAFFOLD_DIR_PATH), createIterateDirCallback(resolvePathToCwd(".")), {
       sync: true,
@@ -90,14 +82,9 @@ export default async function newMonorepo() {
     const includedPackages = getIncludedPackages(repoFeatures);
     exec(`yarn add ${includedPackages.join(" ")} --dev -W`);
     exec(`yarn add ${getPackagePeerDependencies(includedPackages).join(" ")} --dev -W`);
-    exec("lerna bootstrap");
 
-    if (features.includes(TYPESCRIPT)) {
-      buildReferences();
-    }
-
-    if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {
-      run("new-monorepo:post");
+    if (rootPackageJson.scripts && rootPackageJson.scripts["new-repo:post"]) {
+      run("new-repo:post");
     }
   } catch (errors) {
     return error(errors);

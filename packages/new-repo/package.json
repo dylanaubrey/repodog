@@ -1,9 +1,16 @@
 {
-  "name": "@repodog/new-monorepo",
-  "version": "0.2.32",
-  "description": "The RepoDog new-monorepo module.",
-  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
-  "license": "MIT",
+  "name": "@repodog/new-repo",
+  "version": "0.2.34",
+  "description": "The RepoDog new-repo module.",
+  "keywords": [
+    "cli",
+    "command line",
+    "lerna",
+    "monorepos",
+    "releases",
+    "repositories",
+    "yarn"
+  ],
   "homepage": "https://github.com/dylanaubrey/repodog",
   "bugs": {
     "url": "https://github.com/dylanaubrey/repodog/issues"
@@ -12,22 +19,12 @@
     "type": "git",
     "url": "https://github.com/dylanaubrey/repodog"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "license": "MIT",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "main": "lib/main/index.js",
   "types": "lib/types/index.d.ts",
-  "keywords": [
-    "command line",
-    "cli",
-    "lerna",
-    "yarn",
-    "releases",
-    "monorepos",
-    "repositories"
-  ],
   "bin": {
-    "new-monorepo": "bin/cli.js"
+    "new-repo": "bin/cli.js"
   },
   "scripts": {
     "compile": "concurrently npm:compile:*",
@@ -40,10 +37,8 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.0.0",
-    "@repodog/build-references": "^0.1.10",
-    "@repodog/constants": "^0.1.4",
-    "@repodog/helpers": "^0.1.7",
-    "@repodog/new-repo": "^0.1.7",
+    "@repodog/constants": "^0.2.27",
+    "@repodog/helpers": "^0.2.29",
     "core-js": "^2.0",
     "lodash": "^4.17.5"
   },
@@ -51,5 +46,8 @@
     "inquirer": "^7.0.0",
     "semver": "^6.3.0",
     "yargs": "^13.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

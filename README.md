@@ -33,6 +33,7 @@ yarn add @repodog/<package>
 * [@repodog/markdownlint-config](packages/markdownlint-config)
 * [@repodog/new-monorepo](packages/new-monorepo)
 * [@repodog/new-package](packages/new-package)
+* [@repodog/new-repo](packages/new-repo)
 * [@repodog/rollup-config](packages/rollup-config)
 * [@repodog/stylelint-config](packages/stylelint-config)
 * [@repodog/ts-config](packages/ts-config)

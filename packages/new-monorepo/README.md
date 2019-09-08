@@ -17,8 +17,6 @@ The command creates a new monorepo in an existing project, copying over scaffold
 linters and build tools, and merging its `package.json` with the one in the root of the project. It then installs
 the project's dependencies, bootstraps each package, and builds Typescript references for each package.
 
-The command can be configured through the `repodog.config.js` configuration file.
-
 ```json
 // package.json
 {
@@ -26,19 +24,6 @@ The command can be configured through the `repodog.config.js` configuration file
     "new-monorepo": "new-monorepo"
   }
 }
-```
-
-```javascript
-// repodog.config.js
-module.exports = {
-  newMonorepo: {
-    scaffold: {
-      exclude: [
-        /tsconfig/
-      ],
-    },
-  },
-};
 ```
 
 ```shell

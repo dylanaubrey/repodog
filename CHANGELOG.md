@@ -1,3 +1,17 @@
+### 0.3.0 (2019-09-08)
+
+##### Documentation Changes
+
+* **readme:**  add new-repo link ([138221ed](https://github.com/dylanaubrey/repodog/commit/138221edd52b3fddd673554ea1b03b66028522d0))
+
+##### New Features
+
+* **new-repo:**  create new cmd to bootstrap single package repo ([5a4d07c6](https://github.com/dylanaubrey/repodog/commit/5a4d07c69caf53b76504cc7b056fc4786d727c9d))
+
+##### Bug Fixes
+
+* **new-repo:**  include npmignore file in scaffold ([db692d70](https://github.com/dylanaubrey/repodog/commit/db692d7026a28f87ab9f1484fb1f27a1a9d2e8fe))
+
 #### 0.2.34 (2019-09-06)
 
 ##### New Features

@@ -1,6 +1,6 @@
 # RepoDog
 
-An opinionated command line utility for managing monorepos.
+An opinionated command line utility for managing repositories.
 
 [![Build Status](https://travis-ci.org/dylanaubrey/repodog.svg?branch=master)](https://travis-ci.org/dylanaubrey/repodog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -8,6 +8,7 @@ An opinionated command line utility for managing monorepos.
 ## Summary
 
 * Extensible configurations for Typescript, popular linters, and build tools.
+* CLI command for creating a single package repository.
 * CLI commands for creating a monorepo and individual packages within it.
 * Set of scripts for common repository management tasks.
 

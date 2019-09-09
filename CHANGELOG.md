@@ -1,3 +1,9 @@
+#### 0.3.3 (2019-09-09)
+
+##### Bug Fixes
+
+* **new-repo:**  un-ignore private files ([e5b373ef](https://github.com/dylanaubrey/repodog/commit/e5b373ef554e73550343417bf1807825bf9acaba))
+
 #### 0.3.2 (2019-09-09)
 
 ##### Bug Fixes

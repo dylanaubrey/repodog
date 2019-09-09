@@ -1,8 +1,8 @@
 [
   {
-    "name": "@repodog/helpers",
+    "name": "@repodog/new-repo",
     "version": "0.3.1",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/helpers"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-repo"
   }
 ]

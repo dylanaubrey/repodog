@@ -89,7 +89,6 @@ function executeCopyBehaviour(
 
   switch (copyBehaviour) {
     case ACCEPT:
-      unlinkSync(destPath);
       copyFileSync(srcPath, destPath);
       break;
     case DUPLICATE:

@@ -1,3 +1,9 @@
+#### 0.3.4 (2019-09-09)
+
+##### New Features
+
+* **new-repo,new-monorepo:**  add install nvm step ([3dbcab48](https://github.com/dylanaubrey/repodog/commit/3dbcab48d140337b517c0e8b02efcd66fc6c3ecb))
+
 #### 0.3.3 (2019-09-09)
 
 ##### Bug Fixes

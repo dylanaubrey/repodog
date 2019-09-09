@@ -1,3 +1,9 @@
+#### 0.3.5 (2019-09-09)
+
+##### Bug Fixes
+
+* **helpers:**  fix bug in copy files ([461d3d12](https://github.com/dylanaubrey/repodog/commit/461d3d126f7e02f3a8acc590414887da876e85ff))
+
 #### 0.3.4 (2019-09-09)
 
 ##### New Features

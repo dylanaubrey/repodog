@@ -1,3 +1,14 @@
+#### 0.3.1 (2019-09-09)
+
+##### Documentation Changes
+
+* **new-monorepo, new-repo:**  update READMEs ([208aa7b5](https://github.com/dylanaubrey/repodog/commit/208aa7b5dea5bfb5e3d12a7d89de7bbd4a48f6f0))
+
+##### Bug Fixes
+
+* **helpers:**  add missing dependencies ([55e0da84](https://github.com/dylanaubrey/repodog/commit/55e0da8446320fae36aa7b377e86e11da892ad26))
+* **readme:**  correct description ([34ea6b0d](https://github.com/dylanaubrey/repodog/commit/34ea6b0d56788350aa45c0eeb4e40c9b15872385))
+
 ### 0.3.0 (2019-09-08)
 
 ##### Documentation Changes

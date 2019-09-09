@@ -23,7 +23,7 @@
 
 • **deps**: *string[]*
 
-*Defined in [types.ts:2](https://github.com/dylanaubrey/repodog/blob/138221e/packages/new-package/src/types.ts#L2)*
+*Defined in [types.ts:2](https://github.com/dylanaubrey/repodog/blob/55e0da8/packages/new-package/src/types.ts#L2)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **desc**: *string*
 
-*Defined in [types.ts:3](https://github.com/dylanaubrey/repodog/blob/138221e/packages/new-package/src/types.ts#L3)*
+*Defined in [types.ts:3](https://github.com/dylanaubrey/repodog/blob/55e0da8/packages/new-package/src/types.ts#L3)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [types.ts:4](https://github.com/dylanaubrey/repodog/blob/138221e/packages/new-package/src/types.ts#L4)*
+*Defined in [types.ts:4](https://github.com/dylanaubrey/repodog/blob/55e0da8/packages/new-package/src/types.ts#L4)*
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 • **type**? : *undefined | string*
 
-*Defined in [types.ts:5](https://github.com/dylanaubrey/repodog/blob/138221e/packages/new-package/src/types.ts#L5)*
+*Defined in [types.ts:5](https://github.com/dylanaubrey/repodog/blob/55e0da8/packages/new-package/src/types.ts#L5)*

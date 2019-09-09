@@ -8,7 +8,7 @@ export function error(message: string) {
 }
 
 export function exec(command: string, options: ExecOptions = {}) {
-  shell.exec(command, options);
+  return shell.exec(command, options);
 }
 
 export function info(message: string) {

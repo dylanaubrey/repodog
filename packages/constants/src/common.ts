@@ -58,12 +58,19 @@ export const DUPLICATE = "duplicate";
 export const FAIL = "fail";
 export const MERGE = "merge";
 export const OVERWRITE = "overwrite";
+export const ACCEPT = "accept";
+export const REJECT = "reject";
 
-export const COPY_BEHAVIOUR = {
+export const COPY_BEHAVIOUR_EXISTING_FILE = {
   DUPLICATE,
   FAIL,
   MERGE,
   OVERWRITE,
+};
+
+export const COPY_BEHAVIOUR = {
+  ACCEPT,
+  REJECT,
 };
 
 export const DEST_INTO_SCAFFOLD = "destIntoScaffold";

@@ -19,6 +19,7 @@ export const TYPES_LODASH = "@types/lodash";
 export const TYPES_NODE = "@types/node";
 
 export const CODECOV = "codecov";
+export const NVM = "nvm";
 export const TS_JEST = "ts-jest";
 export const TS_TOOLBELT = "ts-toolbelt";
 export const TYPE_FEST = "type-fest";

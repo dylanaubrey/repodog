@@ -1,4 +1,4 @@
-export type CopyBehaviour = "duplicate" | "fail" | "merge" | "overwrite";
+export type CopyBehaviour = "duplicate" | "fail" | "merge" | "overwrite" | "accept" | "reject";
 
 export type MergeStrategy = "destIntoScaffold" | "scaffoldIntoDest";
 

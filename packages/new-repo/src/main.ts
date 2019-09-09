@@ -5,6 +5,7 @@ import {
   error,
   exec,
   info,
+  installNVM,
   iterateDirectory,
   loadRootPackageJson,
   resolvePathToCwd,
@@ -77,6 +78,8 @@ export default async function newRepo() {
     if (!proceed) {
       return error("The files in your repository are not correct");
     }
+
+    installNVM(rootPackageJson);
 
     exec("yarn");
     const includedPackages = getIncludedPackages(repoFeatures);

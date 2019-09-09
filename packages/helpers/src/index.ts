@@ -1,5 +1,6 @@
 export * from "./commands";
 export { default as copyFile } from "./copy-file";
+export { default as installNVM } from "./install-nvm";
 export { default as iterateDependencies } from "./iterate-dependencies";
 export { default as iterateDirectory } from "./iterate-directory";
 export { default as iteratePackages } from "./iterate-packages";

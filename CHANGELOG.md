@@ -1,3 +1,9 @@
+#### 0.3.2 (2019-09-09)
+
+##### Bug Fixes
+
+* **helpers:**  add missing dependency ([db0e30f5](https://github.com/dylanaubrey/repodog/commit/db0e30f5eb10fa699afc8174252a25204dd16c87))
+
 #### 0.3.1 (2019-09-09)
 
 ##### Documentation Changes

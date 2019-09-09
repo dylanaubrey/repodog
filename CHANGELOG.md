@@ -1,3 +1,9 @@
+#### 0.3.6 (2019-09-09)
+
+##### Bug Fixes
+
+* **helpers:**  fix nvm install and use ([45ce6cf4](https://github.com/dylanaubrey/repodog/commit/45ce6cf4396ea4629dd3a9589c3d49215a61d829))
+
 #### 0.3.5 (2019-09-09)
 
 ##### Bug Fixes

@@ -5,8 +5,7 @@ import { exec } from "../commands";
 
 export default function installNVM(rootPackageJson: PackageJson) {
   exec(`curl -o- ${NVM_SCRIPT} | bash`);
-  exec(`export NVM_DIR="$HOME/.nvm"`);
-  exec(`[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"`);
+  exec("source ~/.nvm/nvm.sh");
   const nodeVersion = get(rootPackageJson, ["engines", "node"]);
   exec(`nvm install ${nodeVersion}`);
   exec(`nvm use ${nodeVersion}`);

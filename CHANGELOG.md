@@ -1,3 +1,9 @@
+#### 0.3.7 (2019-09-10)
+
+##### Bug Fixes
+
+* **new-repo/monorepo:**  load nvm into terminal session ([d24cf064](https://github.com/dylanaubrey/repodog/commit/d24cf06466bf6719624a891b2a0ba4e606d1ea4e))
+
 #### 0.3.6 (2019-09-09)
 
 ##### Bug Fixes

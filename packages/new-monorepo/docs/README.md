@@ -20,7 +20,7 @@
 
 • **SCAFFOLD_DIR_PATH**: *"node_modules/@repodog/new-monorepo/scaffold"* = "node_modules/@repodog/new-monorepo/scaffold"
 
-*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/45ce6cf/packages/new-monorepo/src/constants.ts#L1)*
+*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/d24cf06/packages/new-monorepo/src/constants.ts#L1)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **failedFileNames**: *`Set<"babel.config.js" | "codecov.yml" | "commitlint.config.js" | ".editorconfig" | ".eslintrc.js" | ".eslintignore" | ".gitignore" | "jest.config.js" | "lerna.json" | "LICENSE" | ".markdownlint.json" | ".node-version" | ".npmrc" | ".prettierrc.js" | "README.md" | "rollup.config.js" | "stylelint.config.js" | ".travis.yml" | "tsconfig.settings.json" | "tslint.json" | "typedoc.js">`* =  new Set<ScaffoldFileName>()
 
-*Defined in [main.ts:25](https://github.com/dylanaubrey/repodog/blob/45ce6cf/packages/new-monorepo/src/main.ts#L25)*
+*Defined in [main.ts:25](https://github.com/dylanaubrey/repodog/blob/d24cf06/packages/new-monorepo/src/main.ts#L25)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **repoFeatures**: *`RepositoryFeatures`* =  []
 
-*Defined in [main.ts:27](https://github.com/dylanaubrey/repodog/blob/45ce6cf/packages/new-monorepo/src/main.ts#L27)*
+*Defined in [main.ts:27](https://github.com/dylanaubrey/repodog/blob/d24cf06/packages/new-monorepo/src/main.ts#L27)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **rootPackageJson**: *`PackageJson` | undefined*
 
-*Defined in [main.ts:26](https://github.com/dylanaubrey/repodog/blob/45ce6cf/packages/new-monorepo/src/main.ts#L26)*
+*Defined in [main.ts:26](https://github.com/dylanaubrey/repodog/blob/d24cf06/packages/new-monorepo/src/main.ts#L26)*
 
 ## Functions
 
@@ -52,7 +52,7 @@ ___
 
 ▸ **createIterateDirCallback**(`destPath`: string): *`IterateDirectoryCallback`*
 
-*Defined in [main.ts:29](https://github.com/dylanaubrey/repodog/blob/45ce6cf/packages/new-monorepo/src/main.ts#L29)*
+*Defined in [main.ts:29](https://github.com/dylanaubrey/repodog/blob/d24cf06/packages/new-monorepo/src/main.ts#L29)*
 
 **Parameters:**
 
@@ -68,6 +68,6 @@ ___
 
 ▸ **newMonorepo**(): *`Promise<void>`*
 
-*Defined in [main.ts:47](https://github.com/dylanaubrey/repodog/blob/45ce6cf/packages/new-monorepo/src/main.ts#L47)*
+*Defined in [main.ts:47](https://github.com/dylanaubrey/repodog/blob/d24cf06/packages/new-monorepo/src/main.ts#L47)*
 
 **Returns:** *`Promise<void>`*

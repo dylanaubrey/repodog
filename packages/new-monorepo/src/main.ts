@@ -8,7 +8,6 @@ import {
   info,
   iterateDirectory,
   loadRootPackageJson,
-  nvmInstall,
   resolvePathToCwd,
   run,
   validatePackageName,
@@ -87,7 +86,6 @@ export default async function newMonorepo() {
       return error("The files in your repository are not correct");
     }
 
-    await nvmInstall(SCAFFOLD_DIR_PATH);
     exec("yarn");
     const includedPackages = getIncludedPackages(repoFeatures);
     exec(`yarn add ${includedPackages.join(" ")} --dev -W`);

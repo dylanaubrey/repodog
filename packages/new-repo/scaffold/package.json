@@ -1,8 +1,5 @@
 {
   "license": "MIT",
-  "engines": {
-    "node": "10.16.0"
-  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "yarn run clean:libs && yarn run compile",

@@ -1,8 +1,5 @@
 {
   "license": "MIT",
-  "engines": {
-    "node": "10.16.0"
-  },
   "private": true,
   "workspaces": [
     "packages/*"

@@ -1,6 +1,6 @@
 {
   "name": "@repodog/helpers",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "The RepoDog helpers module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

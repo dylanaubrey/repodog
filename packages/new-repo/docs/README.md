@@ -24,7 +24,7 @@
 
 • **SCAFFOLD_DIR_PATH**: *"node_modules/@repodog/new-repo/scaffold"* = "node_modules/@repodog/new-repo/scaffold"
 
-*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/constants.ts#L1)*
+*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/constants.ts#L1)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **failedFileNames**: *`Set<"babel.config.js" | "codecov.yml" | "commitlint.config.js" | ".editorconfig" | ".eslintrc.js" | ".eslintignore" | ".gitignore" | "jest.config.js" | "lerna.json" | "LICENSE" | ".markdownlint.json" | ".node-version" | ".npmrc" | ".prettierrc.js" | "README.md" | "rollup.config.js" | "stylelint.config.js" | ".travis.yml" | "tsconfig.settings.json" | "tslint.json" | "typedoc.js">`* =  new Set<ScaffoldFileName>()
 
-*Defined in [main.ts:23](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/main.ts#L23)*
+*Defined in [main.ts:23](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/main.ts#L23)*
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • **repoFeatures**: *`RepositoryFeatures`* =  []
 
-*Defined in [main.ts:25](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/main.ts#L25)*
+*Defined in [main.ts:25](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/main.ts#L25)*
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • **rootPackageJson**: *`PackageJson` | undefined*
 
-*Defined in [main.ts:24](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/main.ts#L24)*
+*Defined in [main.ts:24](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/main.ts#L24)*
 
 ## Functions
 
@@ -56,7 +56,7 @@ ___
 
 ▸ **createIterateDirCallback**(`destPath`: string): *`IterateDirectoryCallback`*
 
-*Defined in [main.ts:27](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/main.ts#L27)*
+*Defined in [main.ts:27](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/main.ts#L27)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 ▸ **getIncludedFileNames**(`repoFeatures`: `RepositoryFeatures`): *string[]*
 
-*Defined in [helpers.ts:12](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/helpers.ts#L12)*
+*Defined in [helpers.ts:12](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/helpers.ts#L12)*
 
 **Parameters:**
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **getIncludedPackages**(`repoFeatures`: `RepositoryFeatures`, `failedFileNames`: `Set<ScaffoldFileName>`): *string[]*
 
-*Defined in [helpers.ts:19](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/helpers.ts#L19)*
+*Defined in [helpers.ts:19](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/helpers.ts#L19)*
 
 **Parameters:**
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **getPackagePeerDependencies**(`pkgNames`: string[]): *string[]*
 
-*Defined in [helpers.ts:39](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/helpers.ts#L39)*
+*Defined in [helpers.ts:39](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/helpers.ts#L39)*
 
 **Parameters:**
 
@@ -121,7 +121,7 @@ ___
 
 ▸ **isFileExcluded**(`fileName`: string, `repoFeatures`: `RepositoryFeatures`): *boolean*
 
-*Defined in [helpers.ts:51](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/helpers.ts#L51)*
+*Defined in [helpers.ts:51](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/helpers.ts#L51)*
 
 **Parameters:**
 
@@ -138,6 +138,6 @@ ___
 
 ▸ **newRepo**(): *`Promise<void>`*
 
-*Defined in [main.ts:39](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-repo/src/main.ts#L39)*
+*Defined in [main.ts:39](https://github.com/dylanaubrey/repodog/blob/75a5e36/packages/new-repo/src/main.ts#L39)*
 
 **Returns:** *`Promise<void>`*

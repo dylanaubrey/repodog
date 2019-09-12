@@ -1,3 +1,9 @@
+#### 0.3.11 (2019-09-12)
+
+##### Bug Fixes
+
+* **helpers:**  remove node version and nvm install ([6f1ee6b9](https://github.com/dylanaubrey/repodog/commit/6f1ee6b90191225b75671dbd7e24f97ea055c85e))
+
 #### 0.3.10 (2019-09-12)
 
 #### 0.3.9 (2019-09-12)

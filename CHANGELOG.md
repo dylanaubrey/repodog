@@ -1,3 +1,9 @@
+#### 0.3.8 (2019-09-12)
+
+##### Bug Fixes
+
+* **helpers:**  nvm install was broken ([fd5097f2](https://github.com/dylanaubrey/repodog/commit/fd5097f2752a48f70793a7e9f77d363565cf90a4))
+
 #### 0.3.7 (2019-09-10)
 
 ##### Bug Fixes

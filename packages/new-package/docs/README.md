@@ -16,7 +16,7 @@
 
 ▸ **newPackage**(`argv`: [NewPackageParams](interfaces/newpackageparams.md)): *`Promise<void>`*
 
-*Defined in [main.ts:23](https://github.com/dylanaubrey/repodog/blob/d24cf06/packages/new-package/src/main.ts#L23)*
+*Defined in [main.ts:23](https://github.com/dylanaubrey/repodog/blob/fd5097f/packages/new-package/src/main.ts#L23)*
 
 **Parameters:**
 

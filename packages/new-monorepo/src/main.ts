@@ -6,9 +6,9 @@ import {
   error,
   exec,
   info,
-  installNVM,
   iterateDirectory,
   loadRootPackageJson,
+  nvmInstall,
   resolvePathToCwd,
   run,
   validatePackageName,
@@ -87,15 +87,14 @@ export default async function newMonorepo() {
       return error("The files in your repository are not correct");
     }
 
-    installNVM(rootPackageJson);
-
+    await nvmInstall(rootPackageJson);
     exec("yarn");
     const includedPackages = getIncludedPackages(repoFeatures);
     exec(`yarn add ${includedPackages.join(" ")} --dev -W`);
     exec(`yarn add ${getPackagePeerDependencies(includedPackages).join(" ")} --dev -W`);
     exec("lerna bootstrap");
 
-    if (features.includes(TYPESCRIPT)) {
+    if (repoFeatures.includes(TYPESCRIPT)) {
       buildReferences();
     }
 

@@ -1,6 +1,5 @@
 export * from "./commands";
 export { default as copyFile } from "./copy-file";
-export { default as installNVM } from "./install-nvm";
 export { default as iterateDependencies } from "./iterate-dependencies";
 export { default as iterateDirectory } from "./iterate-directory";
 export { default as iteratePackages } from "./iterate-packages";
@@ -9,7 +8,9 @@ export { default as loadRepodogConfig } from "./load-repodog-config";
 export { default as loadRootPackageJson } from "./load-root-package-json";
 export { loadTSConfig, writeTSConfig } from "./load-write-tsconfig";
 export { default as mergeFile } from "./merge-file";
+export { default as nvmInstall } from "./nvm-install";
 export { default as resolvePathToCwd } from "./resolve-path-to-cwd";
+export { default as sanitizeVersion } from "./sanitize-version";
 export { default as sortObject } from "./sort-object";
 export { default as syncDependencyVersions } from "./sync-dependency-versions";
 export * from "./types";

@@ -1,11 +1,11 @@
 import { JsonValue } from "type-fest";
 
-export type Func = (...args: any[]) => Value;
+export type Func = (...args: any[]) => Val;
 
-export type Value = JsonValue | Func | undefined;
+export type Val = JsonValue | Func | undefined;
 
 export interface ObjectMap {
-  [key: string]: Value;
+  [key: string]: Val;
 }
 
 export interface StringObjectMap {

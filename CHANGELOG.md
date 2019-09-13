@@ -1,3 +1,9 @@
+#### 0.3.20 (2019-09-13)
+
+##### Bug Fixes
+
+* **lint:**  sort errors ([4bec627a](https://github.com/dylanaubrey/repodog/commit/4bec627a32208930fc647c79b1bb23d6461ed8be))
+
 #### 0.3.19 (2019-09-13)
 
 ##### Bug Fixes

@@ -89,7 +89,8 @@ export default async function newMonorepo() {
     exec("yarn");
     const includedPackages = getIncludedPackages(repoFeatures);
     exec(`yarn add ${includedPackages.join(" ")} --dev -W`);
-    exec(`yarn add ${getPackagePeerDependencies(includedPackages).join(" ")} --dev -W`);
+    const peerDependencies = getPackagePeerDependencies(includedPackages);
+    exec(`yarn add ${peerDependencies.join(" ")} --dev -W`);
     exec("lerna bootstrap");
 
     if (repoFeatures.includes(TYPESCRIPT)) {

@@ -1,3 +1,9 @@
+#### 0.3.15 (2019-09-13)
+
+##### Bug Fixes
+
+* **new-repo/monorepo:**  split out installation steps ([e7a7a727](https://github.com/dylanaubrey/repodog/commit/e7a7a7279e91a2aad373f2a8a9d8f6338ccc1812))
+
 #### 0.3.14 (2019-09-13)
 
 ##### Bug Fixes

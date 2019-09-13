@@ -1,3 +1,9 @@
+#### 0.3.19 (2019-09-13)
+
+##### Bug Fixes
+
+* **new-repo/monorepo:**  remove version from peer dependencies ([1397525e](https://github.com/dylanaubrey/repodog/commit/1397525ef4fdd06eb845f8f3bf5c7a427153e98b))
+
 #### 0.3.18 (2019-09-13)
 
 ##### Bug Fixes

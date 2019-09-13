@@ -63,7 +63,7 @@
 
 Ƭ **IterateDependenciesCallback**: *function*
 
-*Defined in [types.ts:4](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/types.ts#L4)*
+*Defined in [types.ts:4](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/types.ts#L4)*
 
 #### Type declaration:
 
@@ -84,7 +84,7 @@ ___
 
 Ƭ **IterateDirectoryCallback**: *function*
 
-*Defined in [types.ts:6](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/types.ts#L6)*
+*Defined in [types.ts:6](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/types.ts#L6)*
 
 #### Type declaration:
 
@@ -106,7 +106,7 @@ ___
 
 Ƭ **IteratePackagesCallback**: *function*
 
-*Defined in [types.ts:12](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/types.ts#L12)*
+*Defined in [types.ts:12](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/types.ts#L12)*
 
 #### Type declaration:
 
@@ -128,7 +128,7 @@ ___
 
 Ƭ **IteratePackagesErrorCallback**: *function*
 
-*Defined in [types.ts:18](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/types.ts#L18)*
+*Defined in [types.ts:18](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/types.ts#L18)*
 
 #### Type declaration:
 
@@ -149,7 +149,7 @@ ___
 
 Ƭ **SortObjectComparator**: *`ReadonlyArray<keyof T>` | function*
 
-*Defined in [types.ts:20](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/types.ts#L20)*
+*Defined in [types.ts:20](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/types.ts#L20)*
 
 ## Variables
 
@@ -157,7 +157,7 @@ ___
 
 • **packageJson**: *`PackageJson`*
 
-*Defined in [load-root-package-json/index.ts:6](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-root-package-json/index.ts#L6)*
+*Defined in [load-root-package-json/index.ts:6](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-root-package-json/index.ts#L6)*
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 • **packageJsons**: *`Map<string, PackageJson>`* =  new Map()
 
-*Defined in [load-write-package-json/index.ts:8](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-write-package-json/index.ts#L8)*
+*Defined in [load-write-package-json/index.ts:8](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-write-package-json/index.ts#L8)*
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 • **repodogConfig**: *`RepodogConfig`*
 
-*Defined in [load-repodog-config/index.ts:6](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-repodog-config/index.ts#L6)*
+*Defined in [load-repodog-config/index.ts:6](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-repodog-config/index.ts#L6)*
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 • **tsConfigs**: *`Map<string, TSConfig>`* =  new Map()
 
-*Defined in [load-write-tsconfig/index.ts:7](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-write-tsconfig/index.ts#L7)*
+*Defined in [load-write-tsconfig/index.ts:7](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-write-tsconfig/index.ts#L7)*
 
 ## Functions
 
@@ -189,7 +189,7 @@ ___
 
 ▸ **copyFile**(`fileName`: string, `destPath`: string, `srcPath`: string, `failedFileNames`: `Set<ScaffoldFileName>`): *`Promise<void>`*
 
-*Defined in [copy-file/index.ts:21](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/copy-file/index.ts#L21)*
+*Defined in [copy-file/index.ts:21](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/copy-file/index.ts#L21)*
 
 **Parameters:**
 
@@ -208,7 +208,7 @@ ___
 
 ▸ **error**(`message`: string): *void*
 
-*Defined in [commands/index.ts:5](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/commands/index.ts#L5)*
+*Defined in [commands/index.ts:5](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/commands/index.ts#L5)*
 
 **Parameters:**
 
@@ -224,7 +224,7 @@ ___
 
 ▸ **exec**(`command`: string, `options`: `ExecOptions`): *string & `ShellReturnValue` | `ChildProcess`*
 
-*Defined in [commands/index.ts:10](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/commands/index.ts#L10)*
+*Defined in [commands/index.ts:10](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/commands/index.ts#L10)*
 
 **Parameters:**
 
@@ -241,7 +241,7 @@ ___
 
 ▸ **executeCopyBehaviour**(`copyBehaviour`: `CopyBehaviour`, `mergeStrategy`: `MergeStrategy` | undefined, `fileName`: string, `destPath`: string, `srcPath`: string, `parsedPath`: `ParsedPath`, `failedFileNames`: `Set<ScaffoldFileName>`): *void*
 
-*Defined in [copy-file/index.ts:79](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/copy-file/index.ts#L79)*
+*Defined in [copy-file/index.ts:79](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/copy-file/index.ts#L79)*
 
 **Parameters:**
 
@@ -263,7 +263,7 @@ ___
 
 ▸ **formatFileContents**(`contents`: string): *string[]*
 
-*Defined in [merge-file/index.ts:12](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/merge-file/index.ts#L12)*
+*Defined in [merge-file/index.ts:12](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/merge-file/index.ts#L12)*
 
 **Parameters:**
 
@@ -279,7 +279,7 @@ ___
 
 ▸ **info**(`message`: string): *void*
 
-*Defined in [commands/index.ts:14](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/commands/index.ts#L14)*
+*Defined in [commands/index.ts:14](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/commands/index.ts#L14)*
 
 **Parameters:**
 
@@ -295,7 +295,7 @@ ___
 
 ▸ **iterateDependencies**(`dependencies`: `Dependency`, `callback`: [IterateDependenciesCallback](README.md#iteratedependenciescallback)): *void*
 
-*Defined in [iterate-dependencies/index.ts:4](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/iterate-dependencies/index.ts#L4)*
+*Defined in [iterate-dependencies/index.ts:4](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/iterate-dependencies/index.ts#L4)*
 
 **Parameters:**
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **iterateDirectory**(`fullPath`: string, `callback`: [IterateDirectoryCallback](README.md#iteratedirectorycallback), `__namedParameters`: object): *`Promise<void>`*
 
-*Defined in [iterate-directory/index.ts:6](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/iterate-directory/index.ts#L6)*
+*Defined in [iterate-directory/index.ts:6](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/iterate-directory/index.ts#L6)*
 
 **Parameters:**
 
@@ -334,7 +334,7 @@ ___
 
 ▸ **iteratePackages**(`callback`: [IteratePackagesCallback](README.md#iteratepackagescallback), `errorCallback?`: [IteratePackagesErrorCallback](README.md#iteratepackageserrorcallback)): *void*
 
-*Defined in [iterate-packages/index.ts:9](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/iterate-packages/index.ts#L9)*
+*Defined in [iterate-packages/index.ts:9](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/iterate-packages/index.ts#L9)*
 
 **Parameters:**
 
@@ -351,7 +351,7 @@ ___
 
 ▸ **loadPackageJson**(`path`: string): *undefined | object & `NonStandardEntryPoints` & `TypeScriptConfiguration` & `YarnConfiguration` & `JSPMConfiguration` & object*
 
-*Defined in [load-write-package-json/index.ts:10](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-write-package-json/index.ts#L10)*
+*Defined in [load-write-package-json/index.ts:10](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-write-package-json/index.ts#L10)*
 
 **Parameters:**
 
@@ -367,7 +367,7 @@ ___
 
 ▸ **loadRepodogConfig**(): *`RepodogConfig`*
 
-*Defined in [load-repodog-config/index.ts:13](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-repodog-config/index.ts#L13)*
+*Defined in [load-repodog-config/index.ts:13](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-repodog-config/index.ts#L13)*
 
 **Returns:** *`RepodogConfig`*
 
@@ -377,7 +377,7 @@ ___
 
 ▸ **loadRootPackageJson**(): *`PackageJson` | undefined*
 
-*Defined in [load-root-package-json/index.ts:8](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-root-package-json/index.ts#L8)*
+*Defined in [load-root-package-json/index.ts:8](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-root-package-json/index.ts#L8)*
 
 **Returns:** *`PackageJson` | undefined*
 
@@ -387,7 +387,7 @@ ___
 
 ▸ **loadTSConfig**(`fullPath`: string): *undefined | `TSConfig`*
 
-*Defined in [load-write-tsconfig/index.ts:9](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-write-tsconfig/index.ts#L9)*
+*Defined in [load-write-tsconfig/index.ts:9](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-write-tsconfig/index.ts#L9)*
 
 **Parameters:**
 
@@ -403,7 +403,7 @@ ___
 
 ▸ **mergeFile**(`mergeStrategy`: `MergeStrategy`, `destPath`: string, `srcPath`: string, `__namedParameters`: object): *void*
 
-*Defined in [merge-file/index.ts:16](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/merge-file/index.ts#L16)*
+*Defined in [merge-file/index.ts:16](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/merge-file/index.ts#L16)*
 
 **Parameters:**
 
@@ -428,7 +428,7 @@ ___
 
 ▸ **nvmInstall**(`scaffoldDirPath`: string): *`Promise<void>`*
 
-*Defined in [nvm-install/index.ts:8](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/nvm-install/index.ts#L8)*
+*Defined in [nvm-install/index.ts:8](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/nvm-install/index.ts#L8)*
 
 **Parameters:**
 
@@ -444,7 +444,7 @@ ___
 
 ▸ **resolvePathToCwd**(...`path`: keyof string[]): *string*
 
-*Defined in [resolve-path-to-cwd/index.ts:3](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/resolve-path-to-cwd/index.ts#L3)*
+*Defined in [resolve-path-to-cwd/index.ts:3](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/resolve-path-to-cwd/index.ts#L3)*
 
 **Parameters:**
 
@@ -460,7 +460,7 @@ ___
 
 ▸ **run**(`command`: string, `options`: `ExecOptions`): *void*
 
-*Defined in [commands/index.ts:18](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/commands/index.ts#L18)*
+*Defined in [commands/index.ts:18](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/commands/index.ts#L18)*
 
 **Parameters:**
 
@@ -477,7 +477,7 @@ ___
 
 ▸ **sanitizeVersion**(`version`: string): *string*
 
-*Defined in [sanitize-version/index.ts:1](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/sanitize-version/index.ts#L1)*
+*Defined in [sanitize-version/index.ts:1](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/sanitize-version/index.ts#L1)*
 
 **Parameters:**
 
@@ -493,7 +493,7 @@ ___
 
 ▸ **sortObject**<**O**>(`obj`: `O`, `comparator?`: [SortObjectComparator](README.md#sortobjectcomparator)‹*`O`*›): *`O`*
 
-*Defined in [sort-object/index.ts:5](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/sort-object/index.ts#L5)*
+*Defined in [sort-object/index.ts:5](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/sort-object/index.ts#L5)*
 
 **Type parameters:**
 
@@ -514,7 +514,7 @@ ___
 
 ▸ **syncDependencyVersions**(`__namedParameters`: object): *object*
 
-*Defined in [sync-dependency-versions/index.ts:32](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/sync-dependency-versions/index.ts#L32)*
+*Defined in [sync-dependency-versions/index.ts:32](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/sync-dependency-versions/index.ts#L32)*
 
 **Parameters:**
 
@@ -538,7 +538,7 @@ ___
 
 ▸ **syncVersions**(`name`: string, `dependencies`: `StringObjectMap`): *`StringObjectMap`*
 
-*Defined in [sync-dependency-versions/index.ts:8](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/sync-dependency-versions/index.ts#L8)*
+*Defined in [sync-dependency-versions/index.ts:8](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/sync-dependency-versions/index.ts#L8)*
 
 **Parameters:**
 
@@ -555,7 +555,7 @@ ___
 
 ▸ **validatePackageName**(`name`: string): *[ValidatePackageNameResult](interfaces/validatepackagenameresult.md)*
 
-*Defined in [validate-package-names/index.ts:5](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/validate-package-names/index.ts#L5)*
+*Defined in [validate-package-names/index.ts:5](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/validate-package-names/index.ts#L5)*
 
 **Parameters:**
 
@@ -571,7 +571,7 @@ ___
 
 ▸ **validatePackageNames**(`names`: keyof string[]): *[ValidatePackageNamesResult](interfaces/validatepackagenamesresult.md)*
 
-*Defined in [validate-package-names/index.ts:11](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/validate-package-names/index.ts#L11)*
+*Defined in [validate-package-names/index.ts:11](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/validate-package-names/index.ts#L11)*
 
 **Parameters:**
 
@@ -587,7 +587,7 @@ ___
 
 ▸ **warn**(`message`: string): *void*
 
-*Defined in [commands/index.ts:22](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/commands/index.ts#L22)*
+*Defined in [commands/index.ts:22](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/commands/index.ts#L22)*
 
 **Parameters:**
 
@@ -603,7 +603,7 @@ ___
 
 ▸ **writePackageJson**(`fullPath`: string, `config`: `PackageJson`): *void*
 
-*Defined in [load-write-package-json/index.ts:21](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-write-package-json/index.ts#L21)*
+*Defined in [load-write-package-json/index.ts:21](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-write-package-json/index.ts#L21)*
 
 **Parameters:**
 
@@ -620,7 +620,7 @@ ___
 
 ▸ **writeTSConfig**(`fullPath`: string, `config`: `TSConfig`): *void*
 
-*Defined in [load-write-tsconfig/index.ts:20](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-write-tsconfig/index.ts#L20)*
+*Defined in [load-write-tsconfig/index.ts:20](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-write-tsconfig/index.ts#L20)*
 
 **Parameters:**
 
@@ -637,16 +637,16 @@ Name | Type |
 
 ### ▪ **defaultRepodogConfig**: *object*
 
-*Defined in [load-repodog-config/index.ts:8](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-repodog-config/index.ts#L8)*
+*Defined in [load-repodog-config/index.ts:8](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-repodog-config/index.ts#L8)*
 
 ###  packagesPath
 
 • **packagesPath**: *string* =  DEFAULT_PACKAGES_PATH
 
-*Defined in [load-repodog-config/index.ts:9](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-repodog-config/index.ts#L9)*
+*Defined in [load-repodog-config/index.ts:9](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-repodog-config/index.ts#L9)*
 
 ###  scaffoldPath
 
 • **scaffoldPath**: *string* =  DEFAULT_SCAFFOLD_PATH
 
-*Defined in [load-repodog-config/index.ts:10](https://github.com/dylanaubrey/repodog/blob/6c25ee9/packages/helpers/src/load-repodog-config/index.ts#L10)*
+*Defined in [load-repodog-config/index.ts:10](https://github.com/dylanaubrey/repodog/blob/277ef50/packages/helpers/src/load-repodog-config/index.ts#L10)*

@@ -1,3 +1,9 @@
+#### 0.3.13 (2019-09-13)
+
+##### Bug Fixes
+
+* **types:**  update name of type ([277ef50c](https://github.com/dylanaubrey/repodog/commit/277ef50c4c5936df674c0ac37d7e673919542814))
+
 #### 0.3.12 (2019-09-12)
 
 #### 0.3.11 (2019-09-12)

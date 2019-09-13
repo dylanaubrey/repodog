@@ -1,7 +1,13 @@
 [
   {
-    "name": "@repodog/types",
+    "name": "@repodog/new-repo",
     "version": "0.3.12",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-repo"
+  },
+  {
+    "name": "@repodog/types",
+    "version": "0.3.13",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/types"
   }

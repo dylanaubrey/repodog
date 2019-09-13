@@ -1,3 +1,10 @@
+#### 0.3.14 (2019-09-13)
+
+##### Bug Fixes
+
+* **new-repo:**  remove workspace args from install commands ([e8cb945c](https://github.com/dylanaubrey/repodog/commit/e8cb945cd258d2d7868e20abf7b485b421fa7e2b))
+* **types:**  update utils types ([84b29591](https://github.com/dylanaubrey/repodog/commit/84b2959190c744fba7253a41d325db856d4a9016))
+
 #### 0.3.13 (2019-09-13)
 
 ##### Bug Fixes

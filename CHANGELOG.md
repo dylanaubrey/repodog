@@ -1,3 +1,9 @@
+#### 0.3.16 (2019-09-13)
+
+##### Bug Fixes
+
+* **new-repo/monorepo:**  install nvm back in ([04acceae](https://github.com/dylanaubrey/repodog/commit/04acceae68dc7cdcf88496f4c5d873429463dbd9))
+
 #### 0.3.15 (2019-09-13)
 
 ##### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@repodog/new-repo",
-  "version": "0.3.16",
+  "version": "0.3.17",
   "description": "The RepoDog new-repo module.",
   "keywords": [
     "cli",

@@ -1,6 +1,6 @@
 {
   "name": "@repodog/stylelint-config",
-  "version": "0.3.16",
+  "version": "0.3.17",
   "description": "The RepoDog stylelint-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

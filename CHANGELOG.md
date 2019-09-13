@@ -1,3 +1,9 @@
+#### 0.3.17 (2019-09-13)
+
+##### Bug Fixes
+
+* **new-repo/monorepo:**  add load nvm to scripts ([6823fe47](https://github.com/dylanaubrey/repodog/commit/6823fe474b0a0be14f050fdda315ef34ea4a6508))
+
 #### 0.3.16 (2019-09-13)
 
 ##### Bug Fixes

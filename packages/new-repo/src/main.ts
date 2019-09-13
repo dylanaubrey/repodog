@@ -1,4 +1,4 @@
-import { REPO_FEATURES } from "@repodog/constants";
+import { LOAD_NVM, REPO_FEATURES } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -80,11 +80,11 @@ export default async function newRepo() {
     }
 
     await nvmInstall(SCAFFOLD_DIR_PATH);
-    exec("yarn");
+    exec(`${LOAD_NVM} yarn`);
     const includedPackages = getIncludedPackages(repoFeatures);
-    exec(`yarn add ${includedPackages.join(" ")} --dev`);
+    exec(`${LOAD_NVM} yarn add ${includedPackages.join(" ")} --dev`);
     const peerDependencies = getPackagePeerDependencies(includedPackages);
-    exec(`yarn add ${peerDependencies.join(" ")} --dev`);
+    exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev`);
 
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-repo:post"]) {
       run("new-repo:post");

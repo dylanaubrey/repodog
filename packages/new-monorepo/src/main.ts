@@ -1,5 +1,5 @@
 import buildReferences from "@repodog/build-references";
-import { REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
+import { LOAD_NVM, REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -88,12 +88,12 @@ export default async function newMonorepo() {
     }
 
     await nvmInstall(SCAFFOLD_DIR_PATH);
-    exec("yarn");
+    exec(`${LOAD_NVM} yarn`);
     const includedPackages = getIncludedPackages(repoFeatures);
-    exec(`yarn add ${includedPackages.join(" ")} --dev -W`);
+    exec(`${LOAD_NVM} yarn add ${includedPackages.join(" ")} --dev -W`);
     const peerDependencies = getPackagePeerDependencies(includedPackages);
-    exec(`yarn add ${peerDependencies.join(" ")} --dev -W`);
-    exec("lerna bootstrap");
+    exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev -W`);
+    exec(`${LOAD_NVM} lerna bootstrap`);
 
     if (repoFeatures.includes(TYPESCRIPT)) {
       buildReferences();

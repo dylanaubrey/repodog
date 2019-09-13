@@ -8,7 +8,6 @@ import {
 import { loadPackageJson, resolvePathToCwd } from "@repodog/helpers";
 import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
 import { difference } from "lodash";
-import { PackageJson } from "type-fest";
 
 export function getIncludedFileNames(repoFeatures: RepositoryFeatures) {
   return repoFeatures.reduce((included, feature) => {

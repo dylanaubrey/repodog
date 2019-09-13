@@ -43,11 +43,7 @@ export function getPackagePeerDependencies(pkgNames: string[]) {
       const pkgJson = loadPackageJson(resolvePathToCwd(`node_modules/${pkgName}`));
       if (!pkgJson || !pkgJson.peerDependencies) return pkgDeps;
 
-      const dependencies = Object.keys(pkgJson.peerDependencies).map(packageName => {
-        return `${packageName}@${(pkgJson.peerDependencies as PackageJson.Dependency)[packageName]}`;
-      });
-
-      return [...new Set([...pkgDeps, ...dependencies])];
+      return [...new Set([...pkgDeps, ...Object.keys(pkgJson.peerDependencies)])];
     },
     [] as string[],
   );

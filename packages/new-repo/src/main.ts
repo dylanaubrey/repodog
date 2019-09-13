@@ -80,8 +80,8 @@ export default async function newRepo() {
 
     exec("yarn");
     const includedPackages = getIncludedPackages(repoFeatures);
-    exec(`yarn add ${includedPackages.join(" ")} --dev -W`);
-    exec(`yarn add ${getPackagePeerDependencies(includedPackages).join(" ")} --dev -W`);
+    exec(`yarn add ${includedPackages.join(" ")} --dev`);
+    exec(`yarn add ${getPackagePeerDependencies(includedPackages).join(" ")} --dev`);
 
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-repo:post"]) {
       run("new-repo:post");

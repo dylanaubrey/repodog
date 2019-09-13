@@ -8,6 +8,7 @@ import {
 import { loadPackageJson, resolvePathToCwd } from "@repodog/helpers";
 import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
 import { difference } from "lodash";
+import { PackageJson } from "type-fest";
 
 export function getIncludedFileNames(repoFeatures: RepositoryFeatures) {
   return repoFeatures.reduce((included, feature) => {
@@ -42,7 +43,11 @@ export function getPackagePeerDependencies(pkgNames: string[]) {
       const pkgJson = loadPackageJson(resolvePathToCwd(`node_modules/${pkgName}`));
       if (!pkgJson || !pkgJson.peerDependencies) return pkgDeps;
 
-      return [...new Set([...pkgDeps, ...Object.keys(pkgJson.peerDependencies)])];
+      const dependencies = Object.keys(pkgJson.peerDependencies).map(packageName => {
+        return `${packageName}@${(pkgJson.peerDependencies as PackageJson.Dependency)[packageName]}`;
+      });
+
+      return [...new Set([...pkgDeps, ...dependencies])];
     },
     [] as string[],
   );

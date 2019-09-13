@@ -10,7 +10,6 @@ import {
   loadRootPackageJson,
   nvmInstall,
   resolvePathToCwd,
-  run,
   validatePackageName,
 } from "@repodog/helpers";
 import { getIncludedPackages, getPackagePeerDependencies, isFileExcluded } from "@repodog/new-repo";
@@ -100,7 +99,7 @@ export default async function newMonorepo() {
     }
 
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {
-      run("new-monorepo:post");
+      exec(`${LOAD_NVM} yarn run new-monorepo:post`);
     }
   } catch (errors) {
     return error(errors);

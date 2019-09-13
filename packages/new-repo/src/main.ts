@@ -9,7 +9,6 @@ import {
   loadRootPackageJson,
   nvmInstall,
   resolvePathToCwd,
-  run,
   validatePackageName,
 } from "@repodog/helpers";
 import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
@@ -87,7 +86,7 @@ export default async function newRepo() {
     exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev`);
 
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-repo:post"]) {
-      run("new-repo:post");
+      exec(`${LOAD_NVM} yarn run new-repo:post`);
     }
   } catch (errors) {
     return error(errors);

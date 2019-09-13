@@ -1,13 +1,17 @@
 import { JsonValue } from "type-fest";
 
-export type Func = (...args: any[]) => Val;
+export type Falsy = null | undefined | false | 0 | "";
 
-export type Val = JsonValue | Func | undefined;
+export type Func = (...args: any[]) => Val;
 
 export interface ObjectMap {
   [key: string]: Val;
 }
 
+export type Primitive = number | bigint | boolean | string | symbol;
+
 export interface StringObjectMap {
   [key: string]: string;
 }
+
+export type Val = JsonValue | bigint | Func | undefined;

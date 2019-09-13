@@ -1,3 +1,9 @@
+#### 0.3.18 (2019-09-13)
+
+##### Bug Fixes
+
+* **new-repo/monorepo:**  add version into peer dependency install ([9a4e398c](https://github.com/dylanaubrey/repodog/commit/9a4e398c3fce4e38018d1551652cca05971532cf))
+
 #### 0.3.17 (2019-09-13)
 
 ##### Bug Fixes

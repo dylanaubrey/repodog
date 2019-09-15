@@ -2,4 +2,3 @@
 *.log
 .npmignore
 docs/
-tsconfig.*

@@ -2,96 +2,96 @@
   {
     "name": "@repodog/babel-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/build-references",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/commitlint-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/constants",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/eslint-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/helpers",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/jest-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/lerna-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/markdownlint-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/new-monorepo",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/new-package",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/new-repo",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/prettier-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/rollup-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/stylelint-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/ts-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/tslint-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/typedoc-config",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   },
   {
     "name": "@repodog/types",
     "private": false,
-    "version": "0.3.19"
+    "version": "0.3.20"
   }
 ]

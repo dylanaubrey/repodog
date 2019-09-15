@@ -1,6 +1,6 @@
 {
   "name": "@repodog/tslint-config",
-  "version": "0.3.20",
+  "version": "0.3.21",
   "description": "The RepoDog tslint-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

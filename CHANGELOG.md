@@ -1,3 +1,9 @@
+#### 0.3.21 (2019-09-15)
+
+##### Bug Fixes
+
+* **jest, tsconfig:**  update configs to resolve install bugs ([e16463f0](https://github.com/dylanaubrey/repodog/commit/e16463f0035cc2c9b0f7453ceb056dee5b81eb41))
+
 #### 0.3.20 (2019-09-13)
 
 ##### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@repodog/commitlint-config",
-  "version": "0.3.22",
+  "version": "0.3.23",
   "description": "The RepoDog commitlint-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

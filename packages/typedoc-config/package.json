@@ -1,6 +1,6 @@
 {
   "name": "@repodog/typedoc-config",
-  "version": "0.3.21",
+  "version": "0.3.22",
   "description": "The RepoDog typedoc-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

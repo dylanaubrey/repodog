@@ -1,3 +1,9 @@
+#### 0.3.22 (2019-09-16)
+
+##### Bug Fixes
+
+* **ts-config:**  add module field into base config ([4f96309e](https://github.com/dylanaubrey/repodog/commit/4f96309e591f3be25e70ac1f990188cc2f14d2d2))
+
 #### 0.3.21 (2019-09-15)
 
 ##### Bug Fixes

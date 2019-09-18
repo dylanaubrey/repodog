@@ -1,3 +1,9 @@
+#### 0.3.24 (2019-09-18)
+
+##### Bug Fixes
+
+* **types:**  replace Val with any in utils ([e9872ed8](https://github.com/dylanaubrey/repodog/commit/e9872ed856575a909d0417efb8befac378ce25b6))
+
 #### 0.3.23 (2019-09-16)
 
 #### 0.3.22 (2019-09-16)

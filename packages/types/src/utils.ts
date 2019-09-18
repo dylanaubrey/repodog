@@ -1,11 +1,9 @@
-import { JsonValue } from "type-fest";
-
 export type Falsy = null | undefined | false | 0 | "";
 
-export type Func = (...args: any[]) => Val;
+export type Func = (...args: any[]) => any; // tslint:disable-line no-any
 
 export interface ObjectMap {
-  [key: string]: Val;
+  [key: string]: any; // tslint:disable-line no-any
 }
 
 export type Primitive = number | bigint | boolean | string | symbol;
@@ -13,5 +11,3 @@ export type Primitive = number | bigint | boolean | string | symbol;
 export interface StringObjectMap {
   [key: string]: string;
 }
-
-export type Val = JsonValue | bigint | Func | undefined;

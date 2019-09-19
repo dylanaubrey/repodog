@@ -1,8 +1,8 @@
 [
   {
-    "name": "@repodog/types",
+    "name": "@repodog/jest-config",
     "version": "0.3.23",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/types"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/jest-config"
   }
 ]

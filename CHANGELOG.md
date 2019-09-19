@@ -1,3 +1,9 @@
+#### 0.3.25 (2019-09-19)
+
+##### Bug Fixes
+
+* **jest:**  add default test ignore pattern ([29cffa98](https://github.com/dylanaubrey/repodog/commit/29cffa9874b33e0e66dee34fd9393944f8fe08c7))
+
 #### 0.3.24 (2019-09-18)
 
 ##### Bug Fixes

@@ -1,3 +1,9 @@
+#### 0.3.26 (2019-09-25)
+
+##### Bug Fixes
+
+* **new-repo:**  add main fields to scaffold package.json ([67df9f97](https://github.com/dylanaubrey/repodog/commit/67df9f9747ee33453c80d2804569b7bbb3463494))
+
 #### 0.3.25 (2019-09-19)
 
 ##### Bug Fixes

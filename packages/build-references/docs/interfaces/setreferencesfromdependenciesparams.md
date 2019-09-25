@@ -22,7 +22,7 @@
 
 • **dependencies**: *`Dependency`*
 
-*Defined in [types.ts:13](https://github.com/dylanaubrey/repodog/blob/29cffa9/packages/build-references/src/types.ts#L13)*
+*Defined in [types.ts:13](https://github.com/dylanaubrey/repodog/blob/67df9f9/packages/build-references/src/types.ts#L13)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **references**: *`TSConfigReference`[]*
 
-*Defined in [types.ts:14](https://github.com/dylanaubrey/repodog/blob/29cffa9/packages/build-references/src/types.ts#L14)*
+*Defined in [types.ts:14](https://github.com/dylanaubrey/repodog/blob/67df9f9/packages/build-references/src/types.ts#L14)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **scope**: *string*
 
-*Defined in [types.ts:15](https://github.com/dylanaubrey/repodog/blob/29cffa9/packages/build-references/src/types.ts#L15)*
+*Defined in [types.ts:15](https://github.com/dylanaubrey/repodog/blob/67df9f9/packages/build-references/src/types.ts#L15)*

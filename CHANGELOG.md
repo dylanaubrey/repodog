@@ -1,3 +1,9 @@
+#### 0.3.27 (2019-09-25)
+
+##### Bug Fixes
+
+* **new-repo:**  update npmignore ([37ffcf50](https://github.com/dylanaubrey/repodog/commit/37ffcf50c15aed98f95bc386efc38dc8df1657d4))
+
 #### 0.3.26 (2019-09-25)
 
 ##### Bug Fixes

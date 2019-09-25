@@ -1,5 +1,9 @@
 {
   "license": "MIT",
+  "main": "lib/main/index.js",
+  "module": "lib/module/index.js",
+  "browser": "lib/browser/index.js",
+  "types": "lib/types/index.d.ts",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "yarn run clean:libs && yarn run compile",

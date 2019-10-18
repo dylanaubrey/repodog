@@ -43,6 +43,7 @@
     "lodash": "^4.17.5"
   },
   "dependencies": {
+    "app-root-path": "^2.2.1",
     "chalk": "^2.4.2",
     "fs-extra": "^8.1.0",
     "inquirer": "^7.0.0",

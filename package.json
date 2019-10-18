@@ -85,6 +85,7 @@
     "@babel/runtime": "^7.6.3",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@types/app-root-path": "^1.2.4",
     "@types/chalk": "^2.2.0",
     "@types/fs-extra": "^8.0.1",
     "@types/inquirer": "^6.5.0",

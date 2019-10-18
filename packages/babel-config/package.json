@@ -42,5 +42,8 @@
     "@babel/register": "7.5.5",
     "@babel/runtime": "^7.5.5",
     "babel-plugin-lodash": "^3.3.4"
+  },
+  "dependencies": {
+    "app-root-path": "^2.2.1"
   }
 }

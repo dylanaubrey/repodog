@@ -1,3 +1,19 @@
+const appRoot = require('app-root-path');
+const { resolve } = require('path');
+
+function getRepositoryFeatures() {
+  let features;
+
+  try {
+    const config = require(resolve(appRoot.toString(), 'repodog.config.js')); // eslint-disable-line
+    features = config.features;
+  } catch {
+    // no catch
+  }
+
+  return features;
+}
+
 module.exports = api => {
   const env = api.env();
   let ignore = [];
@@ -13,6 +29,28 @@ module.exports = api => {
     targets = { browsers: 'last 2 versions' };
   } else {
     targets = { node: '10' };
+  }
+
+  const presets = [
+    [
+      '@babel/preset-env',
+      {
+        corejs: 2,
+        modules,
+        targets,
+        useBuiltIns: 'usage',
+      },
+    ],
+  ];
+
+  const features = getRepositoryFeatures();
+
+  if (features.includes('react')) {
+    presets.push('@babel/preset-react');
+  }
+
+  if (features.includes('typescript')) {
+    presets.push('@babel/preset-typescript');
   }
 
   return {
@@ -42,18 +80,6 @@ module.exports = api => {
       ],
       'lodash',
     ],
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          corejs: 2,
-          modules,
-          targets,
-          useBuiltIns: 'usage',
-        },
-      ],
-      '@babel/preset-react',
-      '@babel/preset-typescript',
-    ],
+    presets,
   };
 };

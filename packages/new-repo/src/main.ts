@@ -1,4 +1,4 @@
-import { LOAD_NVM, REPO_FEATURES } from "@repodog/constants";
+import { LOAD_NVM, REPO_FEATURES, SINGLE_PKG_STRUCTURE } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -10,6 +10,7 @@ import {
   nvmInstall,
   resolvePathToCwd,
   validatePackageName,
+  writeRepodogConfig,
 } from "@repodog/helpers";
 import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
 import inquirer from "inquirer";
@@ -61,6 +62,7 @@ export default async function newRepo() {
     });
 
     repoFeatures = features;
+    writeRepodogConfig({ features: repoFeatures });
 
     info("Copying scaffold to new repository");
 
@@ -80,7 +82,11 @@ export default async function newRepo() {
 
     await nvmInstall(SCAFFOLD_DIR_PATH);
     exec(`${LOAD_NVM} yarn`);
-    const includedPackages = getIncludedPackages(repoFeatures);
+
+    const includedPackages = getIncludedPackages(repoFeatures, failedFileNames, {
+      packageStructure: SINGLE_PKG_STRUCTURE,
+    });
+
     exec(`${LOAD_NVM} yarn add ${includedPackages.join(" ")} --dev`);
     const peerDependencies = getPackagePeerDependencies(includedPackages);
     exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev`);

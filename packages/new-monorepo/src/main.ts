@@ -1,5 +1,5 @@
 import buildReferences from "@repodog/build-references";
-import { LOAD_NVM, REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
+import { LOAD_NVM, MULTI_PKG_STRUCTURE, REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -11,6 +11,7 @@ import {
   nvmInstall,
   resolvePathToCwd,
   validatePackageName,
+  writeRepodogConfig,
 } from "@repodog/helpers";
 import { getIncludedPackages, getPackagePeerDependencies, isFileExcluded } from "@repodog/new-repo";
 import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
@@ -69,6 +70,7 @@ export default async function newMonorepo() {
     });
 
     repoFeatures = features;
+    writeRepodogConfig({ features: repoFeatures });
 
     info("Copying scaffold to new monorepo");
 
@@ -88,7 +90,11 @@ export default async function newMonorepo() {
 
     await nvmInstall(SCAFFOLD_DIR_PATH);
     exec(`${LOAD_NVM} yarn`);
-    const includedPackages = getIncludedPackages(repoFeatures);
+
+    const includedPackages = getIncludedPackages(repoFeatures, failedFileNames, {
+      packageStructure: MULTI_PKG_STRUCTURE,
+    });
+
     exec(`${LOAD_NVM} yarn add ${includedPackages.join(" ")} --dev -W`);
     const peerDependencies = getPackagePeerDependencies(includedPackages);
     exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev -W`);

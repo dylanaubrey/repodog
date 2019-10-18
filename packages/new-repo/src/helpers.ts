@@ -8,6 +8,7 @@ import {
 import { loadPackageJson, resolvePathToCwd } from "@repodog/helpers";
 import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
 import { difference } from "lodash";
+import { GetIncludedPackagesOptions } from "./types";
 
 export function getIncludedFileNames(repoFeatures: RepositoryFeatures) {
   return repoFeatures.reduce((included, feature) => {
@@ -19,11 +20,12 @@ export function getIncludedFileNames(repoFeatures: RepositoryFeatures) {
 export function getIncludedPackages(
   repoFeatures: RepositoryFeatures,
   failedFileNames: Set<ScaffoldFileName> = new Set(),
+  { packageStructure }: GetIncludedPackagesOptions,
 ) {
   const includedPackages = repoFeatures.reduce((included, feature) => {
     const repoPackages = REPO_FEATURES_TO_REPO_PKGS[feature];
     return [...new Set([...included, ...repoPackages])];
-  }, Object.values(BASE_REPO_PKGS));
+  }, Object.values(BASE_REPO_PKGS[packageStructure]));
 
   const excludedPackages = [...failedFileNames].reduce(
     (excluded, fileName) => {

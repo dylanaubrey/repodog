@@ -50,6 +50,6 @@
   "dependencies": {
     "inquirer": "^7.0.0",
     "semver": "^6.3.0",
-    "yargs": "^13.3.0"
+    "yargs": "^14.2.0"
   }
 }

@@ -1,8 +1,8 @@
 import { isFunction } from "lodash";
 import { info } from "../commands";
 import iterateDirectory from "../iterate-directory";
-import loadRepodogConfig from "../load-repodog-config";
 import { loadPackageJson } from "../load-write-package-json";
+import { loadRepodogConfig } from "../load-write-repodog-config";
 import resolvePathToCwd from "../resolve-path-to-cwd";
 import { IteratePackagesCallback, IteratePackagesErrorCallback } from "../types";
 

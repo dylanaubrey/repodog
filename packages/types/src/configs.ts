@@ -1,4 +1,5 @@
 import { CompilerOptions } from "typescript";
+import { RepositoryFeatures } from "./common";
 
 export interface BuildReferencesConfig {
   global?: string[];
@@ -6,6 +7,7 @@ export interface BuildReferencesConfig {
 
 export interface RepodogConfig {
   buildReferences?: BuildReferencesConfig;
+  features: RepositoryFeatures;
   packagesPath: string;
   scaffoldPath: string;
 }

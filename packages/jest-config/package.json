@@ -21,6 +21,6 @@
     "configuration"
   ],
   "peerDependencies": {
-    "jest": "^24.8.0"
+    "@repodog/config-helpers": "^0.3"
   }
 }

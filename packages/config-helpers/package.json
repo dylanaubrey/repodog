@@ -1,0 +1,28 @@
+{
+  "name": "@repodog/config-helpers",
+  "version": "0.3.27",
+  "description": "The RepoDog config-helpers module.",
+  "keywords": [
+    "configuration"
+  ],
+  "homepage": "https://github.com/dylanaubrey/repodog",
+  "bugs": {
+    "url": "https://github.com/dylanaubrey/repodog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanaubrey/repodog"
+  },
+  "license": "MIT",
+  "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
+  "main": "index.js",
+  "dependencies": {
+    "app-root-path": "^2.2.1"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

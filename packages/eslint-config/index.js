@@ -75,9 +75,4 @@ module.exports = {
     'sort-keys': [2, 'asc', { caseSensitive: true, natural: true }],
     'sort-vars': [2, { ignoreCase: false }],
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
 };

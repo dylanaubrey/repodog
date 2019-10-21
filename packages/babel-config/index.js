@@ -1,18 +1,6 @@
-const appRoot = require('app-root-path');
-const { resolve } = require('path');
+const { consts, loadRepositoryConfig } = require('@repodog/config-helpers');
 
-function getRepositoryFeatures() {
-  let features;
-
-  try {
-    const config = require(resolve(appRoot.toString(), 'repodog.config.js')); // eslint-disable-line
-    features = config.features;
-  } catch {
-    // no catch
-  }
-
-  return features;
-}
+const { REACT, TYPESCRIPT } = consts;
 
 module.exports = api => {
   const env = api.env();
@@ -43,13 +31,13 @@ module.exports = api => {
     ],
   ];
 
-  const features = getRepositoryFeatures();
+  const { features } = loadRepositoryConfig();
 
-  if (features.includes('react')) {
+  if (features.includes(REACT)) {
     presets.push('@babel/preset-react');
   }
 
-  if (features.includes('typescript')) {
+  if (features.includes(TYPESCRIPT)) {
     presets.push('@babel/preset-typescript');
   }
 

@@ -1,4 +1,4 @@
-import { LOAD_NVM, REPO_FEATURES, SINGLE_PKG_STRUCTURE } from "@repodog/constants";
+import { LOAD_NVM, REPO_FEATURES } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -12,17 +12,19 @@ import {
   validatePackageName,
   writeRepodogConfig,
 } from "@repodog/helpers";
-import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
+import { PublicRepositoryFeature, RepositoryFeature, ScaffoldFileName } from "@repodog/types";
 import inquirer from "inquirer";
 import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
 import { SCAFFOLD_DIR_PATH } from "./constants";
-import { getIncludedPackages, getPackagePeerDependencies, isFileExcluded } from "./helpers";
+import getIncludedPackages from "./helpers/get-included-packages";
+import getPackageDependencies from "./helpers/get-package-dependencies";
+import isFileExcluded from "./helpers/is-file-excluded";
 
 const failedFileNames = new Set<ScaffoldFileName>();
 let rootPackageJson: PackageJson | undefined;
-let repoFeatures: RepositoryFeatures = [];
+let repoFeatures: RepositoryFeature[] = [];
 
 function createIterateDirCallback(destPath: string): IterateDirectoryCallback {
   return async ({ fileName, filePath: srcPath, stats }) => {
@@ -54,12 +56,12 @@ export default async function newRepo() {
       return error("Repodog expected the project package.json to have a valid version");
     }
 
-    const { features } = await inquirer.prompt({
-      choices: Object.values(REPO_FEATURES).map(name => ({ name })),
+    const { features } = (await inquirer.prompt({
+      choices: REPO_FEATURES.map(name => ({ name })),
       message: "Select the features your repository requires",
       name: "features",
       type: "checkbox",
-    });
+    })) as { features: PublicRepositoryFeature[] };
 
     repoFeatures = features;
     writeRepodogConfig({ features: repoFeatures });
@@ -82,13 +84,9 @@ export default async function newRepo() {
 
     await nvmInstall(SCAFFOLD_DIR_PATH);
     exec(`${LOAD_NVM} yarn`);
-
-    const includedPackages = getIncludedPackages(repoFeatures, failedFileNames, {
-      packageStructure: SINGLE_PKG_STRUCTURE,
-    });
-
+    const includedPackages = getIncludedPackages(repoFeatures, failedFileNames);
     exec(`${LOAD_NVM} yarn add ${includedPackages.join(" ")} --dev`);
-    const peerDependencies = getPackagePeerDependencies(includedPackages);
+    const peerDependencies = getPackageDependencies(includedPackages, repoFeatures);
     exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev`);
 
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-repo:post"]) {

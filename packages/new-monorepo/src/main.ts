@@ -1,5 +1,5 @@
 import buildReferences from "@repodog/build-references";
-import { LOAD_NVM, MULTI_PKG_STRUCTURE, REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
+import { LOAD_NVM, MONOREPO, REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -13,8 +13,8 @@ import {
   validatePackageName,
   writeRepodogConfig,
 } from "@repodog/helpers";
-import { getIncludedPackages, getPackagePeerDependencies, isFileExcluded } from "@repodog/new-repo";
-import { RepositoryFeatures, ScaffoldFileName } from "@repodog/types";
+import { getIncludedPackages, getPackageDependencies, isFileExcluded } from "@repodog/new-repo";
+import { PublicRepositoryFeature, RepositoryFeature, ScaffoldFileName } from "@repodog/types";
 import { existsSync, mkdirSync } from "fs";
 import inquirer from "inquirer";
 import { resolve } from "path";
@@ -24,7 +24,7 @@ import { SCAFFOLD_DIR_PATH } from "./constants";
 
 const failedFileNames = new Set<ScaffoldFileName>();
 let rootPackageJson: PackageJson | undefined;
-let repoFeatures: RepositoryFeatures = [];
+let repoFeatures: RepositoryFeature[] = [];
 
 function createIterateDirCallback(destPath: string): IterateDirectoryCallback {
   return async ({ fileName, filePath: srcPath, stats }) => {
@@ -62,14 +62,14 @@ export default async function newMonorepo() {
       return error("Repodog expected the project package.json to have a valid version");
     }
 
-    const { features } = await inquirer.prompt({
-      choices: Object.values(REPO_FEATURES).map(name => ({ name })),
+    const { features } = (await inquirer.prompt({
+      choices: REPO_FEATURES.map(name => ({ name })),
       message: "Select the features your repository requires",
       name: "features",
       type: "checkbox",
-    });
+    })) as { features: PublicRepositoryFeature[] };
 
-    repoFeatures = features;
+    repoFeatures = [...features, MONOREPO];
     writeRepodogConfig({ features: repoFeatures });
 
     info("Copying scaffold to new monorepo");
@@ -90,13 +90,9 @@ export default async function newMonorepo() {
 
     await nvmInstall(SCAFFOLD_DIR_PATH);
     exec(`${LOAD_NVM} yarn`);
-
-    const includedPackages = getIncludedPackages(repoFeatures, failedFileNames, {
-      packageStructure: MULTI_PKG_STRUCTURE,
-    });
-
+    const includedPackages = getIncludedPackages(repoFeatures, failedFileNames);
     exec(`${LOAD_NVM} yarn add ${includedPackages.join(" ")} --dev -W`);
-    const peerDependencies = getPackagePeerDependencies(includedPackages);
+    const peerDependencies = getPackageDependencies(includedPackages, repoFeatures);
     exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev -W`);
     exec(`${LOAD_NVM} lerna bootstrap`);
 

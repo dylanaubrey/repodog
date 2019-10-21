@@ -2,4 +2,8 @@ export type CopyBehaviour = "duplicate" | "fail" | "merge" | "overwrite" | "acce
 
 export type MergeStrategy = "destIntoScaffold" | "scaffoldIntoDest";
 
-export type RepositoryFeatures = Array<"browser" | "css" | "react" | "typescript">;
+export type PublicRepositoryFeature = "browser" | "css" | "react" | "typescript";
+
+export type RepositoryFeature = "browser" | "css" | "monorepo" | "react" | "typescript";
+
+export type RepositoryFeatureConfig = RepositoryFeature | [RepositoryFeature, { dependantOn: RepositoryFeature[] }];

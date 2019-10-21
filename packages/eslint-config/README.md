@@ -16,6 +16,6 @@ yarn add @repodog/eslint-config --dev
 ```javascript
 // .eslintrc.js
 module.exports = {
-  extends: ['@repodog/eslint-config']
+  extends: ['@repodog/eslint-config', '@repodog/eslint-config/react']
 };
 ```

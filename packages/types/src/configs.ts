@@ -1,13 +1,19 @@
 import { CompilerOptions } from "typescript";
-import { RepositoryFeatures } from "./common";
+import { RepositoryFeature } from "./common";
 
 export interface BuildReferencesConfig {
   global?: string[];
 }
 
+export interface ConfigDependencies {
+  core: string[];
+  react?: string[];
+  typescript?: string[];
+}
+
 export interface RepodogConfig {
   buildReferences?: BuildReferencesConfig;
-  features: RepositoryFeatures;
+  features: RepositoryFeature[];
   packagesPath: string;
   scaffoldPath: string;
 }

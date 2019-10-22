@@ -1,3 +1,7 @@
+const { consts } = require('@repodog/config-helpers');
+
+const { REACT } = consts;
+
 const core = [
   '@babel/cli',
   '@babel/core',
@@ -13,6 +17,7 @@ const core = [
   '@babel/plugin-proposal-throw-expressions',
   '@babel/plugin-syntax-dynamic-import',
   '@babel/plugin-syntax-import-meta',
+  '@babel/plugin-transform-modules-commonjs',
   '@babel/plugin-transform-runtime',
   '@babel/preset-env',
   '@babel/register',
@@ -20,12 +25,15 @@ const core = [
   'babel-plugin-lodash',
 ];
 
+const css = ['babel-plugin-styled-components', { dependantOn: REACT }];
+
 const react = ['@babel/preset-react'];
 
 const typescript = ['@babel/preset-typescript'];
 
 module.exports = {
   core,
+  css,
   react,
   typescript,
 };

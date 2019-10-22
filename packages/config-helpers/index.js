@@ -3,6 +3,7 @@ const { resolve } = require('path');
 
 const consts = {
   BROWSER: 'browser',
+  CSS: 'css',
   MONOREPO: 'monorepo',
   REACT: 'react',
   TYPESCRIPT: 'typescript',

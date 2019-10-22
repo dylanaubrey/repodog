@@ -6,4 +6,12 @@ export type PublicRepositoryFeature = "browser" | "css" | "react" | "typescript"
 
 export type RepositoryFeature = "browser" | "css" | "monorepo" | "react" | "typescript";
 
-export type RepositoryFeatureConfig = RepositoryFeature | [RepositoryFeature, { dependantOn: RepositoryFeature[] }];
+export type DependencyConfig = string | [string, { dependantOn: RepositoryFeature[] }];
+
+export interface ConfigDependencies {
+  core: string[];
+  css?: Array<string | DependencyConfig>;
+  monorepo?: Array<string | DependencyConfig>;
+  react?: Array<string | DependencyConfig>;
+  typescript?: Array<string | DependencyConfig>;
+}

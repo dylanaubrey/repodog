@@ -1,6 +1,6 @@
 const { consts, loadRepositoryConfig } = require('@repodog/config-helpers');
 
-const { REACT, TYPESCRIPT } = consts;
+const { CSS, REACT, TYPESCRIPT } = consts;
 
 module.exports = api => {
   const env = api.env();
@@ -31,10 +31,45 @@ module.exports = api => {
     ],
   ];
 
+  const plugins = [
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-export-default-from',
+    '@babel/plugin-proposal-export-namespace-from',
+    '@babel/plugin-proposal-function-sent',
+    '@babel/plugin-proposal-json-strings',
+    '@babel/plugin-proposal-nullish-coalescing-operator',
+    '@babel/plugin-proposal-numeric-separator',
+    '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-proposal-throw-expressions',
+    modules ? '@babel/plugin-transform-modules-commonjs' : '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-syntax-import-meta',
+    [
+      '@babel/plugin-transform-runtime',
+      {
+        corejs: false,
+        helpers: true,
+        regenerator: true,
+        useESModules: false,
+      },
+    ],
+    'lodash',
+  ];
+
   const { features } = loadRepositoryConfig();
 
   if (features.includes(REACT)) {
     presets.push('@babel/preset-react');
+
+    if (features.includes(CSS)) {
+      plugins.push([
+        'babel-plugin-styled-components',
+        {
+          displayName: true,
+          ssr: true,
+        },
+      ]);
+    }
   }
 
   if (features.includes(TYPESCRIPT)) {
@@ -44,30 +79,7 @@ module.exports = api => {
   return {
     comments: false,
     ignore,
-    plugins: [
-      ['@babel/plugin-proposal-decorators', { legacy: true }],
-      '@babel/plugin-proposal-class-properties',
-      '@babel/plugin-proposal-export-default-from',
-      '@babel/plugin-proposal-export-namespace-from',
-      '@babel/plugin-proposal-function-sent',
-      '@babel/plugin-proposal-json-strings',
-      '@babel/plugin-proposal-nullish-coalescing-operator',
-      '@babel/plugin-proposal-numeric-separator',
-      '@babel/plugin-proposal-optional-chaining',
-      '@babel/plugin-proposal-throw-expressions',
-      '@babel/plugin-syntax-dynamic-import',
-      '@babel/plugin-syntax-import-meta',
-      [
-        '@babel/plugin-transform-runtime',
-        {
-          corejs: false,
-          helpers: true,
-          regenerator: true,
-          useESModules: false,
-        },
-      ],
-      'lodash',
-    ],
+    plugins,
     presets,
   };
 };

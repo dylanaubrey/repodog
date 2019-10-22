@@ -5,12 +5,6 @@ export interface BuildReferencesConfig {
   global?: string[];
 }
 
-export interface ConfigDependencies {
-  core: string[];
-  react?: string[];
-  typescript?: string[];
-}
-
 export interface RepodogConfig {
   buildReferences?: BuildReferencesConfig;
   features: RepositoryFeature[];

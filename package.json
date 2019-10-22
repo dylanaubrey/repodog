@@ -1,6 +1,6 @@
 {
   "name": "repodog",
-  "version": "0.3.27",
+  "version": "0.3.28",
   "private": true,
   "description": "An opinionated command line utility for managing a repository.",
   "keywords": [

@@ -1,6 +1,4 @@
-> **[Documentation](../README.md)**
-
-[SyncDependencyVersionsParams](syncdependencyversionsparams.md) /
+[Documentation](../README.md) › [SyncDependencyVersionsParams](syncdependencyversionsparams.md)
 
 # Interface: SyncDependencyVersionsParams
 
@@ -20,17 +18,17 @@
 
 ### `Optional` dependencies
 
-• **dependencies**? : *`PackageJson.Dependency`*
+• **dependencies**? : *PackageJson.Dependency*
 
-*Defined in [types.ts:23](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/helpers/src/types.ts#L23)*
+*Defined in [types.ts:23](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/helpers/src/types.ts#L23)*
 
 ___
 
 ### `Optional` devDependencies
 
-• **devDependencies**? : *`PackageJson.Dependency`*
+• **devDependencies**? : *PackageJson.Dependency*
 
-*Defined in [types.ts:24](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/helpers/src/types.ts#L24)*
+*Defined in [types.ts:24](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/helpers/src/types.ts#L24)*
 
 ___
 
@@ -38,4 +36,4 @@ ___
 
 • **name**: *string*
 
-*Defined in [types.ts:25](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/helpers/src/types.ts#L25)*
+*Defined in [types.ts:25](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/helpers/src/types.ts#L25)*

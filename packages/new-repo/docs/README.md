@@ -1,4 +1,6 @@
-> **[Documentation](README.md)**
+[Documentation](README.md)
+
+# Documentation
 
 ## Index
 
@@ -12,9 +14,11 @@
 ### Functions
 
 * [createIterateDirCallback](README.md#createiteratedircallback)
+* [getConfigsCheckedAgainstDependantOn](README.md#getconfigscheckedagainstdependanton)
+* [getFeatureSpecificDependencies](README.md#getfeaturespecificdependencies)
 * [getIncludedFileNames](README.md#getincludedfilenames)
 * [getIncludedPackages](README.md#getincludedpackages)
-* [getPackagePeerDependencies](README.md#getpackagepeerdependencies)
+* [getPackageDependencies](README.md#getpackagedependencies)
 * [isFileExcluded](README.md#isfileexcluded)
 * [newRepo](README.md#newrepo)
 
@@ -24,39 +28,39 @@
 
 • **SCAFFOLD_DIR_PATH**: *"node_modules/@repodog/new-repo/scaffold"* = "node_modules/@repodog/new-repo/scaffold"
 
-*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/constants.ts#L1)*
+*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/constants.ts#L1)*
 
 ___
 
 ### `Const` failedFileNames
 
-• **failedFileNames**: *`Set<"babel.config.js" | "codecov.yml" | "commitlint.config.js" | ".editorconfig" | ".eslintrc.js" | ".eslintignore" | ".gitignore" | "jest.config.js" | "lerna.json" | "LICENSE" | ".markdownlint.json" | ".node-version" | ".npmrc" | ".prettierrc.js" | "README.md" | "rollup.config.js" | "stylelint.config.js" | ".travis.yml" | "tsconfig.settings.json" | "tslint.json" | "typedoc.js">`* =  new Set<ScaffoldFileName>()
+• **failedFileNames**: *Set‹"babel.config.js" | "codecov.yml" | "commitlint.config.js" | ".editorconfig" | ".eslintrc.js" | ".eslintignore" | ".gitignore" | "jest.config.js" | "lerna.json" | "LICENSE" | ".markdownlint.json" | ".node-version" | ".npmrc" | ".prettierrc.js" | "README.md" | "rollup.config.js" | "stylelint.config.js" | ".travis.yml" | "tsconfig.settings.json" | "tslint.json" | "typedoc.js"›* =  new Set<ScaffoldFileName>()
 
-*Defined in [main.ts:22](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/main.ts#L22)*
+*Defined in [main.ts:25](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/main.ts#L25)*
 
 ___
 
 ### `Let` repoFeatures
 
-• **repoFeatures**: *`RepositoryFeatures`* =  []
+• **repoFeatures**: *RepositoryFeature[]* =  []
 
-*Defined in [main.ts:24](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/main.ts#L24)*
+*Defined in [main.ts:27](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/main.ts#L27)*
 
 ___
 
 ### `Let` rootPackageJson
 
-• **rootPackageJson**: *`PackageJson` | undefined*
+• **rootPackageJson**: *PackageJson | undefined*
 
-*Defined in [main.ts:23](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/main.ts#L23)*
+*Defined in [main.ts:26](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/main.ts#L26)*
 
 ## Functions
 
 ###  createIterateDirCallback
 
-▸ **createIterateDirCallback**(`destPath`: string): *`IterateDirectoryCallback`*
+▸ **createIterateDirCallback**(`destPath`: string): *IterateDirectoryCallback*
 
-*Defined in [main.ts:26](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/main.ts#L26)*
+*Defined in [main.ts:29](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/main.ts#L29)*
 
 **Parameters:**
 
@@ -64,21 +68,62 @@ Name | Type |
 ------ | ------ |
 `destPath` | string |
 
-**Returns:** *`IterateDirectoryCallback`*
+**Returns:** *IterateDirectoryCallback*
 
 ___
 
-###  getIncludedFileNames
+###  getConfigsCheckedAgainstDependantOn
 
-▸ **getIncludedFileNames**(`repoFeatures`: `RepositoryFeatures`): *string[]*
+▸ **getConfigsCheckedAgainstDependantOn**(`dependencyConfigs`: DependencyConfig[], `repoFeatures`: RepositoryFeature[]): *string[]*
 
-*Defined in [helpers.ts:12](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/helpers.ts#L12)*
+*Defined in [helpers/get-configs-checked-against-dependant-on/index.ts:4](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/helpers/get-configs-checked-against-dependant-on/index.ts#L4)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`repoFeatures` | `RepositoryFeatures` |
+`dependencyConfigs` | DependencyConfig[] |
+`repoFeatures` | RepositoryFeature[] |
+
+**Returns:** *string[]*
+
+___
+
+###  getFeatureSpecificDependencies
+
+▸ **getFeatureSpecificDependencies**(`__namedParameters`: object, `repoFeatures`: RepositoryFeature[]): *string[]*
+
+*Defined in [helpers/get-feature-specific-dependencies/index.ts:5](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/helpers/get-feature-specific-dependencies/index.ts#L5)*
+
+**Parameters:**
+
+▪ **__namedParameters**: *object*
+
+Name | Type | Default |
+------ | ------ | ------ |
+`core` | string[] | - |
+`css` | string &#124; [string, object][] |  [] |
+`monorepo` | string &#124; [string, object][] |  [] |
+`react` | string &#124; [string, object][] |  [] |
+`typescript` | string &#124; [string, object][] |  [] |
+
+▪ **repoFeatures**: *RepositoryFeature[]*
+
+**Returns:** *string[]*
+
+___
+
+###  getIncludedFileNames
+
+▸ **getIncludedFileNames**(`repoFeatures`: RepositoryFeature[]): *string[]*
+
+*Defined in [helpers/get-included-file-names/index.ts:4](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/helpers/get-included-file-names/index.ts#L4)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`repoFeatures` | RepositoryFeature[] |
 
 **Returns:** *string[]*
 
@@ -86,32 +131,33 @@ ___
 
 ###  getIncludedPackages
 
-▸ **getIncludedPackages**(`repoFeatures`: `RepositoryFeatures`, `failedFileNames`: `Set<ScaffoldFileName>`): *string[]*
+▸ **getIncludedPackages**(`repoFeatures`: RepositoryFeature[], `failedFileNames`: Set‹ScaffoldFileName›): *string[]*
 
-*Defined in [helpers.ts:19](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/helpers.ts#L19)*
+*Defined in [helpers/get-included-packages/index.ts:6](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/helpers/get-included-packages/index.ts#L6)*
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
-`repoFeatures` | `RepositoryFeatures` | - |
-`failedFileNames` | `Set<ScaffoldFileName>` |  new Set() |
+`repoFeatures` | RepositoryFeature[] | - |
+`failedFileNames` | Set‹ScaffoldFileName› |  new Set() |
 
 **Returns:** *string[]*
 
 ___
 
-###  getPackagePeerDependencies
+###  getPackageDependencies
 
-▸ **getPackagePeerDependencies**(`pkgNames`: string[]): *string[]*
+▸ **getPackageDependencies**(`pkgNames`: string[], `repoFeatures`: RepositoryFeature[]): *string[]*
 
-*Defined in [helpers.ts:39](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/helpers.ts#L39)*
+*Defined in [helpers/get-package-dependencies/index.ts:5](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/helpers/get-package-dependencies/index.ts#L5)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `pkgNames` | string[] |
+`repoFeatures` | RepositoryFeature[] |
 
 **Returns:** *string[]*
 
@@ -119,16 +165,16 @@ ___
 
 ###  isFileExcluded
 
-▸ **isFileExcluded**(`fileName`: string, `repoFeatures`: `RepositoryFeatures`): *boolean*
+▸ **isFileExcluded**(`fileName`: string, `repoFeatures`: RepositoryFeature[]): *boolean*
 
-*Defined in [helpers.ts:51](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/helpers.ts#L51)*
+*Defined in [helpers/is-file-excluded/index.ts:4](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/helpers/is-file-excluded/index.ts#L4)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `fileName` | string |
-`repoFeatures` | `RepositoryFeatures` |
+`repoFeatures` | RepositoryFeature[] |
 
 **Returns:** *boolean*
 
@@ -136,8 +182,8 @@ ___
 
 ###  newRepo
 
-▸ **newRepo**(): *`Promise<void>`*
+▸ **newRepo**(): *Promise‹void›*
 
-*Defined in [main.ts:38](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-repo/src/main.ts#L38)*
+*Defined in [main.ts:41](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-repo/src/main.ts#L41)*
 
-**Returns:** *`Promise<void>`*
+**Returns:** *Promise‹void›*

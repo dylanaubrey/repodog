@@ -1,3 +1,27 @@
+#### 0.3.28 (2019-10-22)
+
+##### Chores
+
+*  upgrade node version and dependencies ([17bf5832](https://github.com/dylanaubrey/repodog/commit/17bf5832d5894a3698aed1b99fbd32973332bde7))
+*  upgrade dependencies and introduce optional chaining ([10edd889](https://github.com/dylanaubrey/repodog/commit/10edd8898a8f6bbcf4635681553297a15c987b71))
+
+##### New Features
+
+*  enable dependantOn within dependencies configs ([02a4e9c3](https://github.com/dylanaubrey/repodog/commit/02a4e9c3d658b8c80007047e11f0521dae6f8469))
+*  adding dynamic dependencies to tslint config ([866b3e1c](https://github.com/dylanaubrey/repodog/commit/866b3e1cad54110643584287ae8926ee7f4a2f6c))
+*  add dynamic dependencies to stylelint config ([b91e8d2e](https://github.com/dylanaubrey/repodog/commit/b91e8d2e483413a2610986e3c47257f0948a9ba9))
+*  update rollup config to fix bugs and add dependencies ([25eee86b](https://github.com/dylanaubrey/repodog/commit/25eee86bf48abc6ee77531cecb6c5190879377db))
+*  add writing of features to repo config ([377f23ad](https://github.com/dylanaubrey/repodog/commit/377f23ad465709f44331f4ed4dd80ea3b6d1e71d))
+* **babel-config:**  only load plugins that match features ([98755eb3](https://github.com/dylanaubrey/repodog/commit/98755eb3f7aa42c95dd01ecf7af4e2f18fd4558f))
+
+##### Bug Fixes
+
+*  split included packages between single and multo package ([f9c4eeb3](https://github.com/dylanaubrey/repodog/commit/f9c4eeb3cc1dc068c0c182e5603f14edd42cd229))
+
+##### Refactors
+
+*  update babel, eslint, jest to support dynamic ([70077984](https://github.com/dylanaubrey/repodog/commit/70077984acf9a19bb9f79a33959e786115d88309))
+
 #### 0.3.27 (2019-09-25)
 
 ##### Bug Fixes

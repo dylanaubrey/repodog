@@ -1,4 +1,6 @@
-> **[Documentation](README.md)**
+[Documentation](README.md)
+
+# Documentation
 
 ## Index
 
@@ -19,7 +21,7 @@
 
 ▸ **buildPackageReferences**(`__namedParameters`: object): *void*
 
-*Defined in [main.ts:25](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/build-references/src/main.ts#L25)*
+*Defined in [main.ts:25](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/build-references/src/main.ts#L25)*
 
 **Parameters:**
 
@@ -29,9 +31,9 @@ Name | Type |
 ------ | ------ |
 `fullPath` | string |
 `globalRefs` | string[] |
-`packageJson` | object & `NonStandardEntryPoints` & `TypeScriptConfiguration` & `YarnConfiguration` & `JSPMConfiguration` & object |
+`packageJson` | object & NonStandardEntryPoints & TypeScriptConfiguration & YarnConfiguration & JSPMConfiguration & object |
 `scope` | string |
-`tsconfig` | `TSConfig` |
+`tsconfig` | TSConfig |
 
 **Returns:** *void*
 
@@ -41,7 +43,7 @@ ___
 
 ▸ **buildProjectReferences**(): *void*
 
-*Defined in [main.ts:55](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/build-references/src/main.ts#L55)*
+*Defined in [main.ts:55](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/build-references/src/main.ts#L55)*
 
 **Returns:** *void*
 
@@ -51,7 +53,7 @@ ___
 
 ▸ **setReferencesFromDependencies**(`__namedParameters`: object): *void*
 
-*Defined in [main.ts:17](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/build-references/src/main.ts#L17)*
+*Defined in [main.ts:17](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/build-references/src/main.ts#L17)*
 
 **Parameters:**
 
@@ -59,8 +61,8 @@ ___
 
 Name | Type |
 ------ | ------ |
-`dependencies` | `Dependency` |
-`references` | `TSConfigReference`[] |
+`dependencies` | Dependency |
+`references` | TSConfigReference[] |
 `scope` | string |
 
 **Returns:** *void*

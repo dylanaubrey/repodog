@@ -1,4 +1,6 @@
-> **[Documentation](README.md)**
+[Documentation](README.md)
+
+# Documentation
 
 ## Index
 
@@ -14,9 +16,9 @@
 
 ###  newPackage
 
-▸ **newPackage**(`argv`: [NewPackageParams](interfaces/newpackageparams.md)): *`Promise<void>`*
+▸ **newPackage**(`argv`: [NewPackageParams](interfaces/newpackageparams.md)): *Promise‹void›*
 
-*Defined in [main.ts:23](https://github.com/dylanaubrey/repodog/blob/37ffcf5/packages/new-package/src/main.ts#L23)*
+*Defined in [main.ts:23](https://github.com/dylanaubrey/repodog/blob/17bf583/packages/new-package/src/main.ts#L23)*
 
 **Parameters:**
 
@@ -24,4 +26,4 @@ Name | Type |
 ------ | ------ |
 `argv` | [NewPackageParams](interfaces/newpackageparams.md) |
 
-**Returns:** *`Promise<void>`*
+**Returns:** *Promise‹void›*

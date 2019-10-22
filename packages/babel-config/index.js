@@ -23,7 +23,7 @@ module.exports = api => {
     [
       '@babel/preset-env',
       {
-        corejs: 2,
+        corejs: 3,
         modules,
         targets,
         useBuiltIns: 'usage',

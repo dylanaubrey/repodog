@@ -19,9 +19,6 @@
   "dependencies": {
     "app-root-path": "^2.2.1"
   },
-  "peerDependencies": {
-    "lodash": "^4.17.5"
-  },
   "publishConfig": {
     "access": "public"
   }

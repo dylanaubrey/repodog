@@ -39,7 +39,7 @@
     "@babel/runtime": "^7.0.0",
     "@repodog/constants": "^0.0.3",
     "@repodog/helpers": "^0.0.3",
-    "core-js": "^2.0",
+    "core-js": "> 4.0",
     "lodash": "^4.17.5"
   }
 }

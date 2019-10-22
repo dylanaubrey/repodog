@@ -11,6 +11,7 @@ import {
   writeTSConfig,
 } from "@repodog/helpers";
 import { TSConfig, TSConfigReference } from "@repodog/types";
+import { get } from "lodash";
 import { BuildPackageReferencesParams, SetReferencesFromDependenciesParams } from "./types";
 
 function setReferencesFromDependencies({ dependencies, references, scope }: SetReferencesFromDependenciesParams) {
@@ -68,7 +69,7 @@ export default function buildProjectReferences() {
     }
 
     const { buildReferences, packagesPath } = loadRepodogConfig();
-    const globalRefs = buildReferences?.global ?? [];
+    const globalRefs = get(buildReferences, ["global"], []);
     const references: TSConfigReference[] = [];
 
     iteratePackages(({ dirName, fullPath, packageJson }) => {

@@ -36,6 +36,7 @@
     "clean:repo": "del-cli ./node_modules",
     "compile": "lerna run compile --stream",
     "compile-watch": "lerna run compile-watch --parallel",
+    "compile:browser": "lerna run compile:browser --stream",
     "compile:main": "lerna run compile:main --stream",
     "compile:module": "lerna run compile:module --stream",
     "compile:types": "lerna run compile:types --stream",

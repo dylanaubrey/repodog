@@ -23,6 +23,7 @@ export const LERNA_CONFIG = "lerna.json";
 export const LICENSE = "LICENSE";
 export const MARKDOWN_LINT_CONFIG = ".markdownlint.json";
 export const NODE_VERSION = ".node-version";
+export const NPM_IGNORE = ".npmignore";
 export const NPMRC = ".npmrc";
 export const PRETTIER_CONFIG = ".prettierrc.js";
 export const README = "README.md";

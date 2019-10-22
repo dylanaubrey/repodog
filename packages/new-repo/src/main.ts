@@ -18,6 +18,7 @@ import { resolve } from "path";
 import semver from "semver";
 import { PackageJson } from "type-fest";
 import { SCAFFOLD_DIR_PATH } from "./constants";
+import generateNPMIgnore from "./helpers/generate-npm-ignore";
 import getIncludedPackages from "./helpers/get-included-packages";
 import getPackageDependencies from "./helpers/get-package-dependencies";
 import isFileExcluded from "./helpers/is-file-excluded";
@@ -71,6 +72,8 @@ export default async function newRepo() {
     await iterateDirectory(resolvePathToCwd(SCAFFOLD_DIR_PATH), createIterateDirCallback(resolvePathToCwd(".")), {
       sync: true,
     });
+
+    generateNPMIgnore();
 
     const { proceed } = await inquirer.prompt({
       message: "Are the files in your repository correct?",

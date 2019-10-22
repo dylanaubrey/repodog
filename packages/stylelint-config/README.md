@@ -16,6 +16,6 @@ yarn add @repodog/stylelint-config --dev
 ```javascript
 // stylelint.config.js
 module.exports = {
-  extends: '@repodog/stylelint-config',
+  extends: ['@repodog/stylelint-config', '@repodog/stylelint-config/react'],
 };
 ```

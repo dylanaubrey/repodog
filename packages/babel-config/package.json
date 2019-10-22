@@ -21,6 +21,7 @@
     "configuration"
   ],
   "peerDependencies": {
-    "@repodog/config-helpers": "^0.3"
+    "@repodog/config-helpers": "^0.3",
+    "lodash": "^4.17.5"
   }
 }

@@ -1,3 +1,11 @@
+#### 0.3.30 (2019-10-23)
+
+##### Bug Fixes
+
+*  update npmignore ([45c36a2a](https://github.com/dylanaubrey/repodog/commit/45c36a2aefb807a78f81d4781eb0a32764122a08))
+*  change engine node version ([59f4fe21](https://github.com/dylanaubrey/repodog/commit/59f4fe2111ba7b83547bbdc069b262f6ad57596a))
+*  revert node engine change ([1934cd2e](https://github.com/dylanaubrey/repodog/commit/1934cd2e45dbae01fb39a4389c85661d2e7831b5))
+
 #### 0.3.29 (2019-10-23)
 
 ##### Bug Fixes

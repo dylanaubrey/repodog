@@ -30,7 +30,7 @@
 
 • **SCAFFOLD_DIR_PATH**: *"node_modules/@repodog/new-repo/scaffold"* = "node_modules/@repodog/new-repo/scaffold"
 
-*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/constants.ts#L1)*
+*Defined in [constants.ts:1](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/constants.ts#L1)*
 
 ___
 
@@ -55,9 +55,12 @@ karma.*
 lerna.json
 mocha.opts
 package-lock.json
+repodog.config.json
 sonar-project.properties
+test-setup.js
 tsconfig.*
 tslint.*
+typedoc.js
 webpack.*
 yarn.lock
 "* =  `
@@ -79,14 +82,17 @@ karma.*
 lerna.json
 mocha.opts
 package-lock.json
+repodog.config.json
 sonar-project.properties
+test-setup.js
 tsconfig.*
 tslint.*
+typedoc.js
 webpack.*
 yarn.lock
 `
 
-*Defined in [helpers/generate-npm-ignore/index.ts:5](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/generate-npm-ignore/index.ts#L5)*
+*Defined in [helpers/generate-npm-ignore/index.ts:5](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/generate-npm-ignore/index.ts#L5)*
 
 ___
 
@@ -94,7 +100,7 @@ ___
 
 • **failedFileNames**: *Set‹"babel.config.js" | "codecov.yml" | "commitlint.config.js" | ".editorconfig" | ".eslintrc.js" | ".eslintignore" | ".gitignore" | "jest.config.js" | "lerna.json" | "LICENSE" | ".markdownlint.json" | ".node-version" | ".npmrc" | ".prettierrc.js" | "README.md" | "rollup.config.js" | "stylelint.config.js" | ".travis.yml" | "tsconfig.settings.json" | "tslint.json" | "typedoc.js"›* =  new Set<ScaffoldFileName>()
 
-*Defined in [main.ts:26](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/main.ts#L26)*
+*Defined in [main.ts:26](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/main.ts#L26)*
 
 ___
 
@@ -102,7 +108,7 @@ ___
 
 • **repoFeatures**: *RepositoryFeature[]* =  []
 
-*Defined in [main.ts:28](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/main.ts#L28)*
+*Defined in [main.ts:28](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/main.ts#L28)*
 
 ___
 
@@ -110,7 +116,7 @@ ___
 
 • **rootPackageJson**: *PackageJson | undefined*
 
-*Defined in [main.ts:27](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/main.ts#L27)*
+*Defined in [main.ts:27](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/main.ts#L27)*
 
 ## Functions
 
@@ -118,7 +124,7 @@ ___
 
 ▸ **createIterateDirCallback**(`destPath`: string): *IterateDirectoryCallback*
 
-*Defined in [main.ts:30](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/main.ts#L30)*
+*Defined in [main.ts:30](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/main.ts#L30)*
 
 **Parameters:**
 
@@ -134,7 +140,7 @@ ___
 
 ▸ **generateNPMIgnore**(): *void*
 
-*Defined in [helpers/generate-npm-ignore/index.ts:31](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/generate-npm-ignore/index.ts#L31)*
+*Defined in [helpers/generate-npm-ignore/index.ts:34](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/generate-npm-ignore/index.ts#L34)*
 
 **Returns:** *void*
 
@@ -144,7 +150,7 @@ ___
 
 ▸ **getConfigsCheckedAgainstDependantOn**(`dependencyConfigs`: DependencyConfig[], `repoFeatures`: RepositoryFeature[]): *string[]*
 
-*Defined in [helpers/get-configs-checked-against-dependant-on/index.ts:4](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/get-configs-checked-against-dependant-on/index.ts#L4)*
+*Defined in [helpers/get-configs-checked-against-dependant-on/index.ts:4](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/get-configs-checked-against-dependant-on/index.ts#L4)*
 
 **Parameters:**
 
@@ -161,7 +167,7 @@ ___
 
 ▸ **getFeatureSpecificDependencies**(`__namedParameters`: object, `repoFeatures`: RepositoryFeature[]): *string[]*
 
-*Defined in [helpers/get-feature-specific-dependencies/index.ts:5](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/get-feature-specific-dependencies/index.ts#L5)*
+*Defined in [helpers/get-feature-specific-dependencies/index.ts:5](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/get-feature-specific-dependencies/index.ts#L5)*
 
 **Parameters:**
 
@@ -185,7 +191,7 @@ ___
 
 ▸ **getIncludedFileNames**(`repoFeatures`: RepositoryFeature[]): *string[]*
 
-*Defined in [helpers/get-included-file-names/index.ts:4](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/get-included-file-names/index.ts#L4)*
+*Defined in [helpers/get-included-file-names/index.ts:4](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/get-included-file-names/index.ts#L4)*
 
 **Parameters:**
 
@@ -201,7 +207,7 @@ ___
 
 ▸ **getIncludedPackages**(`repoFeatures`: RepositoryFeature[], `failedFileNames`: Set‹ScaffoldFileName›): *string[]*
 
-*Defined in [helpers/get-included-packages/index.ts:6](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/get-included-packages/index.ts#L6)*
+*Defined in [helpers/get-included-packages/index.ts:6](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/get-included-packages/index.ts#L6)*
 
 **Parameters:**
 
@@ -218,7 +224,7 @@ ___
 
 ▸ **getPackageDependencies**(`pkgNames`: string[], `repoFeatures`: RepositoryFeature[]): *string[]*
 
-*Defined in [helpers/get-package-dependencies/index.ts:5](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/get-package-dependencies/index.ts#L5)*
+*Defined in [helpers/get-package-dependencies/index.ts:5](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/get-package-dependencies/index.ts#L5)*
 
 **Parameters:**
 
@@ -235,7 +241,7 @@ ___
 
 ▸ **isFileExcluded**(`fileName`: string, `repoFeatures`: RepositoryFeature[]): *boolean*
 
-*Defined in [helpers/is-file-excluded/index.ts:4](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/helpers/is-file-excluded/index.ts#L4)*
+*Defined in [helpers/is-file-excluded/index.ts:4](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/helpers/is-file-excluded/index.ts#L4)*
 
 **Parameters:**
 
@@ -252,6 +258,6 @@ ___
 
 ▸ **newRepo**(): *Promise‹void›*
 
-*Defined in [main.ts:42](https://github.com/dylanaubrey/repodog/blob/4256e18/packages/new-repo/src/main.ts#L42)*
+*Defined in [main.ts:42](https://github.com/dylanaubrey/repodog/blob/45c36a2/packages/new-repo/src/main.ts#L42)*
 
 **Returns:** *Promise‹void›*

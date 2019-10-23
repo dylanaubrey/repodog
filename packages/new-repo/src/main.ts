@@ -13,6 +13,7 @@ import {
   writeRepodogConfig,
 } from "@repodog/helpers";
 import { PublicRepositoryFeature, RepositoryFeature, ScaffoldFileName } from "@repodog/types";
+import { mkdirSync } from "fs";
 import inquirer from "inquirer";
 import { resolve } from "path";
 import semver from "semver";
@@ -74,6 +75,7 @@ export default async function newRepo() {
     });
 
     generateNPMIgnore();
+    mkdirSync(resolvePathToCwd("src"));
 
     const { proceed } = await inquirer.prompt({
       message: "Are the files in your repository correct?",

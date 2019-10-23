@@ -1,3 +1,11 @@
+#### 0.3.29 (2019-10-23)
+
+##### Bug Fixes
+
+*  change repodog config to json file ([4256e187](https://github.com/dylanaubrey/repodog/commit/4256e1874dce8258f8eaed63c798564fd9ccc170))
+*  change npmignore to be dynamically added ([6bb9010d](https://github.com/dylanaubrey/repodog/commit/6bb9010d63bfb096e64d27eebfd236a214f31802))
+*  update repodog config ([fc32b77e](https://github.com/dylanaubrey/repodog/commit/fc32b77ed2acd9ff56cf41ef4b27d53d1ed6d69e))
+
 #### 0.3.28 (2019-10-22)
 
 ##### Chores

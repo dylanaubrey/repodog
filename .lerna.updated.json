@@ -1,92 +1,26 @@
 [
   {
-    "name": "@repodog/babel-config",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/babel-config"
-  },
-  {
     "name": "@repodog/build-references",
-    "version": "0.3.23",
+    "version": "0.3.24",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/build-references"
   },
   {
     "name": "@repodog/config-helpers",
-    "version": "0.3.27",
+    "version": "0.3.28",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/config-helpers"
   },
   {
     "name": "@repodog/constants",
-    "version": "0.3.23",
+    "version": "0.3.24",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/constants"
   },
   {
-    "name": "@repodog/eslint-config",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/eslint-config"
-  },
-  {
-    "name": "@repodog/helpers",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/helpers"
-  },
-  {
-    "name": "@repodog/jest-config",
-    "version": "0.3.24",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/jest-config"
-  },
-  {
-    "name": "@repodog/new-monorepo",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
-  },
-  {
-    "name": "@repodog/new-package",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-package"
-  },
-  {
     "name": "@repodog/new-repo",
-    "version": "0.3.25",
+    "version": "0.3.26",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-repo"
-  },
-  {
-    "name": "@repodog/prettier-config",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/prettier-config"
-  },
-  {
-    "name": "@repodog/rollup-config",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/rollup-config"
-  },
-  {
-    "name": "@repodog/stylelint-config",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/stylelint-config"
-  },
-  {
-    "name": "@repodog/tslint-config",
-    "version": "0.3.23",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/tslint-config"
-  },
-  {
-    "name": "@repodog/types",
-    "version": "0.3.24",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/types"
   }
 ]

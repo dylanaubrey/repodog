@@ -1,6 +1,6 @@
 {
   "name": "@repodog/config-helpers",
-  "version": "0.3.28",
+  "version": "0.3.29",
   "description": "The RepoDog config-helpers module.",
   "keywords": [
     "configuration"

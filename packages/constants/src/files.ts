@@ -8,7 +8,7 @@ export const MARKDOWN_EXT = ".md";
 export const YAML_EXT = ".yml";
 
 export const PACKAGE_JSON_FILENAME = "package.json";
-export const REPODOG_CONFIG_FILENAME = "repodog.config.js";
+export const REPODOG_CONFIG_FILENAME = "repodog.config.json";
 export const TSCONFIG_FILENAME = "tsconfig.json";
 
 export const BABEL_CONFIG = "babel.config.js";

@@ -18,7 +18,7 @@ const defaultConfig = {
 function loadRepositoryConfig() {
   try {
     // eslint-disable-next-line global-require, import/no-dynamic-require
-    return require(resolve(appRoot.toString(), 'repodog.config.js'));
+    return require(resolve(appRoot.toString(), 'repodog.config.json'));
   } catch {
     return defaultConfig;
   }

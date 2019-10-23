@@ -22,7 +22,6 @@
     "cutoff": "cutoff",
     "cutoff:post-version": "yarn run compile && yarn run docs",
     "docs": "typedoc --includes ./src --out ./docs --options ./typedoc.js",
-    "init": "yarn",
     "lint": "tslint --project ./tsconfig.json",
     "publish-cutoff": "publish-cutoff",
     "test": "jest --logHeapUsage",

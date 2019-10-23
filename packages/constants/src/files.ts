@@ -30,7 +30,8 @@ export const README = "README.md";
 export const ROLLUP_CONFIG = "rollup.config.js";
 export const STYLELINT_CONFIG = "stylelint.config.js";
 export const TRAVIS_CONFIG = ".travis.yml";
-export const TSCONFIG = "tsconfig.settings.json";
+export const TSCONFIG = "tsconfig.json";
+export const TSCONFIG_SETTINGS = "tsconfig.settings.json";
 export const TSLINT_CONFIG = "tslint.json";
 export const TYPEDOC_CONFIG = "typedoc.js";
 
@@ -54,7 +55,7 @@ export const SCAFFOLD_FILE_NAMES = [
   ROLLUP_CONFIG,
   STYLELINT_CONFIG,
   TRAVIS_CONFIG,
-  TSCONFIG,
+  TSCONFIG_SETTINGS,
   TSLINT_CONFIG,
   TYPEDOC_CONFIG,
 ];

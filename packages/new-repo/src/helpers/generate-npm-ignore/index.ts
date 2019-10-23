@@ -21,9 +21,12 @@ karma.*
 lerna.json
 mocha.opts
 package-lock.json
+repodog.config.json
 sonar-project.properties
+test-setup.js
 tsconfig.*
 tslint.*
+typedoc.js
 webpack.*
 yarn.lock
 `;

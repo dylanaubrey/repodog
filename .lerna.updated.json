@@ -1,7 +1,13 @@
 [
   {
+    "name": "@repodog/constants",
+    "version": "0.3.25",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/constants"
+  },
+  {
     "name": "@repodog/new-repo",
-    "version": "0.3.27",
+    "version": "0.3.28",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-repo"
   }

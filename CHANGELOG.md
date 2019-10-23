@@ -1,3 +1,14 @@
+#### 0.3.31 (2019-10-23)
+
+##### New Features
+
+* **new-repo:**  add logging to get package dependencies ([f25a8dba](https://github.com/dylanaubrey/repodog/commit/f25a8dba044d017a28a37e390a115b2dd07e5e0b))
+
+##### Bug Fixes
+
+* **constants:**  type error ([6eb6b4de](https://github.com/dylanaubrey/repodog/commit/6eb6b4decbc95ff7e08f0771d0697d7b161552a6))
+*  add missing tsconfig to files list ([2be17510](https://github.com/dylanaubrey/repodog/commit/2be1751029f48142c910ed23bae810cfe941b05d))
+
 #### 0.3.30 (2019-10-23)
 
 ##### Bug Fixes

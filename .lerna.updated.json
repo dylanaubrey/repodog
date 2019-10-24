@@ -1,13 +1,19 @@
 [
   {
     "name": "@repodog/constants",
-    "version": "0.3.25",
+    "version": "0.3.26",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/constants"
   },
   {
+    "name": "@repodog/new-monorepo",
+    "version": "0.3.24",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
+  },
+  {
     "name": "@repodog/new-repo",
-    "version": "0.3.28",
+    "version": "0.3.29",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-repo"
   }

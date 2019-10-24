@@ -1,3 +1,9 @@
+#### 0.3.32 (2019-10-24)
+
+##### Bug Fixes
+
+*  add config helpers to initial package dev dependencies ([58357496](https://github.com/dylanaubrey/repodog/commit/583574966fb29acd56a67902a477da410c43e8c8))
+
 #### 0.3.31 (2019-10-23)
 
 ##### New Features

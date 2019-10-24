@@ -1,6 +1,7 @@
 export const BABEL_CONFIG_PKG = "@repodog/babel-config";
 export const BUILD_REFERENCES_PKG = "@repodog/build-references";
 export const COMMITLINT_CONFIG_PKG = "@repodog/commitlint-config";
+export const CONFIG_HELPERS = "@repodog/config-helpers";
 export const ESLINT_CONFIG_PKG = "@repodog/eslint-config";
 export const JEST_CONFIG_PKG = "@repodog/jest-config";
 export const LERNA_CONFIG_PKG = "@repodog/lerna-config";

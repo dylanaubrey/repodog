@@ -39,6 +39,7 @@
     }
   },
   "devDependencies": {
+    "@repodog/config-helpers": "> 1.0",
     "concurrently": "^4.1.1",
     "cross-env": "^5.1.6",
     "cutoff": "^0.2.7",
@@ -49,6 +50,6 @@
     "lodash": "^4.17.5"
   },
   "engines": {
-    "node": "^12.13.0"
+    "node": "< 10.16.0"
   }
 }

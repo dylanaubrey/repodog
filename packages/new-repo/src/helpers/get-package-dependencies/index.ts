@@ -15,7 +15,7 @@ export default function getPackageDependencies(pkgNames: string[], repoFeatures:
           : pkgDeps;
       } catch (error) {
         warn(error);
-        info("Failed to load dependencies file, falling back to package.json");
+
         const pkgJson = loadPackageJson(resolvePathToCwd(`node_modules/${pkgName}`));
         if (!pkgJson || !pkgJson.peerDependencies) return pkgDeps;
 

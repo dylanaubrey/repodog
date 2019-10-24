@@ -39,7 +39,7 @@
     }
   },
   "devDependencies": {
-    "@repodog/config-helpers": "> 1.0",
+    "@repodog/config-helpers": "^0.3.29",
     "concurrently": "^4.1.1",
     "cross-env": "^5.1.6",
     "cutoff": "^0.2.7",

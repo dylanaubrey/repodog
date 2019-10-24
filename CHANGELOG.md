@@ -1,3 +1,9 @@
+#### 0.3.33 (2019-10-24)
+
+##### Bug Fixes
+
+*  wrong dependency version ([2d335bb5](https://github.com/dylanaubrey/repodog/commit/2d335bb50792165b0d379a8680cde2cab702311b))
+
 #### 0.3.32 (2019-10-24)
 
 ##### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@repodog/new-monorepo",
-  "version": "0.3.25",
+  "version": "0.3.26",
   "description": "The RepoDog new-monorepo module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

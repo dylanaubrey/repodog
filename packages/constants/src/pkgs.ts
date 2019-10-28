@@ -13,15 +13,20 @@ export const STYLELINT_CONFIG_PKG = "@repodog/stylelint-config";
 export const TS_CONFIG_PKG = "@repodog/ts-config";
 export const TSLINT_CONFIG_PKG = "@repodog/tslint-config";
 export const TYPEDOC_CONFIG_PKG = "@repodog/typedoc-config";
+export const REPODOG_TYPES_PKG = "@repodog/types";
 
 export const TYPES_FS_EXTRA = "@types/fs-extra";
 export const TYPES_JEST = "@types/jest";
 export const TYPES_LODASH = "@types/lodash";
 export const TYPES_NODE = "@types/node";
+export const TYPES_REACT = "@types/react";
 
 export const CODECOV = "codecov";
 export const NVM = "nvm";
+export const REACT = "react";
+export const REACT_DOM = "react-dom";
 export const TS_JEST = "ts-jest";
+export const TS_NODE = "ts-node";
 export const TS_TOOLBELT = "ts-toolbelt";
 export const TYPE_FEST = "type-fest";
 export const UTILITY_TYPES = "utility-types";

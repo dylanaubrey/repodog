@@ -1,3 +1,9 @@
+#### 0.3.34 (2019-10-28)
+
+##### New Features
+
+*  add npm packages to install logic ([b814e0d5](https://github.com/dylanaubrey/repodog/commit/b814e0d5dfc0fd03a670da45ec1aa037c3c449f1))
+
 #### 0.3.33 (2019-10-24)
 
 ##### Bug Fixes

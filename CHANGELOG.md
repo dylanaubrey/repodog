@@ -1,3 +1,11 @@
+#### 0.3.35 (2019-10-31)
+
+##### Bug Fixes
+
+* **new-monorepo:**
+  *  remove unused variables ([b246e2dc](https://github.com/dylanaubrey/repodog/commit/b246e2dc0f38bbc9fac641a3a68e13fab827b60b))
+  *  add lerna version and remove build references ([b6931919](https://github.com/dylanaubrey/repodog/commit/b6931919682a7df88d0f99afd0b53901634307c2))
+
 #### 0.3.34 (2019-10-28)
 
 ##### New Features

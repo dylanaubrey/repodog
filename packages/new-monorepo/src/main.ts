@@ -1,5 +1,4 @@
-import buildReferences from "@repodog/build-references";
-import { LOAD_NVM, MONOREPO, REPO_FEATURES, TYPESCRIPT } from "@repodog/constants";
+import { LOAD_NVM, MONOREPO, REPO_FEATURES } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,

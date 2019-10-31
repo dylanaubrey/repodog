@@ -62,7 +62,7 @@ export default async function newMonorepo() {
     }
 
     const { features } = (await inquirer.prompt({
-      choices: REPO_FEATURES.map(name => ({ name })),
+      choices: REPO_FEATURES.filter(feature => feature !== MONOREPO).map(name => ({ name })),
       message: "Select the features your repository requires",
       name: "features",
       type: "checkbox",

@@ -1,4 +1,4 @@
-import { LOAD_NVM, REPO_FEATURES } from "@repodog/constants";
+import { LOAD_NVM, MONOREPO, REPO_FEATURES } from "@repodog/constants";
 import {
   IterateDirectoryCallback,
   copyFile,
@@ -59,7 +59,7 @@ export default async function newRepo() {
     }
 
     const { features } = (await inquirer.prompt({
-      choices: REPO_FEATURES.map(name => ({ name })),
+      choices: REPO_FEATURES.filter(feature => feature !== MONOREPO).map(name => ({ name })),
       message: "Select the features your repository requires",
       name: "features",
       type: "checkbox",

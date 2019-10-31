@@ -9,9 +9,6 @@
   ],
   "references": [
     {
-      "path": "../build-references"
-    },
-    {
       "path": "../constants"
     },
     {

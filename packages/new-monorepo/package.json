@@ -41,7 +41,6 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.0.0",
-    "@repodog/build-references": "> 1.0",
     "@repodog/constants": "> 1.0",
     "@repodog/helpers": "> 1.0",
     "@repodog/new-repo": "> 1.0",

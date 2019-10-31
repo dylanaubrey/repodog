@@ -96,10 +96,6 @@ export default async function newMonorepo() {
     exec(`${LOAD_NVM} yarn add ${peerDependencies.join(" ")} --dev -W`);
     exec(`${LOAD_NVM} lerna bootstrap`);
 
-    if (repoFeatures.includes(TYPESCRIPT)) {
-      buildReferences();
-    }
-
     if (rootPackageJson.scripts && rootPackageJson.scripts["new-monorepo:post"]) {
       exec(`${LOAD_NVM} yarn run new-monorepo:post`);
     }

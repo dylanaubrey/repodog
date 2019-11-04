@@ -8,14 +8,15 @@ const json = require('rollup-plugin-json');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const { terser } = require('rollup-plugin-terser');
 
+const appRootPath = appRoot.toString();
 let rootPackageJson;
 
 try {
   // eslint-disable-next-line global-require, import/no-dynamic-require
-  rootPackageJson = require(resolve(appRoot.toString(), 'package.json'));
+  rootPackageJson = require(resolve(appRootPath, 'package.json'));
 } catch (error) {
   // eslint-disable-next-line no-console
-  console.error(`No package.json found in in root directory ${appRoot.toString()}`, error);
+  console.error(`No package.json found in in root directory ${appRootPath}`, error);
 }
 
 const packageDir = resolve(process.cwd());
@@ -49,7 +50,7 @@ const defaultPlugins = [
   commonjs(),
   json(),
   babel({
-    configFile: '../../babel.config.js',
+    configFile: `${appRootPath}/babel.config.js`,
     extensions,
     runtimeHelpers: true,
   }),

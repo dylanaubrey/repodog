@@ -11,6 +11,13 @@ The RepoDog new-repo command.
 yarn add @repodog/new-repo --dev
 ```
 
+The package depends on @repodog/constants and @repodog/helpers, as well as core-js, @babel/runtime and lodash, so these
+packages also need to be installed in your project.
+
+```shell
+yarn add @repodog/constants @repodog/helpers core-js @babel/runtime lodash --dev
+```
+
 ## Usage
 
 The command creates a new repo in an existing project, copying over scaffolding files for Typescript, popular

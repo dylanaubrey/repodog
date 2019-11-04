@@ -11,6 +11,13 @@ The RepoDog new-monorepo command.
 yarn add @repodog/new-monorepo --dev
 ```
 
+The package depends on @repodog/new-repo, @repodog/constants and @repodog/helpers, as well as core-js, @babel/runtime
+and lodash, so these packages also need to be installed in your project.
+
+```shell
+yarn add @repodog/new-repo @repodog/constants @repodog/helpers core-js @babel/runtime lodash --dev
+```
+
 ## Usage
 
 The command creates a new monorepo in an existing project, copying over scaffolding files for Typescript, popular

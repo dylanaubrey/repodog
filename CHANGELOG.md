@@ -1,3 +1,15 @@
+#### 0.3.36 (2019-11-04)
+
+##### Documentation Changes
+
+*  add missing packages to main readme ([01d9506b](https://github.com/dylanaubrey/repodog/commit/01d9506b72cd4353fb63a51b21add5edaac3edcc))
+*  update new repo/monorepo readme files ([a5e74136](https://github.com/dylanaubrey/repodog/commit/a5e74136454b90190043af6af9cbef14de5eefd1))
+
+##### Bug Fixes
+
+* **rollup-config:**  path to babel config broken for single repo ([9f143aeb](https://github.com/dylanaubrey/repodog/commit/9f143aeb356939ba9f781dfade206c278818af16))
+*  update new repo/monorepo repo feature types ([af6eb1c7](https://github.com/dylanaubrey/repodog/commit/af6eb1c74a06674aa5b46a6dfff6c6b54a79fd62))
+
 #### 0.3.35 (2019-10-31)
 
 ##### Bug Fixes

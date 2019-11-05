@@ -6,15 +6,19 @@ module.exports = api => {
   const env = api.env();
   let ignore = [];
 
-  if (env !== 'test') {
+  if (env !== 'test' && env !== 'debug' && env !== 'browserTest' && env !== 'browserDebug') {
     ignore = ['**/*.test.ts'];
   }
 
   const modules = env === 'main' || env === 'test' ? 'commonjs' : false;
   let targets;
 
-  if (env === 'browser') {
+  if (env === 'browser' || env === 'browserTest') {
     targets = { browsers: 'last 2 versions' };
+  } else if (env === 'browserDebug') {
+    targets = { browsers: 'chrome >= 60' };
+  } else if (env === 'debug') {
+    targets = { node: '>= 12' };
   } else {
     targets = { node: '10' };
   }

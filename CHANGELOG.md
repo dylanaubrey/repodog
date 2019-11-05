@@ -1,3 +1,9 @@
+#### 0.3.37 (2019-11-05)
+
+##### Bug Fixes
+
+* **babel-config:**  update to deal with browser test env ([b5cedbce](https://github.com/dylanaubrey/repodog/commit/b5cedbce405e10a8bac90b5948432e3939274440))
+
 #### 0.3.36 (2019-11-04)
 
 ##### Documentation Changes

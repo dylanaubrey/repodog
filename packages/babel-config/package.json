@@ -1,6 +1,6 @@
 {
   "name": "@repodog/babel-config",
-  "version": "0.3.24",
+  "version": "0.3.25",
   "description": "The RepoDog babel-config module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

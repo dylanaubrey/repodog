@@ -1,20 +1,8 @@
 [
   {
-    "name": "@repodog/new-monorepo",
-    "version": "0.3.28",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
-  },
-  {
-    "name": "@repodog/new-repo",
-    "version": "0.3.32",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-repo"
-  },
-  {
-    "name": "@repodog/rollup-config",
+    "name": "@repodog/babel-config",
     "version": "0.3.24",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/rollup-config"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/babel-config"
   }
 ]

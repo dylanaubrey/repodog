@@ -1,3 +1,9 @@
+#### 0.3.38 (2019-11-12)
+
+##### Chores
+
+*  update dependencies and fix issues ([ca58d25a](https://github.com/dylanaubrey/repodog/commit/ca58d25a8ceb7a351c496846330686ec21e0f37c))
+
 #### 0.3.37 (2019-11-05)
 
 ##### Bug Fixes

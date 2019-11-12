@@ -44,15 +44,15 @@
     "lodash": "^4.17.5"
   },
   "dependencies": {
-    "app-root-path": "^2.2.1",
-    "chalk": "^2.4.2",
+    "app-root-path": "^3.0.0",
+    "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
     "inquirer": "^7.0.0",
     "js-yaml": "^3.13.1",
     "semver": "^6.3.0",
     "shelljs": "^0.8.3",
     "sort-object-keys": "^1.1.2",
-    "sort-package-json": "^1.22.1",
+    "sort-package-json": "^1.23.1",
     "validate-npm-package-name": "^3.0.0"
   }
 }

@@ -12,13 +12,10 @@ export default function getIncludedPackages(
     return [...new Set([...included, ...getConfigsCheckedAgainstDependantOn(repoPackages, repoFeatures)])];
   }, BASE_REPO_PKGS);
 
-  const excludedPackages = [...failedFileNames].reduce(
-    (excluded, fileName) => {
-      const pkgNames = FILE_NAMES_TO_PKG_NAMES[fileName];
-      return [...new Set([...excluded, ...pkgNames])];
-    },
-    [] as string[],
-  );
+  const excludedPackages = [...failedFileNames].reduce((excluded, fileName) => {
+    const pkgNames = FILE_NAMES_TO_PKG_NAMES[fileName];
+    return [...new Set([...excluded, ...pkgNames])];
+  }, [] as string[]);
 
   return difference(includedPackages, excludedPackages);
 }

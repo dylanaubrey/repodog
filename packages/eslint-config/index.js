@@ -2,7 +2,7 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['airbnb', 'eslint-config-prettier'],
+  extends: ['airbnb-base', 'eslint-config-prettier'],
   parser: 'babel-eslint',
   plugins: ['eslint-plugin-prettier', 'sort-class-members'],
   rules: {

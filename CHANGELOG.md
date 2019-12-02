@@ -1,3 +1,11 @@
+#### 0.3.39 (2019-12-02)
+
+##### Bug Fixes
+
+* **stylelint-config:**  add support for new babel plugins ([3c8817cb](https://github.com/dylanaubrey/repodog/commit/3c8817cb12733d684cf3a30b2bd782ac50474ca8))
+*  add js and ts lints into linting npm script ([cabac679](https://github.com/dylanaubrey/repodog/commit/cabac679e17b66484cd90739fe0171e4a8475102))
+* **eslint-config:**  correctly split airbnb base and react rulesets ([1b744c51](https://github.com/dylanaubrey/repodog/commit/1b744c51630f00d90df1bb2f198f11be7ead722f))
+
 #### 0.3.38 (2019-11-12)
 
 ##### Chores

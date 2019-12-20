@@ -21,7 +21,7 @@
 
 ▸ **buildPackageReferences**(`__namedParameters`: object): *void*
 
-*Defined in [main.ts:24](https://github.com/dylanaubrey/repodog/blob/3c8817c/packages/build-references/src/main.ts#L24)*
+*Defined in [main.ts:24](https://github.com/dylanaubrey/repodog/blob/f867c1b/packages/build-references/src/main.ts#L24)*
 
 **Parameters:**
 
@@ -43,7 +43,7 @@ ___
 
 ▸ **buildProjectReferences**(): *void*
 
-*Defined in [main.ts:54](https://github.com/dylanaubrey/repodog/blob/3c8817c/packages/build-references/src/main.ts#L54)*
+*Defined in [main.ts:54](https://github.com/dylanaubrey/repodog/blob/f867c1b/packages/build-references/src/main.ts#L54)*
 
 **Returns:** *void*
 
@@ -53,7 +53,7 @@ ___
 
 ▸ **setReferencesFromDependencies**(`__namedParameters`: object): *void*
 
-*Defined in [main.ts:16](https://github.com/dylanaubrey/repodog/blob/3c8817c/packages/build-references/src/main.ts#L16)*
+*Defined in [main.ts:16](https://github.com/dylanaubrey/repodog/blob/f867c1b/packages/build-references/src/main.ts#L16)*
 
 **Parameters:**
 

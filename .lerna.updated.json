@@ -1,26 +1,14 @@
 [
   {
-    "name": "@repodog/eslint-config",
-    "version": "0.3.24",
+    "name": "@repodog/babel-config",
+    "version": "0.3.25",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/eslint-config"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/babel-config"
   },
   {
-    "name": "@repodog/new-monorepo",
-    "version": "0.3.29",
+    "name": "@repodog/jest-config",
+    "version": "0.3.25",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
-  },
-  {
-    "name": "@repodog/new-repo",
-    "version": "0.3.34",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-repo"
-  },
-  {
-    "name": "@repodog/stylelint-config",
-    "version": "0.3.24",
-    "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/stylelint-config"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/jest-config"
   }
 ]

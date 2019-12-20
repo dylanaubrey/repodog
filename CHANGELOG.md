@@ -1,3 +1,9 @@
+#### 0.3.40 (2019-12-20)
+
+##### Bug Fixes
+
+*  add test and mock folders to various configs ([f867c1b9](https://github.com/dylanaubrey/repodog/commit/f867c1b9411bc6776b663336488b508f9e57ac67))
+
 #### 0.3.39 (2019-12-02)
 
 ##### Bug Fixes

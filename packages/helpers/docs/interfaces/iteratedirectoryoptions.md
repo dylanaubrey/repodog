@@ -18,4 +18,4 @@
 
 • **sync**? : *undefined | false | true*
 
-*Defined in [types.ts:9](https://github.com/dylanaubrey/repodog/blob/3c8817c/packages/helpers/src/types.ts#L9)*
+*Defined in [types.ts:9](https://github.com/dylanaubrey/repodog/blob/f867c1b/packages/helpers/src/types.ts#L9)*

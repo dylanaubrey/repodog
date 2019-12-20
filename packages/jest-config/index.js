@@ -2,20 +2,27 @@ const { consts, loadRepositoryConfig } = require('@repodog/config-helpers');
 
 const { MONOREPO } = consts;
 
+const commonCollectCoverageFrom = [
+  '!**/types.ts',
+  '!**/types.ts',
+  '!**/*.test.*',
+  '!**/__test__/**',
+  '!**/__TEST__/**',
+  '!**/__MOCK__/**',
+];
+
 const singePackageConfig = {
-  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!**/types.ts', '!**/*.test.*', '!**/__test__/**'],
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', ...commonCollectCoverageFrom],
   testMatch: ['<rootDir>/src/**/*.test.*'],
 };
 
 const multiPackageConfig = {
   collectCoverageFrom: [
     'packages/**/*.{js,jsx,ts,tsx}',
-    '!**/types.ts',
-    '!**/*.test.*',
-    '!**/__test__/**',
     '!**/bin/**',
     '!**/lib/**',
     '!**/node_modules/**',
+    ...commonCollectCoverageFrom,
   ],
   testMatch: ['<rootDir>/packages/**/*.test.*'],
 };

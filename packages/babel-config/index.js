@@ -7,7 +7,7 @@ module.exports = api => {
   let ignore = [];
 
   if (env !== 'test' && env !== 'debug' && env !== 'browserTest' && env !== 'browserDebug') {
-    ignore = ['**/*.test.ts'];
+    ignore = ['**/*.test.ts', '**/__test__/**', '**/__TEST__/**', '**/__MOCK__/**'];
   }
 
   const modules = env === 'main' || env === 'test' ? 'commonjs' : false;

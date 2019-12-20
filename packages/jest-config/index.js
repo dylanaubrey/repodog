@@ -8,7 +8,8 @@ const commonCollectCoverageFrom = [
   '!**/*.test.*',
   '!**/__test__/**',
   '!**/__TEST__/**',
-  '!**/__MOCK__/**',
+  '!**/__mocks__/**',
+  '!**/__MOCKS__/**',
 ];
 
 const singePackageConfig = {

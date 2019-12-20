@@ -1,3 +1,9 @@
+#### 0.3.41 (2019-12-20)
+
+##### Bug Fixes
+
+*  updating folders in various ignore files ([757359b2](https://github.com/dylanaubrey/repodog/commit/757359b2a83e08c3c2ab7a06b77ed14bebf1cb44))
+
 #### 0.3.40 (2019-12-20)
 
 ##### Bug Fixes

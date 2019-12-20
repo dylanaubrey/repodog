@@ -1,13 +1,13 @@
 [
   {
     "name": "@repodog/babel-config",
-    "version": "0.3.25",
+    "version": "0.3.26",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/babel-config"
   },
   {
     "name": "@repodog/jest-config",
-    "version": "0.3.25",
+    "version": "0.3.26",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/jest-config"
   }

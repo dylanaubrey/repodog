@@ -1,3 +1,9 @@
+#### 0.3.42 (2019-12-23)
+
+##### Bug Fixes
+
+*  update ignore patterns again ([185b628e](https://github.com/dylanaubrey/repodog/commit/185b628ee84d4094e57e05f4611e8192e2456f31))
+
 #### 0.3.41 (2019-12-20)
 
 ##### Bug Fixes

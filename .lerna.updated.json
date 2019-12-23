@@ -1,14 +1,20 @@
 [
   {
     "name": "@repodog/babel-config",
-    "version": "0.3.26",
+    "version": "0.3.27",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/babel-config"
   },
   {
     "name": "@repodog/jest-config",
-    "version": "0.3.26",
+    "version": "0.3.27",
     "private": false,
     "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/jest-config"
+  },
+  {
+    "name": "@repodog/new-monorepo",
+    "version": "0.3.30",
+    "private": false,
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/new-monorepo"
   }
 ]

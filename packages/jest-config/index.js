@@ -6,8 +6,8 @@ const commonCollectCoverageFrom = [
   '!**/types.ts',
   '!**/types.ts',
   '!**/*.test.*',
-  '!**/__test__/**',
-  '!**/__TEST__/**',
+  '!**/__tests__/**',
+  '!**/__TESTS__/**',
   '!**/__mocks__/**',
   '!**/__MOCKS__/**',
 ];

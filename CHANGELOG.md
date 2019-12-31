@@ -1,3 +1,13 @@
+#### 0.3.43 (2019-12-31)
+
+##### Chores
+
+* **deps:**  bump handlebars from 4.1.2 to 4.5.3 ([#3](https://github.com/dylanaubrey/repodog/pull/3)) ([0d5183df](https://github.com/dylanaubrey/repodog/commit/0d5183df2e97f7612b92c36156d45843b30f44f1))
+
+##### Bug Fixes
+
+*  add enzyme to jest install if react feature is there ([25debfd6](https://github.com/dylanaubrey/repodog/commit/25debfd6e271ebf899fb092bfe4d178d4786b3c4))
+
 #### 0.3.42 (2019-12-23)
 
 ##### Bug Fixes

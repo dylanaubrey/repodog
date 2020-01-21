@@ -1,3 +1,13 @@
+#### 0.3.47 (2020-01-21)
+
+##### New Features
+
+* **rollup-config:**  upgrade babel plugin to use skip checks ([b470475e](https://github.com/dylanaubrey/repodog/commit/b470475e31f65fdfc11c156f50b32aef9b0806aa))
+
+##### Bug Fixes
+
+*  add new rollup config to repo ([f13aaac8](https://github.com/dylanaubrey/repodog/commit/f13aaac8c5362529af63915a1afd4e7809343d47))
+
 #### 0.3.46 (2020-01-21)
 
 ##### New Features

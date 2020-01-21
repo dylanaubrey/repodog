@@ -129,7 +129,7 @@
     "prettier": "^1.19.1",
     "rollup": "^1.26.5",
     "rollup-plugin-analyzer": "^3.2.2",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-babel": "^5.0.0-alpha.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",

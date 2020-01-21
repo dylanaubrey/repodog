@@ -1,3 +1,9 @@
+#### 0.3.44 (2020-01-21)
+
+##### New Features
+
+* **babel-config:**  restrict caching to when babel env is same ([55b10bdd](https://github.com/dylanaubrey/repodog/commit/55b10bdd504fb583741506a069882984a9ad0b39))
+
 #### 0.3.43 (2019-12-31)
 
 ##### Chores

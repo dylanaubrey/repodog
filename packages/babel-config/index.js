@@ -3,6 +3,7 @@ const { consts, loadRepositoryConfig } = require('@repodog/config-helpers');
 const { CSS, REACT, TYPESCRIPT } = consts;
 
 module.exports = api => {
+  api.cache.using(() => process.env.BABEL_ENV);
   const env = api.env();
   let ignore = [];
 

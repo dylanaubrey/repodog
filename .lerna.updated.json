@@ -1,8 +1,8 @@
 [
   {
-    "name": "@repodog/babel-config",
-    "version": "0.3.29",
+    "name": "@repodog/rollup-config",
+    "version": "0.3.25",
     "private": false,
-    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/babel-config"
+    "location": "/Users/dylanaubrey/Documents/workspaces/repodog/packages/rollup-config"
   }
 ]

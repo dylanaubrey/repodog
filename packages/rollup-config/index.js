@@ -50,9 +50,10 @@ const defaultPlugins = [
   commonjs(),
   json(),
   babel({
+    babelHelpers: 'runtime',
     configFile: `${appRootPath}/babel.config.js`,
     extensions,
-    runtimeHelpers: true,
+    skipPreflightCheck: true,
   }),
 ];
 

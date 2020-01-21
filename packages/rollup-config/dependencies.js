@@ -1,7 +1,7 @@
 const core = [
   'rollup',
   'rollup-plugin-analyzer',
-  'rollup-plugin-babel',
+  'rollup-plugin-babel@next',
   'rollup-plugin-commonjs',
   'rollup-plugin-json',
   'rollup-plugin-node-resolve',

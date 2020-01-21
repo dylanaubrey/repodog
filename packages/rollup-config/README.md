@@ -8,7 +8,8 @@ The RepoDog Rollup config.
 ## Installation
 
 ```shell
-yarn add @repodog/rollup-config --dev
+yarn add @repodog/rollup-config rollup rollup-plugin-analyzer rollup-plugin-babel@next rollup-plugin-commonjs
+  rollup-plugin-json rollup-plugin-node-resolve rollup-plugin-terser --dev
 ```
 
 ## Usage

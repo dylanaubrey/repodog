@@ -1,3 +1,9 @@
+#### 0.3.45 (2020-01-21)
+
+##### Bug Fixes
+
+* **babel-config:**  remove unnecessary cache config ([e3b43dc6](https://github.com/dylanaubrey/repodog/commit/e3b43dc63fe2246f9d885073b43c09ca4d652d08))
+
 #### 0.3.44 (2020-01-21)
 
 ##### New Features

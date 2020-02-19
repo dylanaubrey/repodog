@@ -1,3 +1,9 @@
+#### 0.3.48 (2020-02-19)
+
+##### Bug Fixes
+
+*  add new tslint rule and exclude lib from jest ([aaed031b](https://github.com/dylanaubrey/repodog/commit/aaed031b4311087b7cd8fc6bd033ed7a07a907cb))
+
 #### 0.3.47 (2020-01-21)
 
 ##### New Features

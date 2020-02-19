@@ -38,6 +38,7 @@
     "no-implicit-dependencies": false,
     "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
     "no-namespace": true,
+    "no-shadowed-variable": [true, { "temporalDeadZone": false }],
     "no-submodule-imports": [true, "ts-jest/utils"],
     "no-this-assignment": [true, { "allowed-names": ["_this"] }],
     "no-var-requires": false,

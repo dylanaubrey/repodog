@@ -36,7 +36,7 @@ module.exports = {
   coverageReporters: ['json', 'lcov', 'text-summary'],
   moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testPathIgnorePatterns: ['/__snapshots__/'],
+  testPathIgnorePatterns: ['/__snapshots__/', '/lib/'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },

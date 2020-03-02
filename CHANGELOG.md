@@ -1,3 +1,9 @@
+#### 0.3.50 (2020-03-02)
+
+##### Chores
+
+*  upgrade dependencies ([ee1cd2bc](https://github.com/dylanaubrey/repodog/commit/ee1cd2bce5c59f52a235b2fe6fd0fa0110167ac2))
+
 #### 0.3.49 (2020-03-02)
 
 ##### Bug Fixes

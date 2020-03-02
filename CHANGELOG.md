@@ -1,3 +1,10 @@
+#### 0.3.49 (2020-03-02)
+
+##### Bug Fixes
+
+*  change missed peer dependency version ([dda5c3cb](https://github.com/dylanaubrey/repodog/commit/dda5c3cb56517a713912655cb0798811c235525d))
+*  peer dependency versioning ([47c874a7](https://github.com/dylanaubrey/repodog/commit/47c874a792e2a7f178676bc2a0d248f4babc0c4b))
+
 #### 0.3.48 (2020-02-19)
 
 ##### Bug Fixes

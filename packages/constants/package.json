@@ -1,6 +1,6 @@
 {
   "name": "@repodog/constants",
-  "version": "0.3.28",
+  "version": "0.3.29",
   "description": "The RepoDog constants module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",

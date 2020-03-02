@@ -48,6 +48,7 @@ module.exports = api => {
     '@babel/plugin-proposal-throw-expressions',
     modules ? '@babel/plugin-transform-modules-commonjs' : '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-syntax-import-meta',
+    '@babel/plugin-syntax-top-level-await',
     [
       '@babel/plugin-transform-runtime',
       {

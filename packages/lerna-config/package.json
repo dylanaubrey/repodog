@@ -21,6 +21,6 @@
     "configuration"
   ],
   "peerDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": "< 4"
   }
 }

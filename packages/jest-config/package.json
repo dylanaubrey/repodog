@@ -21,6 +21,6 @@
     "configuration"
   ],
   "peerDependencies": {
-    "@repodog/config-helpers": "> 1.0"
+    "@repodog/config-helpers": "< 1"
   }
 }

@@ -36,10 +36,10 @@
     "docs": "typedoc --includes ./src/main --out ./docs --options ../../typedoc.js"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.0.0",
+    "@babel/runtime": "< 8",
     "@repodog/constants": "^0.0.3",
     "@repodog/helpers": "^0.0.3",
-    "core-js": "> 4.0",
-    "lodash": "^4.17.5"
+    "core-js": "< 4",
+    "lodash": "< 5"
   }
 }

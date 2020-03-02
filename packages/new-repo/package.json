@@ -37,11 +37,11 @@
     "docs": "typedoc --includes ./src/main --out ./docs --options ../../typedoc.js"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.0.0",
-    "@repodog/constants": "> 1.0",
-    "@repodog/helpers": "> 1.0",
-    "core-js": "> 4.0",
-    "lodash": "^4.17.5"
+    "@babel/runtime": "< 8",
+    "@repodog/constants": "< 1",
+    "@repodog/helpers": "< 1",
+    "core-js": "< 4",
+    "lodash": "< 5"
   },
   "dependencies": {
     "inquirer": "^7.0.0",

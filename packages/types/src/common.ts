@@ -10,8 +10,8 @@ export type DependencyConfig = string | [string, { dependantOn: RepositoryFeatur
 
 export interface ConfigDependencies {
   core: string[];
-  css?: Array<string | DependencyConfig>;
-  monorepo?: Array<string | DependencyConfig>;
-  react?: Array<string | DependencyConfig>;
-  typescript?: Array<string | DependencyConfig>;
+  css?: (string | DependencyConfig)[];
+  monorepo?: (string | DependencyConfig)[];
+  react?: (string | DependencyConfig)[];
+  typescript?: (string | DependencyConfig)[];
 }

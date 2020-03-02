@@ -37,8 +37,8 @@
   },
   "peerDependencies": {
     "@babel/runtime": "< 8",
-    "@repodog/constants": "^0.0.3",
-    "@repodog/helpers": "^0.0.3",
+    "@repodog/constants": "< 1",
+    "@repodog/helpers": "< 1",
     "core-js": "< 4",
     "lodash": "< 5"
   }

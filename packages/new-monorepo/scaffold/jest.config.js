@@ -6,7 +6,7 @@ module.exports = {
     'packages/**/*.{js,jsx,ts,tsx}',
     '!**/types.ts',
     '!**/*.test.*',
-    '!**/__test__/**',
+    '!**/__tests__/**',
     '!**/bin/**',
     '!**/lib/**',
     '!**/node_modules/**',

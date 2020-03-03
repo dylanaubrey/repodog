@@ -1,3 +1,14 @@
+#### 0.3.53 (2020-03-03)
+
+##### Chores
+
+*  update cutoff ([22f6b928](https://github.com/badbatch/repodog/commit/22f6b928f8230086216d096c24dec38769435dba))
+*  update urls after moving repo ([82a3cd30](https://github.com/badbatch/repodog/commit/82a3cd30027c4e4924569a51b28c8656f7c15dd1))
+
+##### Bug Fixes
+
+* **jest:**  change name of test folder ([c1a0efa1](https://github.com/badbatch/repodog/commit/c1a0efa14edd1860defa44dac5f0e9567197a295))
+
 #### 0.3.52 (2020-03-03)
 
 ##### Bug Fixes

@@ -19,7 +19,7 @@
 
 • **errors**: *string[]*
 
-*Defined in [packages/helpers/src/types.ts:29](https://github.com/dylanaubrey/repodog/blob/ee1cd2b/packages/helpers/src/types.ts#L29)*
+*Defined in [packages/helpers/src/types.ts:29](https://github.com/dylanaubrey/repodog/blob/9e12887/packages/helpers/src/types.ts#L29)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **valid**: *boolean*
 
-*Defined in [packages/helpers/src/types.ts:30](https://github.com/dylanaubrey/repodog/blob/ee1cd2b/packages/helpers/src/types.ts#L30)*
+*Defined in [packages/helpers/src/types.ts:30](https://github.com/dylanaubrey/repodog/blob/9e12887/packages/helpers/src/types.ts#L30)*

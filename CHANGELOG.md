@@ -1,3 +1,9 @@
+#### 0.3.51 (2020-03-03)
+
+##### Bug Fixes
+
+* **new-repo:**  adding exists check on dir before make ([9e128870](https://github.com/dylanaubrey/repodog/commit/9e12887053c2117cf8a656ea938117a74cbf9bc0))
+
 #### 0.3.50 (2020-03-02)
 
 ##### Chores

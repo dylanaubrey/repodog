@@ -4,13 +4,13 @@
   "description": "The RepoDog new-monorepo module.",
   "author": "Dylan Aubrey <dylanaubrey@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/dylanaubrey/repodog",
+  "homepage": "https://github.com/badbatch/repodog",
   "bugs": {
-    "url": "https://github.com/dylanaubrey/repodog/issues"
+    "url": "https://github.com/badbatch/repodog/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dylanaubrey/repodog"
+    "url": "https://github.com/badbatch/repodog"
   },
   "publishConfig": {
     "access": "public"

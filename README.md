@@ -2,7 +2,7 @@
 
 An opinionated command line utility for managing repositories.
 
-[![Build Status](https://travis-ci.org/dylanaubrey/repodog.svg?branch=master)](https://travis-ci.org/dylanaubrey/repodog)
+[![Build Status](https://travis-ci.com/badbatch/repodog.svg?branch=master)](https://travis-ci.com/badbatch/repodog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Summary

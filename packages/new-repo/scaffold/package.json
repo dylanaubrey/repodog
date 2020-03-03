@@ -5,7 +5,6 @@
   "browser": "lib/browser/index.js",
   "types": "lib/types/index.d.ts",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
     "build": "yarn run clean:libs && yarn run compile",
     "clean": "yarn run clean:libs && yarn run clean:docs && yarn run clean:repo",
     "clean:docs": "del-cli ./docs",

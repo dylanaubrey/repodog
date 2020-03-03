@@ -1,3 +1,10 @@
+#### 0.3.52 (2020-03-03)
+
+##### Bug Fixes
+
+* **new-repo:**  remove boostrap cmd from package json ([30d5d3f9](https://github.com/dylanaubrey/repodog/commit/30d5d3f9411f28d9a99db76e49440ced4d4ab37a))
+*  add codecov cmd to new repo/monorepo travis files ([f2645bda](https://github.com/dylanaubrey/repodog/commit/f2645bda30a6437a7d973d79c86572aed1b16a4d))
+
 #### 0.3.51 (2020-03-03)
 
 ##### Bug Fixes

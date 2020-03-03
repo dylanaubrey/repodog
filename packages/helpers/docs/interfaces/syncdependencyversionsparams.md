@@ -20,7 +20,7 @@
 
 • **dependencies**? : *PackageJson.Dependency*
 
-*Defined in [packages/helpers/src/types.ts:23](https://github.com/dylanaubrey/repodog/blob/9e12887/packages/helpers/src/types.ts#L23)*
+*Defined in [packages/helpers/src/types.ts:23](https://github.com/dylanaubrey/repodog/blob/30d5d3f/packages/helpers/src/types.ts#L23)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **devDependencies**? : *PackageJson.Dependency*
 
-*Defined in [packages/helpers/src/types.ts:24](https://github.com/dylanaubrey/repodog/blob/9e12887/packages/helpers/src/types.ts#L24)*
+*Defined in [packages/helpers/src/types.ts:24](https://github.com/dylanaubrey/repodog/blob/30d5d3f/packages/helpers/src/types.ts#L24)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/helpers/src/types.ts:25](https://github.com/dylanaubrey/repodog/blob/9e12887/packages/helpers/src/types.ts#L25)*
+*Defined in [packages/helpers/src/types.ts:25](https://github.com/dylanaubrey/repodog/blob/30d5d3f/packages/helpers/src/types.ts#L25)*
